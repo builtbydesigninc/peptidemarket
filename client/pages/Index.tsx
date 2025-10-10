@@ -560,6 +560,57 @@ export default function Index() {
           </p>
         </div>
       </div>
+
+      {/* Testimonials Section */}
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#333]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[61px] mb-2">
+              250k+ Men choose
+            </h2>
+            <p className="text-[#989898] font-orpheus text-3xl sm:text-4xl md:text-[45px] font-bold">
+              the peptide market
+            </p>
+          </div>
+
+          {/* Testimonials Carousel */}
+          <div className="relative">
+            <Carousel
+              slides={[
+                ...Array(8).fill(null).map((_, i) => (
+                  <div
+                    key={i}
+                    className="bg-[#272727] border border-white/20 rounded-md p-6 sm:p-8 md:p-9 flex flex-col gap-12 sm:gap-16 md:gap-[75px] h-full"
+                  >
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, starIndex) => (
+                        <svg
+                          key={starIndex}
+                          className="w-5 h-5 sm:w-6 sm:h-6"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                        >
+                          <path
+                            d="M6.39742 21.6536L8.03322 14.5819L2.547 9.82553L9.79485 9.19637L12.6135 2.52734L15.4321 9.19637L22.6799 9.82553L17.1937 14.5819L18.8295 21.6536L12.6135 17.9039L6.39742 21.6536Z"
+                            fill="#EFD05C"
+                          />
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="text-white font-helvetica text-lg sm:text-xl md:text-[23px] leading-normal">
+                      It has changed life in the bedroom and dramatically improved my relationship with my wife.
+                    </p>
+                    <p className="text-white font-helvetica text-lg sm:text-xl md:text-[23px]">
+                      Nawaf
+                    </p>
+                  </div>
+                )),
+              ]}
+              verticalDots={false}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
