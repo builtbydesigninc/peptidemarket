@@ -57,7 +57,7 @@ export function BenefitShowcase({
     }>
       {/* Header */}
       <div className="mb-8 sm:mb-12">
-        <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[52px] leading-tight">{title}</h2>
+        <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[52px] leading-tight whitespace-pre-line">{title}</h2>
         {ghostTitle ? (
           <div className="mt-2 sm:mt-3 text-white/10 font-helvetica text-5xl sm:text-6xl md:text-[79px] font-bold leading-tight">
             {ghostTitle}
