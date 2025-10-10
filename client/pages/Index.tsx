@@ -698,6 +698,100 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* Footer Section */}
+      <footer className="bg-[#333333]/20 px-6 sm:px-8 py-12 sm:py-16 md:py-20 lg:py-[87px]">
+        <div className="max-w-[1410px] mx-auto">
+          <div className="flex flex-col gap-16 sm:gap-20 md:gap-[91px]">
+            {/* Footer Links */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-[187px]">
+              {/* Navigation Column */}
+              <div className="flex flex-col gap-[22px]">
+                <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
+                  Navigation
+                </h3>
+                <nav className="flex flex-col gap-[14px]">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    Home
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    Shop / Products
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    About
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    FAQs
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    Contact / Support
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    Clinician Login
+                  </a>
+                </nav>
+              </div>
+
+              {/* Legal & Compliance Column */}
+              <div className="flex flex-col gap-[22px]">
+                <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
+                  Legal & Compliance
+                </h3>
+                <nav className="flex flex-col gap-[14px]">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    Terms & Conditions
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    Privacy Policy
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    Return / Refund Policy
+                  </a>
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                    HIPAA Compliance Notice
+                  </a>
+                </nav>
+              </div>
+
+              {/* Contact Column */}
+              <div className="flex flex-col gap-[22px]">
+                <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
+                  Contact
+                </h3>
+                <div className="flex flex-col gap-[14px]">
+                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                    Email: ash@thepeptidemarket.com
+                  </p>
+                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                    Phone: +1 (914) 874-9600
+                  </p>
+                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                    Address: 123 North St, New York, NY, 15546
+                  </p>
+                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                    Hours: Mon-Fri, 9AM-6PM EST
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Bottom */}
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-8">
+              <p className="text-[#B9B9B9] font-helvetica text-xs font-bold">
+                © 2025 The Peptide Market™
+              </p>
+              <p className="text-[#B9B9B9] font-helvetica text-xs font-bold text-center">
+                Complete Peptide Solutions for Modern Medicine.
+              </p>
+            </div>
+
+            {/* Large Watermark Text */}
+            <div className="text-white/30 font-orpheus text-6xl sm:text-7xl md:text-8xl lg:text-[171px] font-bold leading-none text-center sm:text-left overflow-hidden">
+              the peptide market
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
