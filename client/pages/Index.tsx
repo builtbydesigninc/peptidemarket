@@ -86,16 +86,23 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white">
       {/* Trust Banner */}
-      <div className="bg-[#F9F7F0] px-6 sm:px-8 md:px-12 py-6 md:py-7">
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-7">
-          {trustBadges.map((badge, index) => (
-            <div key={index} className="flex items-center gap-3 sm:gap-4">
-              <div className="flex-shrink-0">{badge.icon}</div>
-              <div className="text-[#333] font-inter text-sm sm:text-base">
-                {badge.text}
+      <div className="bg-[#F9F7F0] px-6 sm:px-8 md:px-12 py-6 md:py-7 overflow-hidden">
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-0 mask-fade z-[1]" aria-hidden="true" />
+          <div className="marquee flex items-center gap-6 sm:gap-8 md:gap-10 w-max [--duration:40s] hover:[animation-play-state:paused] motion-reduce:!animate-none">
+            {trustBadges.map((badge, index) => (
+              <div key={`a-${index}`} className="flex items-center gap-3 sm:gap-4">
+                <div className="flex-shrink-0">{badge.icon}</div>
+                <div className="text-[#333] font-inter text-sm sm:text-base">{badge.text}</div>
               </div>
-            </div>
-          ))}
+            ))}
+            {trustBadges.map((badge, index) => (
+              <div key={`b-${index}`} className="flex items-center gap-3 sm:gap-4">
+                <div className="flex-shrink-0">{badge.icon}</div>
+                <div className="text-[#333] font-inter text-sm sm:text-base">{badge.text}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
