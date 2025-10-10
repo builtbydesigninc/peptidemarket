@@ -701,7 +701,7 @@ export default function Index() {
 
       {/* Footer Section */}
       <footer className="relative bg-[#333333] px-0 py-12 sm:py-16 md:py-20 lg:py-[87px]">
-        <div className="relative max-w-[1410px] mx-auto px-6 sm:px-8">
+        <div className="relative z-[1] max-w-[1410px] mx-auto px-6 sm:px-8 pb-[clamp(80px,14vw,260px)]">
           <div className="flex flex-col gap-16 sm:gap-20 md:gap-[91px]">
             {/* Footer Links */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-[187px]">
@@ -789,7 +789,7 @@ export default function Index() {
           </div>
         </div>
         {/* Absolute full-width watermark with 10px margins */}
-        <div aria-hidden className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px]">
+        <div aria-hidden className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px] z-0">
           <div className="w-full text-white/30 font-orpheus font-bold leading-none whitespace-nowrap">
             <span className="hidden sm:inline text-[clamp(56px,12vw,220px)]">the peptide market</span>
             <span className="inline sm:hidden text-5xl">tpm</span>
