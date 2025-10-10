@@ -57,11 +57,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        brand: {
+          green: "hsl(var(--brand-green))",
+          cream: "hsl(var(--brand-cream))",
+          dark: "hsl(var(--brand-dark))",
+          gray: "hsl(var(--brand-gray))",
+          black: "hsl(var(--brand-black))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["Inter", "-apple-system", "Roboto", "Helvetica", "sans-serif"],
+        helvetica: ["Helvetica", "-apple-system", "Roboto", "sans-serif"],
+        orpheus: ["Orpheus Pro", "Georgia", "serif"],
       },
       keyframes: {
         "accordion-down": {
