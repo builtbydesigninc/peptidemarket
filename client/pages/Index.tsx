@@ -306,6 +306,76 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* How It Works Section */}
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Title */}
+          <h2 className="text-[#808080] font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-8 sm:mb-12 md:mb-16">
+            We're with you every step of the way
+          </h2>
+
+          {/* Steps Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {/* Step 1 */}
+            <div className="bg-[#F9F7F1] rounded-[22px] p-6 sm:p-8 flex flex-col">
+              <div className="flex items-start gap-4 sm:gap-6 mb-6">
+                <div className="flex-shrink-0 w-8 h-8 border border-black flex items-center justify-center">
+                  <span className="text-black font-helvetica text-lg">1</span>
+                </div>
+                <p className="text-black font-helvetica text-base sm:text-[19px] leading-normal">
+                  Complete your health history form before meeting with a licensed clinician
+                </p>
+              </div>
+              <div className="mt-auto relative w-full aspect-[457/536] max-w-[320px] sm:max-w-[400px] mx-auto">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/e469dc7125be98eecb9d46279629d80da2f649be?width=913"
+                  alt="Health form on mobile device"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-[#F9F7F1] rounded-[22px] p-6 sm:p-8 flex flex-col">
+              <div className="flex items-start gap-4 sm:gap-6 mb-6">
+                <div className="flex-shrink-0 w-8 h-8 border border-black flex items-center justify-center">
+                  <span className="text-black font-helvetica text-lg">2</span>
+                </div>
+                <p className="text-black font-helvetica text-base sm:text-[19px] leading-normal">
+                  Our partner and providers review your medical history and determine if a prescription is right for you.
+                </p>
+              </div>
+              <div className="mt-auto relative w-full aspect-[309/348] max-w-[280px] sm:max-w-[309px] mx-auto">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/3a6ba0116ebdbb0cc21e310f768e6539547989da?width=618"
+                  alt="Medical professional consultation"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-[#F9F7F1] rounded-[22px] p-6 sm:p-8 flex flex-col">
+              <div className="flex items-start gap-4 sm:gap-6 mb-6">
+                <div className="flex-shrink-0 w-8 h-8 border border-black flex items-center justify-center">
+                  <span className="text-black font-helvetica text-lg">3</span>
+                </div>
+                <p className="text-black font-helvetica text-base sm:text-[19px] leading-normal">
+                  Your treatments will be delivered to your door, and we will continue to optimize your care.
+                </p>
+              </div>
+              <div className="mt-auto relative w-full aspect-[2/3] max-w-[280px] sm:max-w-[340px] mx-auto">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/e2b8029fec6ae76eae777f4ebbc23ca419692631?width=752"
+                  alt="Product delivery boxes"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
