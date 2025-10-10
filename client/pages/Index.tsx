@@ -574,44 +574,50 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Testimonials - Using existing Carousel with custom styling */}
-          <div className="relative">
-            <Carousel
-              slides={[
-                ...Array(8).fill(null).map((_, i) => (
-                  <div
-                    key={i}
-                    className="bg-[#272727] border border-white/20 rounded-md p-6 sm:p-8 md:p-9 flex flex-col gap-12 sm:gap-16 md:gap-[75px] h-full"
-                  >
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, starIndex) => (
-                        <svg
-                          key={starIndex}
-                          className="w-5 h-5 sm:w-6 sm:h-6"
-                          viewBox="0 0 25 25"
-                          fill="none"
-                        >
-                          <path
-                            d="M6.39742 21.6536L8.03322 14.5819L2.547 9.82553L9.79485 9.19637L12.6135 2.52734L15.4321 9.19637L22.6799 9.82553L17.1937 14.5819L18.8295 21.6536L12.6135 17.9039L6.39742 21.6536Z"
-                            fill="#EFD05C"
-                          />
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="text-white font-helvetica text-lg sm:text-xl md:text-[23px] leading-normal">
-                      It has changed life in the bedroom and dramatically improved my relationship with my wife.
-                    </p>
-                    <p className="text-white font-helvetica text-lg sm:text-xl md:text-[23px]">
-                      Nawaf
-                    </p>
-                  </div>
-                )),
-              ]}
-              options={{ align: "start" }}
-              verticalDots={false}
-              className="testimonials-carousel"
-            />
-          </div>
+          <TestimonialsCarousel
+            testimonials={[
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+            ]}
+          />
         </div>
       </div>
     </div>
