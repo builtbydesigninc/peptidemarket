@@ -10,6 +10,7 @@ interface BenefitShowcaseProps {
   title: string;
   ghostTitle?: string;
   wrapperClassName?: string; // background and padding wrapper
+  color?: "teal" | "emerald" | "slate" | "black" | "cream";
   cta: {
     title: string;
     image: string;
@@ -28,6 +29,7 @@ export function BenefitShowcase({
   title,
   ghostTitle,
   wrapperClassName,
+  color = "teal",
   cta,
   slides,
   tags,
@@ -50,9 +52,37 @@ export function BenefitShowcase({
 
   const carouselSlides = slides.map((s, i) => <Slide key={i} data={s} />);
 
+  const theme = {
+    teal: {
+      wrapper: "bg-[#77A9A3]",
+      panel: "bg-white/10 border-white/15",
+      ctaBtn: "bg-white/20 hover:bg-white/30 text-white",
+    },
+    emerald: {
+      wrapper: "bg-[#199F65]",
+      panel: "bg-white/10 border-white/15",
+      ctaBtn: "bg-white/20 hover:bg-white/30 text-white",
+    },
+    slate: {
+      wrapper: "bg-[#1F2937]",
+      panel: "bg-white/10 border-white/15",
+      ctaBtn: "bg-white/20 hover:bg-white/30 text-white",
+    },
+    black: {
+      wrapper: "bg-[#111111]",
+      panel: "bg-white/10 border-white/15",
+      ctaBtn: "bg-white/20 hover:bg-white/30 text-white",
+    },
+    cream: {
+      wrapper: "bg-[#F9F7F1]",
+      panel: "bg-white border-[#EAEAEA]",
+      ctaBtn: "bg-black text-white hover:bg-black/90",
+    },
+  }[color];
+
   return (
     <div className={
-      "rounded-[22px] p-8 sm:p-10 md:p-12 lg:p-16 relative overflow-hidden bg-[#77A9A3] " +
+      `rounded-[22px] p-8 sm:p-10 md:p-12 lg:p-16 relative overflow-hidden ${theme.wrapper} ` +
       (wrapperClassName || "")
     }>
       {/* Header */}
@@ -68,18 +98,18 @@ export function BenefitShowcase({
       {/* Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
         {/* CTA Card */}
-        <div className="lg:col-span-4 bg-white/10 border border-white/15 rounded-[22px] p-6 flex flex-col items-center justify-between min-h-[332px] backdrop-blur-sm">
+        <div className={`lg:col-span-4 ${theme.panel} rounded-[22px] p-6 flex flex-col items-center justify-between min-h-[332px] backdrop-blur-sm`}>
           <div className="flex flex-col items-center gap-10 flex-1 justify-center">
             <h3 className="text-white font-helvetica text-lg text-center">{cta.title}</h3>
             <img src={cta.image} alt={cta.title} className="w-40 h-40 object-contain" />
           </div>
-          <button className="bg-white/20 hover:bg-white/30 transition-colors text-white font-helvetica text-base px-6 py-2 rounded-[22px]">
+          <button className={`${theme.ctaBtn} transition-colors font-helvetica text-base px-6 py-2 rounded-[22px]`}>
             {cta.buttonLabel}
           </button>
         </div>
 
         {/* Carousel */}
-        <div className="lg:col-span-8 bg-white/10 border border-white/15 rounded-[22px] p-4 sm:p-6 relative backdrop-blur-sm">
+        <div className={`lg:col-span-8 ${theme.panel} rounded-[22px] p-4 sm:p-6 relative backdrop-blur-sm`}>
           <Carousel slides={carouselSlides} className="" verticalDots />
         </div>
       </div>
@@ -97,7 +127,7 @@ export function BenefitShowcase({
         </div>
 
         {/* Tags */}
-        <div className="lg:col-span-8 bg-white/10 border border-white/15 rounded-[22px] p-4 sm:p-5 min-h-[84px] flex flex-wrap items-center gap-2 sm:gap-3 backdrop-blur-sm">
+        <div className={`lg:col-span-8 ${theme.panel} rounded-[22px] p-4 sm:p-5 min-h-[84px] flex flex-wrap items-center gap-2 sm:gap-3 backdrop-blur-sm`}>
           {tags.map((tag) => (
             <div key={tag} className="bg-white/10 hover:bg-white/20 transition-colors rounded-[22px] px-4 py-2">
               <span className="text-white font-helvetica text-sm sm:text-[15px]">{tag}</span>
