@@ -83,6 +83,8 @@ export default function Index() {
     },
   ];
 
+  const brandLogos = Array(5).fill("https://api.builder.io/api/v1/image/assets/TEMP/573f8a9a825e36f9f59ba4eedeca62ecaa3d9db8?width=390");
+
   return (
     <div className="min-h-screen bg-white">
       {/* Trust Banner */}
