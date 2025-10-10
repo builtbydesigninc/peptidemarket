@@ -700,7 +700,7 @@ export default function Index() {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-[#333333]/20 px-6 sm:px-8 py-12 sm:py-16 md:py-20 lg:py-[87px]">
+      <footer className="bg-[#333333] px-6 sm:px-8 py-12 sm:py-16 md:py-20 lg:py-[87px]">
         <div className="max-w-[1410px] mx-auto">
           <div className="flex flex-col gap-16 sm:gap-20 md:gap-[91px]">
             {/* Footer Links */}
@@ -786,8 +786,9 @@ export default function Index() {
             </div>
 
             {/* Large Watermark Text */}
-            <div className="text-white/30 font-orpheus text-6xl sm:text-7xl md:text-8xl lg:text-[171px] font-bold leading-none text-center sm:text-left overflow-hidden">
-              the peptide market
+            <div className="text-white/30 font-orpheus text-6xl sm:text-7xl md:text-8xl lg:text-[171px] font-bold leading-none text-center sm:text-left overflow-hidden whitespace-nowrap">
+              <span className="hidden sm:inline">the peptide market</span>
+              <span className="inline sm:hidden">tpm</span>
             </div>
           </div>
         </div>
