@@ -199,6 +199,144 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* Benefits and Products Section */}
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto bg-[#77A9A3] rounded-[22px] p-8 sm:p-10 md:p-12 lg:p-16 relative overflow-hidden">
+          {/* Header */}
+          <div className="mb-8 sm:mb-12 relative">
+            <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[52px] leading-tight relative z-10">
+              Increase
+              <br />
+              Testosterone
+            </h2>
+            <div className="absolute top-0 left-0 text-white/10 font-helvetica text-5xl sm:text-6xl md:text-[79px] font-bold leading-tight pointer-events-none">
+              Increase Testosterone
+            </div>
+          </div>
+
+          {/* Products Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+            {/* Testosterone Solutions Card */}
+            <div className="lg:col-span-3 bg-[#6D9A95] rounded-[22px] p-6 flex flex-col items-center justify-between min-h-[332px]">
+              <div className="flex flex-col items-center gap-10 flex-1 justify-center">
+                <h3 className="text-white font-helvetica text-lg text-center">
+                  Testosterone Solutions
+                </h3>
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/6292e665eeb327f4a82e272d4cbac87046c6f323?width=312"
+                  alt="Testosterone Solution"
+                  className="w-40 h-40 object-contain"
+                />
+              </div>
+              <button className="bg-[#8FB1AE] hover:bg-[#9DBFBC] transition-colors text-white font-helvetica text-base px-6 py-2 rounded-[22px]">
+                Shop Now
+              </button>
+            </div>
+
+            {/* Injectable TRT Cards Container */}
+            <div className="lg:col-span-9 bg-[#6D9A95] rounded-[22px] p-4 sm:p-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Injectable TRT Card 1 */}
+                <div className="bg-[#4E7772] rounded-[22px] p-6 flex flex-col items-center">
+                  <h3 className="text-white font-helvetica text-xl sm:text-2xl mb-10">
+                    Injectable TRT
+                  </h3>
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f76d1259301903dae173ebf0e7a3984c7a46f308?width=312"
+                    alt="Injectable TRT"
+                    className="w-40 h-40 object-contain mb-10"
+                  />
+                  <div className="space-y-2 w-full">
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 18 18" fill="none">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M8.97425 17.5401C10.0664 17.5401 11.1479 17.3249 12.1569 16.907C13.166 16.489 14.0828 15.8764 14.8551 15.1041C15.6274 14.3318 16.24 13.415 16.658 12.406C17.0759 11.3969 17.291 10.3155 17.291 9.22328C17.291 8.1311 17.0759 7.04962 16.658 6.04058C16.24 5.03154 15.6274 4.11471 14.8551 3.34242C14.0828 2.57014 13.166 1.95753 12.1569 1.53957C11.1479 1.12161 10.0664 0.906494 8.97425 0.906494C6.7685 0.906494 4.6531 1.78272 3.0934 3.34242C1.5337 4.90212 0.657471 7.01753 0.657471 9.22328C0.657471 11.429 1.5337 13.5444 3.0934 15.1041C4.6531 16.6638 6.7685 17.5401 8.97425 17.5401ZM8.75986 12.587L13.3803 7.04243L11.9609 5.8596L7.98733 10.627L5.93123 8.56995L4.62458 9.87661L7.39684 12.6489L8.11208 13.3641L8.75986 12.587Z" fill="#FFFD6C"/>
+                      </svg>
+                      <span className="text-white font-helvetica text-[13px]">More energy, strength, and libido</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 18 18" fill="none">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M8.97425 17.5401C10.0664 17.5401 11.1479 17.3249 12.1569 16.907C13.166 16.489 14.0828 15.8764 14.8551 15.1041C15.6274 14.3318 16.24 13.415 16.658 12.406C17.0759 11.3969 17.291 10.3155 17.291 9.22328C17.291 8.1311 17.0759 7.04962 16.658 6.04058C16.24 5.03154 15.6274 4.11471 14.8551 3.34242C14.0828 2.57014 13.166 1.95753 12.1569 1.53957C11.1479 1.12161 10.0664 0.906494 8.97425 0.906494C6.7685 0.906494 4.6531 1.78272 3.0934 3.34242C1.5337 4.90212 0.657471 7.01753 0.657471 9.22328C0.657471 11.429 1.5337 13.5444 3.0934 15.1041C4.6531 16.6638 6.7685 17.5401 8.97425 17.5401ZM8.75986 12.587L13.3803 7.04243L11.9609 5.8596L7.98733 10.627L5.93123 8.56995L4.62458 9.87661L7.39684 12.6489L8.11208 13.3641L8.75986 12.587Z" fill="#FFFD6C"/>
+                      </svg>
+                      <span className="text-white font-helvetica text-[13px]">Reduce body fat</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 18 18" fill="none">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M8.97425 17.5401C10.0664 17.5401 11.1479 17.3249 12.1569 16.907C13.166 16.489 14.0828 15.8764 14.8551 15.1041C15.6274 14.3318 16.24 13.415 16.658 12.406C17.0759 11.3969 17.291 10.3155 17.291 9.22328C17.291 8.1311 17.0759 7.04962 16.658 6.04058C16.24 5.03154 15.6274 4.11471 14.8551 3.34242C14.0828 2.57014 13.166 1.95753 12.1569 1.53957C11.1479 1.12161 10.0664 0.906494 8.97425 0.906494C6.7685 0.906494 4.6531 1.78272 3.0934 3.34242C1.5337 4.90212 0.657471 7.01753 0.657471 9.22328C0.657471 11.429 1.5337 13.5444 3.0934 15.1041C4.6531 16.6638 6.7685 17.5401 8.97425 17.5401ZM8.75986 12.587L13.3803 7.04243L11.9609 5.8596L7.98733 10.627L5.93123 8.56995L4.62458 9.87661L7.39684 12.6489L8.11208 13.3641L8.75986 12.587Z" fill="#FFFD6C"/>
+                      </svg>
+                      <span className="text-white font-helvetica text-[13px]">Increase mental clarity</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Injectable TRT Card 2 */}
+                <div className="bg-[#4E7772] rounded-[22px] p-6 flex flex-col items-center">
+                  <h3 className="text-white font-helvetica text-xl sm:text-2xl mb-10">
+                    Injectable TRT
+                  </h3>
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/339411d2a5e370cfdac41242553c914113a9bfdc?width=312"
+                    alt="Injectable TRT"
+                    className="w-40 h-40 object-contain mb-10"
+                  />
+                  <div className="space-y-2 w-full">
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 18 18" fill="none">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M8.97425 17.5401C10.0664 17.5401 11.1479 17.3249 12.1569 16.907C13.166 16.489 14.0828 15.8764 14.8551 15.1041C15.6274 14.3318 16.24 13.415 16.658 12.406C17.0759 11.3969 17.291 10.3155 17.291 9.22328C17.291 8.1311 17.0759 7.04962 16.658 6.04058C16.24 5.03154 15.6274 4.11471 14.8551 3.34242C14.0828 2.57014 13.166 1.95753 12.1569 1.53957C11.1479 1.12161 10.0664 0.906494 8.97425 0.906494C6.7685 0.906494 4.6531 1.78272 3.0934 3.34242C1.5337 4.90212 0.657471 7.01753 0.657471 9.22328C0.657471 11.429 1.5337 13.5444 3.0934 15.1041C4.6531 16.6638 6.7685 17.5401 8.97425 17.5401ZM8.75986 12.587L13.3803 7.04243L11.9609 5.8596L7.98733 10.627L5.93123 8.56995L4.62458 9.87661L7.39684 12.6489L8.11208 13.3641L8.75986 12.587Z" fill="#FFFD6C"/>
+                      </svg>
+                      <span className="text-white font-helvetica text-[13px]">More energy, strength, and libido</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 18 18" fill="none">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M8.97425 17.5401C10.0664 17.5401 11.1479 17.3249 12.1569 16.907C13.166 16.489 14.0828 15.8764 14.8551 15.1041C15.6274 14.3318 16.24 13.415 16.658 12.406C17.0759 11.3969 17.291 10.3155 17.291 9.22328C17.291 8.1311 17.0759 7.04962 16.658 6.04058C16.24 5.03154 15.6274 4.11471 14.8551 3.34242C14.0828 2.57014 13.166 1.95753 12.1569 1.53957C11.1479 1.12161 10.0664 0.906494 8.97425 0.906494C6.7685 0.906494 4.6531 1.78272 3.0934 3.34242C1.5337 4.90212 0.657471 7.01753 0.657471 9.22328C0.657471 11.429 1.5337 13.5444 3.0934 15.1041C4.6531 16.6638 6.7685 17.5401 8.97425 17.5401ZM8.75986 12.587L13.3803 7.04243L11.9609 5.8596L7.98733 10.627L5.93123 8.56995L4.62458 9.87661L7.39684 12.6489L8.11208 13.3641L8.75986 12.587Z" fill="#FFFD6C"/>
+                      </svg>
+                      <span className="text-white font-helvetica text-[13px]">Reduce body fat</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 18 18" fill="none">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M8.97425 17.5401C10.0664 17.5401 11.1479 17.3249 12.1569 16.907C13.166 16.489 14.0828 15.8764 14.8551 15.1041C15.6274 14.3318 16.24 13.415 16.658 12.406C17.0759 11.3969 17.291 10.3155 17.291 9.22328C17.291 8.1311 17.0759 7.04962 16.658 6.04058C16.24 5.03154 15.6274 4.11471 14.8551 3.34242C14.0828 2.57014 13.166 1.95753 12.1569 1.53957C11.1479 1.12161 10.0664 0.906494 8.97425 0.906494C6.7685 0.906494 4.6531 1.78272 3.0934 3.34242C1.5337 4.90212 0.657471 7.01753 0.657471 9.22328C0.657471 11.429 1.5337 13.5444 3.0934 15.1041C4.6531 16.6638 6.7685 17.5401 8.97425 17.5401ZM8.75986 12.587L13.3803 7.04243L11.9609 5.8596L7.98733 10.627L5.93123 8.56995L4.62458 9.87661L7.39684 12.6489L8.11208 13.3641L8.75986 12.587Z" fill="#FFFD6C"/>
+                      </svg>
+                      <span className="text-white font-helvetica text-[13px]">Increase mental clarity</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Testimonial Card */}
+            <div className="lg:col-span-3 relative rounded-[22px] overflow-hidden min-h-[211px] flex items-center justify-center p-6 sm:p-12">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/6a8f9d5eaf0c2d8a885e73df8e14237eb5b79db1?width=538')"
+                }}
+              />
+              <div className="absolute inset-0 bg-black/60" />
+              <div className="relative z-10 flex flex-col items-center gap-4 text-center">
+                <p className="text-white font-helvetica text-[13px] leading-relaxed">
+                  "DRT treatment has been the best decision I've ever made. I'm keeping up with men half my age, also my energy levels are that of my 25-year-old self. Can't say enough about the improvements to my lifestyle."
+                </p>
+                <p className="text-[#B9B9B9] font-helvetica text-[13px]">Sarah Jones</p>
+              </div>
+            </div>
+
+            {/* Tags/Pills */}
+            <div className="lg:col-span-9 bg-[#6D9A95] rounded-[22px] p-6 sm:p-8 flex flex-wrap items-center gap-2 sm:gap-3">
+              {["get in shape", "be energized", "stay hard", "increased sex drive"].map((tag) => (
+                <div
+                  key={tag}
+                  className="bg-white/10 hover:bg-white/20 transition-colors rounded-[22px] px-4 py-2"
+                >
+                  <span className="text-white font-helvetica text-sm sm:text-[15px]">{tag}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
