@@ -700,8 +700,8 @@ export default function Index() {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-[#333333] px-6 sm:px-8 py-12 sm:py-16 md:py-20 lg:py-[87px]">
-        <div className="max-w-[1410px] mx-auto">
+      <footer className="relative bg-[#333333] px-0 py-12 sm:py-16 md:py-20 lg:py-[87px]">
+        <div className="relative max-w-[1410px] mx-auto px-6 sm:px-8">
           <div className="flex flex-col gap-16 sm:gap-20 md:gap-[91px]">
             {/* Footer Links */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-[187px]">
@@ -711,22 +711,22 @@ export default function Index() {
                   Navigation
                 </h3>
                 <nav className="flex flex-col gap-[14px]">
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     Home
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     Shop / Products
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     About
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     FAQs
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     Contact / Support
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     Clinician Login
                   </a>
                 </nav>
@@ -738,16 +738,16 @@ export default function Index() {
                   Legal & Compliance
                 </h3>
                 <nav className="flex flex-col gap-[14px]">
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     Terms & Conditions
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     Privacy Policy
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     Return / Refund Policy
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px] hover:text-white transition-colors">
+                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
                     HIPAA Compliance Notice
                   </a>
                 </nav>
@@ -759,16 +759,16 @@ export default function Index() {
                   Contact
                 </h3>
                 <div className="flex flex-col gap-[14px]">
-                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
                     Email: ash@thepeptidemarket.com
                   </p>
-                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
                     Phone: +1 (914) 874-9600
                   </p>
-                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
                     Address: 123 North St, New York, NY, 15546
                   </p>
-                  <p className="text-[#B9B9B9] font-helvetica text-xl sm:text-2xl md:text-[26px]">
+                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
                     Hours: Mon-Fri, 9AM-6PM EST
                   </p>
                 </div>
@@ -785,7 +785,7 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Large Watermark Text moved below for full-bleed */}
+            {/* Watermark handled by absolute element below */}
           </div>
         </div>
       {/* Full-bleed watermark */}
@@ -795,6 +795,13 @@ export default function Index() {
           <span className="inline sm:hidden text-5xl">tpm</span>
         </div>
       </div>
+        {/* Absolute full-width watermark with 10px margins */}
+        <div aria-hidden className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px]">
+          <div className="w-full text-white/30 font-orpheus font-bold leading-none whitespace-nowrap">
+            <span className="hidden sm:inline text-[clamp(56px,12vw,220px)]">the peptide market</span>
+            <span className="inline sm:hidden text-5xl">tpm</span>
+          </div>
+        </div>
       </footer>
     </div>
   );
