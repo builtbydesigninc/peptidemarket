@@ -653,6 +653,51 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* Newsletter Section */}
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-[#333] rounded-[24px] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-[169px]">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-[1090px] mx-auto">
+              {/* Left Content */}
+              <div className="flex flex-col gap-[23px] max-w-[359px] w-full">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-helvetica font-normal leading-normal">
+                  <span className="text-white">Unlock the free </span>
+                  <span className="text-[#B9B9B9]">guide to protein for weight loss</span>
+                </h2>
+                <p className="text-[#B9B9B9] font-helvetica text-base sm:text-lg">
+                  Written by board-certified doctors to support your journey
+                </p>
+              </div>
+
+              {/* Right Form */}
+              <div className="flex flex-col gap-[36px] max-w-[384px] w-full">
+                <div className="flex flex-col gap-[30px]">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="w-full px-6 py-[21px] rounded-lg bg-white text-black placeholder:text-[#ACACAC] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+                  />
+                  <button className="w-full px-6 py-[9px] rounded-full bg-white text-[#333] font-helvetica text-base sm:text-lg hover:bg-white/90 transition-colors">
+                    Get the Guide
+                  </button>
+                </div>
+                <p className="text-[#B9B9B9] font-helvetica text-sm">
+                  By creating an account using email, I agree to the{" "}
+                  <a href="#" className="underline hover:text-white transition-colors">
+                    Terms & conditions
+                  </a>{" "}
+                  and acknowledge the{" "}
+                  <a href="#" className="underline hover:text-white transition-colors">
+                    Privacy Policy
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
