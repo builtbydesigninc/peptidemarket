@@ -382,11 +382,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Content */}
-            <div className="flex-1 max-w-[607px]">
-              <h2 className="text-[#333] font-helvetica text-3xl sm:text-4xl md:text-[42px] mb-6 sm:mb-8 md:mb-12 leading-tight">
+            <div className="flex-1 max-w-[520px] lg:self-center">
+              <h2 className="text-[#333] font-helvetica text-3xl sm:text-[34px] md:text-[38px] mb-6 sm:mb-8 md:mb-10 leading-tight">
                 No hidden fees, ever
               </h2>
-              <p className="text-[#808080] font-helvetica text-lg sm:text-xl md:text-[26px] mb-8 sm:mb-10 md:mb-12 leading-normal">
+              <p className="text-[#808080] font-helvetica text-base sm:text-[18px] md:text-[22px] mb-8 sm:mb-10 md:mb-12 leading-relaxed">
                 We build community by focusing on real solutions, personalized care, science-backed supplements and root cause therapies paired with virtual appointments and accessible diagnostics make healthcare seamless and centered on you.
               </p>
               <button className="bg-[#333] hover:bg-[#4a4a4a] transition-colors text-white font-helvetica text-xl sm:text-2xl md:text-[26px] px-12 sm:px-16 md:px-24 py-4 sm:py-5 md:py-6 rounded-full">
@@ -397,202 +397,85 @@ export default function Index() {
             {/* Right Comparison Table */}
             <div className="flex-1 w-full max-w-[643px]">
               {/* Table Headers */}
-              <div className="flex items-end justify-end gap-4 sm:gap-6 md:gap-8 lg:gap-10 mb-6 sm:mb-8 md:mb-12">
-                <div className="text-[#333] font-orpheus text-base sm:text-lg md:text-[19px] font-bold w-32 sm:w-36 md:w-40">
+              <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-end mb-6 sm:mb-8 md:mb-12 gap-x-4">
+                <div></div>
+                <div className="text-[#333] font-orpheus text-base sm:text-lg md:text-[19px] font-bold text-center">
                   the peptide market
                 </div>
-                <div className="text-[#636363] font-helvetica text-[10px] sm:text-xs uppercase w-28 sm:w-32 md:w-36 text-center">
+                <div className="text-[#636363] font-helvetica text-[10px] sm:text-xs uppercase text-center">
                   OUR COMPETITORS
                 </div>
-                <div className="text-[#636363] font-helvetica text-[10px] sm:text-xs uppercase w-28 sm:w-32 md:w-36 text-center">
+                <div className="text-[#636363] font-helvetica text-[10px] sm:text-xs uppercase text-center">
                   TRADITIONAL MEDICINE
                 </div>
               </div>
 
               {/* Comparison Rows */}
-              <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6">
+              <div className="space-y-3 mb-6">
                 {/* Row: CONVENIENT */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase w-24 sm:w-28">
-                    CONVENIENT
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/>
-                      </svg>
-                    </div>
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">CONVENIENT</div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
                 </div>
 
                 {/* Row: MEMBERSHIP FEES */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase w-24 sm:w-28">
-                    MEMBERSHIP FEES
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg">$0</span>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-8 sm:px-10 md:px-12 lg:px-14 py-2 sm:py-2.5 md:py-3">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg">$129 +</span>
-                    </div>
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg">$0</span>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">MEMBERSHIP FEES</div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$129+</span></div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
                 </div>
 
                 {/* Row: CONSULTATION FEES */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase w-24 sm:w-28">
-                    CONSULTATION FEES
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg">$0</span>
-                    </div>
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg">$0</span>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-10 sm:px-12 md:px-14 lg:px-16 py-2 sm:py-2.5 md:py-3">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg">$20 +</span>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">CONSULTATION FEES</div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$20+</span></div>
                 </div>
 
                 {/* Row: TREATS ROOT CAUSE */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase w-24 sm:w-28">
-                    TREATS ROOT CAUSE
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">TREATS ROOT CAUSE</div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
                 </div>
 
                 {/* Row: LAB DRAWS */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase w-24 sm:w-28">
-                    LAB DRAWS
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/>
-                      </svg>
-                    </div>
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">LAB DRAWS</div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
                 </div>
 
                 {/* Row: PROACTIVE */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase w-24 sm:w-28">
-                    PROACTIVE
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">PROACTIVE</div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
                 </div>
 
                 {/* Row: DATA DRIVEN */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase w-24 sm:w-28">
-                    DATA DRIVEN
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="bg-[#C7D5F6] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-[#EDEDED] rounded px-12 sm:px-14 md:px-16 lg:px-20 py-2 sm:py-2.5 md:py-3 flex items-center justify-center">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 27 27" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/>
-                      </svg>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">DATA DRIVEN</div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
                 </div>
               </div>
 
               {/* Total Cost Row */}
               <div className="pt-4 sm:pt-5 md:pt-6 border-t border-[#CFCFCF]">
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="text-[#333] font-helvetica text-[10px] font-bold uppercase w-24 sm:w-28">
-                    TOTAL COST
-                  </div>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <div className="px-12 sm:px-14 md:px-16 lg:px-20">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg font-bold">$0</span>
-                    </div>
-                    <div className="px-8 sm:px-10 md:px-12 lg:px-14">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg font-bold">$129+</span>
-                    </div>
-                    <div className="px-10 sm:px-12 md:px-14 lg:px-16">
-                      <span className="text-[#333] font-helvetica text-base sm:text-lg font-bold">$20+</span>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
+                  <div className="text-[#333] font-helvetica text-[10px] font-bold uppercase">TOTAL COST</div>
+                  <div className="py-2"><span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">$0</span></div>
+                  <div className="py-2"><span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">$129+</span></div>
+                  <div className="py-2"><span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">$20+</span></div>
                 </div>
               </div>
             </div>
