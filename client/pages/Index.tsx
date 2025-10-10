@@ -482,6 +482,84 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* Our Team Section */}
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl md:text-[61px] font-helvetica mb-10 sm:mb-12 md:mb-14">
+            <span className="text-[#333]">Our </span>
+            <span className="text-[#AAA]">Team</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
+            {[
+              { name: "Ashfaq Rahman", role: "CEO", image: "https://api.builder.io/api/v1/image/assets/TEMP/9a730167ce218459764ed3b2d71115d2742b6411?width=544" },
+              { name: "Oliver Ibrahim", role: "Chief of Staff", image: "https://api.builder.io/api/v1/image/assets/TEMP/c9ab7ea3e7d76914190be15f86949192ad3d35bf?width=544" },
+              { name: "Muhammad Bin Sohail", role: "Head of Technology", image: "https://api.builder.io/api/v1/image/assets/TEMP/4b2ebd867dd1d91c824c85da76edf4cf57c8e550?width=544" },
+              { name: "Gaelle Seman", role: "Head of Sales", image: "https://api.builder.io/api/v1/image/assets/TEMP/14ff3c745ade6c7194d578ebd55a3834d188aa07?width=544" },
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-md shadow-[0_5.67px_45.362px_0_rgba(0,0,0,0.25)] overflow-hidden"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full aspect-square object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-[#333] font-helvetica text-lg sm:text-xl md:text-[22px] mb-2">
+                    {member.name}
+                  </h3>
+                  <p className="text-[#90847E] font-helvetica text-sm md:text-[14px]">
+                    {member.role}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Our Medical Advisors Section */}
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl md:text-[61px] font-helvetica mb-10 sm:mb-12 md:mb-14">
+            <span className="text-[#333]">Our Medical </span>
+            <span className="text-[#B9B9B9]">Advisors</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-10 sm:mb-12 md:mb-16">
+            {[
+              { name: "Ashfaq Rahman", role: "MD", image: "https://api.builder.io/api/v1/image/assets/TEMP/9a730167ce218459764ed3b2d71115d2742b6411?width=544" },
+              { name: "Oliver Ibrahim", role: "Doctor", image: "https://api.builder.io/api/v1/image/assets/TEMP/c9ab7ea3e7d76914190be15f86949192ad3d35bf?width=544" },
+              { name: "Muhammad Bin Sohail", role: "Head of Technology", image: "https://api.builder.io/api/v1/image/assets/TEMP/4b2ebd867dd1d91c824c85da76edf4cf57c8e550?width=544" },
+              { name: "Gaelle Seman", role: "Head of Sales", image: "https://api.builder.io/api/v1/image/assets/TEMP/14ff3c745ade6c7194d578ebd55a3834d188aa07?width=544" },
+            ].map((advisor, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-md shadow-[0_5.67px_45.362px_0_rgba(0,0,0,0.25)] overflow-hidden"
+              >
+                <img
+                  src={advisor.image}
+                  alt={advisor.name}
+                  className="w-full aspect-square object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-[#333] font-helvetica text-lg sm:text-xl md:text-[22px] mb-2">
+                    {advisor.name}
+                  </h3>
+                  <p className="text-[#90847E] font-helvetica text-sm md:text-[14px]">
+                    {advisor.role}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#333] font-helvetica text-lg sm:text-xl md:text-[22px] text-center max-w-lg mx-auto">
+            Our board-certified physicians ensure our treatments are{" "}
+            <span className="font-bold">nothing but the best.</span>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
