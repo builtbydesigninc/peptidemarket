@@ -40,23 +40,7 @@ export function Carousel({ slides, options, className, verticalDots = true }: Ca
         </div>
       </div>
 
-      {/* Arrows */}
-      <button
-        type="button"
-        aria-label="Previous"
-        onClick={scrollPrev}
-        className="hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 text-white absolute left-2 top-1/2 -translate-y-1/2"
-      >
-        <ChevronLeft className="w-5 h-5" />
-      </button>
-      <button
-        type="button"
-        aria-label="Next"
-        onClick={scrollNext}
-        className="hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 text-white absolute right-2 top-1/2 -translate-y-1/2"
-      >
-        <ChevronRight className="w-5 h-5" />
-      </button>
+      {/* Arrows - hidden by default, can be shown via className prop */}
 
       {/* Dots */}
       {verticalDots ? (
