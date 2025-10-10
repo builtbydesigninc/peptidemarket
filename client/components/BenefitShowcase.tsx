@@ -111,6 +111,7 @@ export function BenefitShowcase({
         {/* Carousel */}
         <div className={`lg:col-span-8 ${theme.panel} rounded-[22px] p-4 sm:p-6 relative backdrop-blur-sm`}>
           <Carousel slides={carouselSlides} className="" verticalDots />
+          <div className="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-b from-white/5 to-transparent mix-blend-overlay" aria-hidden="true" />
         </div>
       </div>
 
