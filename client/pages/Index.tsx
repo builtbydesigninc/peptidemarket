@@ -204,13 +204,13 @@ export default function Index() {
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto bg-[#77A9A3] rounded-[22px] p-8 sm:p-10 md:p-12 lg:p-16 relative overflow-hidden">
           {/* Header */}
-          <div className="mb-8 sm:mb-12 relative">
-            <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[52px] leading-tight relative z-10">
+          <div className="mb-8 sm:mb-12">
+            <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[52px] leading-tight">
               Increase
               <br />
               Testosterone
             </h2>
-            <div className="absolute top-0 left-0 text-white/10 font-helvetica text-5xl sm:text-6xl md:text-[79px] font-bold leading-tight pointer-events-none">
+            <div className="mt-2 sm:mt-3 text-white/10 font-helvetica text-5xl sm:text-6xl md:text-[79px] font-bold leading-tight">
               Increase Testosterone
             </div>
           </div>
