@@ -790,9 +790,8 @@ export default function Index() {
         </div>
         {/* Absolute full-width watermark with 10px margins */}
         <div aria-hidden className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px] z-0">
-          <div className="w-full text-white/30 font-orpheus font-bold leading-none whitespace-nowrap">
-            <span className="hidden sm:inline text-[clamp(56px,12vw,220px)]">the peptide market</span>
-            <span className="inline sm:hidden text-5xl">tpm</span>
+          <div className="w-full text-white/30 font-orpheus font-bold leading-none whitespace-nowrap text-[clamp(28px,12vw,220px)]">
+            the peptide market
           </div>
         </div>
       </footer>
