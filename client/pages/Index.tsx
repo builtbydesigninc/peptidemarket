@@ -268,7 +268,6 @@ export default function Index() {
                   <Slide key="s4" img="https://api.builder.io/api/v1/image/assets/TEMP/339411d2a5e370cfdac41242553c914113a9bfdc?width=312" />,
                 ];
 
-                const Carousel = require("../components/Carousel").Carousel as any;
                 return <Carousel slides={slides} className="" verticalDots />;
               })()}
             </div>
