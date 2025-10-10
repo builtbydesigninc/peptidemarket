@@ -218,7 +218,7 @@ export default function Index() {
           {/* Products Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
             {/* Testosterone Solutions Card */}
-            <div className="lg:col-span-3 bg-[#6D9A95] rounded-[22px] p-6 flex flex-col items-center justify-between min-h-[332px]">
+            <div className="lg:col-span-4 bg-[#6D9A95] rounded-[22px] p-6 flex flex-col items-center justify-between min-h-[332px]">
               <div className="flex flex-col items-center gap-10 flex-1 justify-center">
                 <h3 className="text-white font-helvetica text-lg text-center">
                   Testosterone Solutions
@@ -235,17 +235,17 @@ export default function Index() {
             </div>
 
             {/* Injectable TRT Cards Container */}
-            <div className="lg:col-span-9 bg-[#6D9A95] rounded-[22px] p-4 sm:p-6">
+            <div className="lg:col-span-8 bg-[#6D9A95] rounded-[22px] p-4 sm:p-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Injectable TRT Card 1 */}
-                <div className="bg-[#4E7772] rounded-[22px] p-6 flex flex-col items-center">
-                  <h3 className="text-white font-helvetica text-xl sm:text-2xl mb-10">
+                <div className="bg-[#4E7772] rounded-[22px] p-5 flex flex-col items-center">
+                  <h3 className="text-white font-helvetica text-xl sm:text-2xl mb-6">
                     Injectable TRT
                   </h3>
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/f76d1259301903dae173ebf0e7a3984c7a46f308?width=312"
                     alt="Injectable TRT"
-                    className="w-40 h-40 object-contain mb-10"
+                    className="w-32 h-32 object-contain mb-6"
                   />
                   <div className="space-y-2 w-full">
                     <div className="flex items-center gap-2">
@@ -270,14 +270,14 @@ export default function Index() {
                 </div>
 
                 {/* Injectable TRT Card 2 */}
-                <div className="bg-[#4E7772] rounded-[22px] p-6 flex flex-col items-center">
-                  <h3 className="text-white font-helvetica text-xl sm:text-2xl mb-10">
+                <div className="bg-[#4E7772] rounded-[22px] p-5 flex flex-col items-center">
+                  <h3 className="text-white font-helvetica text-xl sm:text-2xl mb-6">
                     Injectable TRT
                   </h3>
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/339411d2a5e370cfdac41242553c914113a9bfdc?width=312"
                     alt="Injectable TRT"
-                    className="w-40 h-40 object-contain mb-10"
+                    className="w-32 h-32 object-contain mb-6"
                   />
                   <div className="space-y-2 w-full">
                     <div className="flex items-center gap-2">
@@ -307,7 +307,7 @@ export default function Index() {
           {/* Bottom Section */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Testimonial Card */}
-            <div className="lg:col-span-3 relative rounded-[22px] overflow-hidden min-h-[211px] flex items-center justify-center p-6 sm:p-12">
+            <div className="lg:col-span-4 relative rounded-[22px] overflow-hidden min-h-[211px] flex items-center justify-center p-6 sm:p-12">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
@@ -324,7 +324,7 @@ export default function Index() {
             </div>
 
             {/* Tags/Pills */}
-            <div className="lg:col-span-9 bg-[#6D9A95] rounded-[22px] p-6 sm:p-8 flex flex-wrap items-center gap-2 sm:gap-3">
+            <div className="lg:col-span-8 bg-[#6D9A95] rounded-[22px] p-4 sm:p-5 min-h-[84px] flex flex-wrap items-center gap-2 sm:gap-3">
               {["get in shape", "be energized", "stay hard", "increased sex drive"].map((tag) => (
                 <div
                   key={tag}
