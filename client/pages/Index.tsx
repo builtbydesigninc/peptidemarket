@@ -788,13 +788,6 @@ export default function Index() {
             {/* Watermark handled by absolute element below */}
           </div>
         </div>
-      {/* Full-bleed watermark */}
-      <div className="w-full overflow-hidden whitespace-nowrap">
-        <div className="text-white/30 font-orpheus font-bold leading-none whitespace-nowrap text-center sm:text-left px-0">
-          <span className="hidden sm:inline text-[clamp(56px,13vw,220px)]">the peptide market</span>
-          <span className="inline sm:hidden text-5xl">tpm</span>
-        </div>
-      </div>
         {/* Absolute full-width watermark with 10px margins */}
         <div aria-hidden className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px]">
           <div className="w-full text-white/30 font-orpheus font-bold leading-none whitespace-nowrap">
