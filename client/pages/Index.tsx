@@ -621,6 +621,38 @@ export default function Index() {
           />
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-[601px] mx-auto">
+          <div className="flex flex-col gap-[25px]">
+            <FAQItem
+              question="What is the peptide market?"
+              answer="The peptide market is a comprehensive platform offering personalized healthcare solutions including peptides, TRT, and other science-backed treatments. We focus on providing accessible, data-driven care tailored to your specific needs."
+            />
+            <FAQItem
+              question="How does the treatment process work?"
+              answer="Our treatment process is simple and convenient. Start by completing a health history form, then consult with our licensed clinicians who will review your medical history. If approved, your personalized treatment will be delivered directly to your door, and we'll continue to optimize your care."
+            />
+            <FAQItem
+              question="Are there any membership or consultation fees?"
+              answer="No, we pride ourselves on transparent pricing with no hidden fees. Unlike our competitors who charge $129+ in membership fees, we offer consultations at $0 cost. You only pay for your prescribed treatments."
+            />
+            <FAQItem
+              question="What makes you different from traditional medicine?"
+              answer="We take a proactive, data-driven approach to healthcare. Our treatments address root causes rather than just symptoms, and we offer convenient at-home lab draws and virtual appointments. Plus, there are no consultation fees like you'd find with traditional medicine."
+            />
+            <FAQItem
+              question="Is the treatment safe and FDA-approved?"
+              answer="Yes, all our treatments are dispensed through FDA-registered pharmacies and prescribed by board-certified physicians. We ensure the highest standards of safety and quality in all our products and services."
+            />
+            <FAQItem
+              question="How long does shipping take?"
+              answer="We offer free and discreet shipping on all prescriptions. Most orders are delivered within 3-5 business days. All packages are shipped in unmarked, discreet packaging to protect your privacy."
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
