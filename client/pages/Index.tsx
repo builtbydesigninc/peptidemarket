@@ -127,6 +127,7 @@ export default function Index() {
       {/* Hero Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl border border-[#EAEAEA] bg-gradient-to-b from-white to-[#F7F7F7] p-6 sm:p-8 md:p-10">
           {/* Brand Name */}
           <h3 className="text-[#333] font-serif text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">
             the peptide market
@@ -137,11 +138,11 @@ export default function Index() {
             {/* Hero Text */}
             <div className="flex flex-col gap-6">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[91px] font-helvetica leading-tight">
-                <span className="text-[#199F65]">Mental health</span>
+                <span className="bg-gradient-to-r from-[#1AAE6F] to-[#199F65] bg-clip-text text-transparent">Mental health</span>
                 <br />
                 <span className="text-[#1C1C1C]">personalized to you</span>
               </h1>
-              <p className="text-[#595959] font-helvetica text-base sm:text-lg md:text-xl">
+              <p className="text-[#6B7280] font-helvetica text-base sm:text-lg md:text-xl">
                 Customized care starts here
               </p>
             </div>
@@ -153,7 +154,7 @@ export default function Index() {
                 {testosteroneCards.map((card, index) => (
                   <div
                     key={index}
-                    className="bg-[#F9F7F1] rounded-xl p-5 flex flex-col gap-5 min-h-[182px]"
+                    className="rounded-xl p-5 flex flex-col gap-5 min-h-[182px] bg-white border border-[#EAEAEA] hover:shadow-sm transition-all hover:-translate-y-0.5"
                   >
                     <div className="flex justify-between items-center">
                       <div className="text-base sm:text-[17px] font-helvetica">
@@ -176,7 +177,7 @@ export default function Index() {
                 {[1, 2, 3].map((item) => (
                   <div
                     key={item}
-                    className="bg-[#F9F7F1] rounded-xl p-6 flex items-center justify-between min-h-[73px]"
+                    className="bg-white border border-[#EAEAEA] rounded-xl p-6 flex items-center justify-between min-h-[73px] hover:shadow-sm transition-all hover:-translate-y-0.5"
                   >
                     <div className="text-base sm:text-[17px] font-helvetica">
                       <span className="text-[#171716]">Boost</span>{" "}
@@ -187,6 +188,7 @@ export default function Index() {
                 ))}
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
