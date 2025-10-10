@@ -102,7 +102,7 @@ export default function Index() {
   const brandLogos = Array(5).fill("https://api.builder.io/api/v1/image/assets/TEMP/573f8a9a825e36f9f59ba4eedeca62ecaa3d9db8?width=390");
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Trust Banner */}
       <div className="bg-[#F9F7F0] px-6 sm:px-8 md:px-12 py-6 md:py-7 overflow-hidden">
         <div className="relative">
