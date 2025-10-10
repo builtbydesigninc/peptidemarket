@@ -98,7 +98,8 @@ export function BenefitShowcase({
       {/* Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
         {/* CTA Card */}
-        <div className={`lg:col-span-4 ${theme.panel} rounded-[22px] p-6 flex flex-col items-center justify-between min-h-[332px] backdrop-blur-sm`}>
+        <div className={`lg:col-span-4 ${theme.panel} rounded-[22px] p-6 flex flex-col items-center justify-between min-h-[332px] backdrop-blur-sm relative overflow-hidden`}>
+          <div className="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-br from-white/5 to-transparent" aria-hidden="true" />
           <div className="flex flex-col items-center gap-10 flex-1 justify-center">
             <h3 className="text-white font-helvetica text-lg text-center">{cta.title}</h3>
             <img src={cta.image} alt={cta.title} className="w-40 h-40 object-contain" />
@@ -109,16 +110,38 @@ export function BenefitShowcase({
         </div>
 
         {/* Carousel */}
-        <div className={`lg:col-span-8 ${theme.panel} rounded-[22px] p-4 sm:p-6 relative backdrop-blur-sm`}>
+        <div className={`lg:col-span-4 ${theme.panel} rounded-[22px] p-4 sm:p-6 relative backdrop-blur-sm`}>
           <Carousel slides={carouselSlides} className="" verticalDots />
           <div className="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-b from-white/5 to-transparent mix-blend-overlay" aria-hidden="true" />
+        </div>
+
+        {/* Checklist Panel */}
+        <div className={`lg:col-span-4 ${theme.panel} rounded-[22px] p-6 flex flex-col justify-between min-h-[332px] relative overflow-hidden`}>
+          <div>
+            <h3 className="text-white font-helvetica text-xl sm:text-2xl mb-4">Your plan</h3>
+            <ul className="space-y-3">
+              {[
+                "Build strength, energy, and libido",
+                "Personalized dosing by clinicians",
+                "Lab monitoring and optimizations",
+                "Discrete shipping and support",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-white/90">
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span className="text-sm sm:text-base font-helvetica">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <button className={`${theme.ctaBtn} mt-6 w-full transition-colors font-helvetica text-base px-6 py-3 rounded-[12px]`}>Start your plan</button>
+          <div className="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-tr from-white/5 to-transparent" aria-hidden="true" />
         </div>
       </div>
 
       {/* Bottom Row */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Testimonial */}
-        <div className="lg:col-span-4 relative rounded-[22px] overflow-hidden min-h-[211px] flex items-center justify-center p-6 sm:p-12">
+        <div className="lg:col-span-4 relative rounded-[22px] overflow-hidden min-h-[211px] flex items-center justify-center p-6 sm:p-12 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_10px_30px_rgba(0,0,0,0.35)]">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${testimonial.image}')` }} />
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 flex flex-col items-center gap-4 text-center">
@@ -128,7 +151,7 @@ export function BenefitShowcase({
         </div>
 
         {/* Tags */}
-        <div className={`lg:col-span-8 ${theme.panel} rounded-[22px] p-4 sm:p-5 min-h-[84px] flex flex-wrap items-center gap-2 sm:gap-3 backdrop-blur-sm`}>
+        <div className={`lg:col-span-8 ${theme.panel} rounded-[22px] p-4 sm:p-5 min-h-[84px] flex flex-wrap items-center gap-2 sm:gap-3 backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_10px_30px_rgba(0,0,0,0.35)]`}>
           {tags.map((tag) => (
             <div key={tag} className="bg-white/10 hover:bg-white/20 transition-colors rounded-[22px] px-4 py-2">
               <span className="text-white font-helvetica text-sm sm:text-[15px]">{tag}</span>
