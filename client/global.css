@@ -107,3 +107,24 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+/* Utilities for continuous marquee banner */
+@layer utilities {
+  .mask-fade { /* fade edges for seamless scroll */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+  .marquee {
+    animation: marquee var(--duration, 30s) linear infinite;
+    will-change: transform;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none; }
+}
