@@ -785,13 +785,16 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Large Watermark Text */}
-            <div className="text-white/30 font-orpheus text-6xl sm:text-7xl md:text-8xl lg:text-[171px] font-bold leading-none text-center sm:text-left overflow-hidden whitespace-nowrap">
-              <span className="hidden sm:inline">the peptide market</span>
-              <span className="inline sm:hidden">tpm</span>
-            </div>
+            {/* Large Watermark Text moved below for full-bleed */}
           </div>
         </div>
+      {/* Full-bleed watermark */}
+      <div className="w-full overflow-hidden whitespace-nowrap">
+        <div className="text-white/30 font-orpheus font-bold leading-none whitespace-nowrap text-center sm:text-left px-0">
+          <span className="hidden sm:inline text-[clamp(56px,13vw,220px)]">the peptide market</span>
+          <span className="inline sm:hidden text-5xl">tpm</span>
+        </div>
+      </div>
       </footer>
     </div>
   );
