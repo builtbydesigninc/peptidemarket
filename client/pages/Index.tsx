@@ -174,6 +174,31 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* Brands Section */}
+      <div className="py-12 sm:py-16 overflow-hidden bg-white">
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-0 mask-fade z-[1]" aria-hidden="true" />
+          <div className="marquee flex items-center gap-16 sm:gap-20 md:gap-24 w-max [--duration:30s] hover:[animation-play-state:paused] motion-reduce:!animate-none">
+            {brandLogos.map((logo, index) => (
+              <img
+                key={`a-${index}`}
+                src={logo}
+                alt="Brand logo"
+                className="h-10 sm:h-12 md:h-[51px] w-auto object-contain opacity-40 hover:opacity-100 transition-opacity"
+              />
+            ))}
+            {brandLogos.map((logo, index) => (
+              <img
+                key={`b-${index}`}
+                src={logo}
+                alt="Brand logo"
+                className="h-10 sm:h-12 md:h-[51px] w-auto object-contain opacity-40 hover:opacity-100 transition-opacity"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
