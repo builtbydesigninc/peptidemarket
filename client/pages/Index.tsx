@@ -574,7 +574,7 @@ export default function Index() {
           </div>
 
           {/* Testimonials Carousel */}
-          <div className="relative">
+          <div className="relative mb-12 sm:mb-14 md:mb-16">
             <Carousel
               slides={[
                 ...Array(8).fill(null).map((_, i) => (
@@ -608,6 +608,36 @@ export default function Index() {
               ]}
               verticalDots={false}
             />
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center gap-4">
+            <button
+              aria-label="Previous testimonial"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 hover:bg-white/30 transition-colors flex items-center justify-center"
+            >
+              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 30 30" fill="none">
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M10.0802 15.184L17.1119 22.2157L18.4018 20.9258L12.6601 15.184L18.4018 9.4441L17.1119 8.15234L10.0802 15.184Z"
+                  fill="#272727"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Next testimonial"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 hover:bg-white/30 transition-colors flex items-center justify-center"
+            >
+              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 30 30" fill="none">
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M19.9198 15.184L12.8881 22.2157L11.5982 20.9258L17.3399 15.184L11.5982 9.4441L12.8881 8.15234L19.9198 15.184Z"
+                  fill="#272727"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
