@@ -72,20 +72,7 @@ export function Carousel({ slides, options, className, verticalDots = true }: Ca
             />
           ))}
         </div>
-      ) : (
-        <div className="flex md:hidden items-center justify-center gap-2 mt-3">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              aria-label={`Go to slide ${i + 1}`}
-              onClick={() => emblaApi?.scrollTo(i)}
-              className={`w-2.5 h-2.5 rounded-full border border-white/60 ${
-                i === selectedIndex ? "bg-white" : "bg-transparent"
-              }`}
-            />
-          ))}
-        </div>
-      )}
+      ) : null}
     </div>
   );
 }
