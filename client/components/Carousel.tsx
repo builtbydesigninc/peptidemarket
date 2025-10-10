@@ -31,9 +31,9 @@ export function Carousel({ slides, options, className, verticalDots = true }: Ca
   return (
     <div className={"relative " + (className || "")}>
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-4">
+        <div className="flex -mx-2 sm:-mx-3 md:-mx-4">
           {slides.map((slide, i) => (
-            <div key={i} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%]">
+            <div key={i} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] px-2 sm:px-3 md:px-4">
               {slide}
             </div>
           ))}
@@ -60,7 +60,7 @@ export function Carousel({ slides, options, className, verticalDots = true }: Ca
 
       {/* Dots */}
       {verticalDots ? (
-        <div className="hidden md:flex flex-col gap-3 absolute -right-6 top-1/2 -translate-y-1/2">
+        <div className="hidden md:flex flex-col gap-3 absolute -right-10 md:-right-12 lg:-right-14 top-1/2 -translate-y-1/2">
           {slides.map((_, i) => (
             <button
               key={i}
