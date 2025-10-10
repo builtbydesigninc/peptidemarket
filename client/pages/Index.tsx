@@ -225,6 +225,7 @@ export default function Index() {
           <BenefitShowcase
             title={"Increase\nTestosterone"}
             ghostTitle="Increase Testosterone"
+            color="emerald"
             cta={{
               title: "Testosterone Solutions",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/6292e665eeb327f4a82e272d4cbac87046c6f323?width=312",
