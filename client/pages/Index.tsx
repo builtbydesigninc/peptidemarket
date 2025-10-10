@@ -69,6 +69,19 @@ export default function Index() {
       ),
       text: "100% Online Process",
     },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M20.5 4H16.5L15.17 2.67C14.89 2.39 14.5 2.22 14.09 2.22H9.91C9.5 2.22 9.11 2.39 8.83 2.67L7.5 4H3.5C2.67 4 2 4.67 2 5.5V19.5C2 20.33 2.67 21 3.5 21H20.5C21.33 21 22 20.33 22 19.5V5.5C22 4.67 21.33 4 20.5 4ZM12 18C9.24 18 7 15.76 7 13C7 10.24 9.24 8 12 8C14.76 8 17 10.24 17 13C17 15.76 14.76 18 12 18ZM12 10C10.34 10 9 11.34 9 13C9 14.66 10.34 16 12 16C13.66 16 15 14.66 15 13C15 11.34 13.66 10 12 10Z" fill="#333333"/>
+        </svg>
+      ),
+      text: "Private white label available",
+    },
   ];
 
   const testosteroneCards = [
@@ -328,13 +341,6 @@ export default function Index() {
                 <p className="text-black font-helvetica text-base sm:text-[19px] leading-normal">
                   Complete your health history form before meeting with a licensed clinician
                 </p>
-              </div>
-              <div className="mt-auto relative w-full aspect-[457/536] max-w-[320px] sm:max-w-[400px] mx-auto">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/e469dc7125be98eecb9d46279629d80da2f649be?width=913"
-                  alt="Health form on mobile device"
-                  className="w-full h-full object-contain"
-                />
               </div>
             </div>
 
