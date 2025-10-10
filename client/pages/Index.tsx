@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { Carousel } from "../components/Carousel";
 
 export default function Index() {
   const trustBadges = [
