@@ -4,6 +4,7 @@ import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
 import { FAQItem } from "../components/FAQItem";
 import { BenefitShowcase } from "../components/BenefitShowcase";
 import { HowItWorks } from "../components/HowItWorks";
+import { FeatureBento } from "../components/FeatureBento";
 
 export default function Index() {
   const trustBadges = [
@@ -268,32 +269,26 @@ export default function Index() {
               Increase Testosterone
             </h3>
             <div className="bg-gradient-to-b from-[#FAFAFA] to-[#F5F5F5] rounded-3xl p-4 sm:p-6 md:p-8 border border-[#EEEEEE]">
-              {/* eslint-disable-next-line */}
-              {(() => {
-                const { FeatureBento } = require("../components/FeatureBento");
-                return (
-                  <FeatureBento
-                    items={[
-                      {
-                        title: "Transparent pricing",
-                        description: "Affordable pricing with no hidden fees or memberships.",
-                      },
-                      {
-                        title: "FDA-registered pharmacies",
-                        description: "All treatments are dispensed through FDA-registered pharmacies.",
-                      },
-                      {
-                        title: "Free, discreet shipping",
-                        description: "Every prescription ships free in unmarked packaging.",
-                      },
-                      {
-                        title: "100% online process",
-                        description: "From consult to delivery, manage everything online.",
-                      },
-                    ]}
-                  />
-                );
-              })()}
+              <FeatureBento
+                items={[
+                  {
+                    title: "Transparent pricing",
+                    description: "Affordable pricing with no hidden fees or memberships.",
+                  },
+                  {
+                    title: "FDA-registered pharmacies",
+                    description: "All treatments are dispensed through FDA-registered pharmacies.",
+                  },
+                  {
+                    title: "Free, discreet shipping",
+                    description: "Every prescription ships free in unmarked packaging.",
+                  },
+                  {
+                    title: "100% online process",
+                    description: "From consult to delivery, manage everything online.",
+                  },
+                ]}
+              />
             </div>
           </div>
         </div>
