@@ -6,6 +6,7 @@ interface TestimonialsCarouselProps {
     text: string;
     name: string;
     rating: number;
+    image?: string;
   }>;
 }
 
