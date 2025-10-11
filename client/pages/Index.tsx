@@ -80,7 +80,10 @@ export default function Index() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M20.5 4H16.5L15.17 2.67C14.89 2.39 14.5 2.22 14.09 2.22H9.91C9.5 2.22 9.11 2.39 8.83 2.67L7.5 4H3.5C2.67 4 2 4.67 2 5.5V19.5C2 20.33 2.67 21 3.5 21H20.5C21.33 21 22 20.33 22 19.5V5.5C22 4.67 21.33 4 20.5 4ZM12 18C9.24 18 7 15.76 7 13C7 10.24 9.24 8 12 8C14.76 8 17 10.24 17 13C17 15.76 14.76 18 12 18ZM12 10C10.34 10 9 11.34 9 13C9 14.66 10.34 16 12 16C13.66 16 15 14.66 15 13C15 11.34 13.66 10 12 10Z" fill="#333333"/>
+          <path
+            d="M20.5 4H16.5L15.17 2.67C14.89 2.39 14.5 2.22 14.09 2.22H9.91C9.5 2.22 9.11 2.39 8.83 2.67L7.5 4H3.5C2.67 4 2 4.67 2 5.5V19.5C2 20.33 2.67 21 3.5 21H20.5C21.33 21 22 20.33 22 19.5V5.5C22 4.67 21.33 4 20.5 4ZM12 18C9.24 18 7 15.76 7 13C7 10.24 9.24 8 12 8C14.76 8 17 10.24 17 13C17 15.76 14.76 18 12 18ZM12 10C10.34 10 9 11.34 9 13C9 14.66 10.34 16 12 16C13.66 16 15 14.66 15 13C15 11.34 13.66 10 12 10Z"
+            fill="#333333"
+          />
         </svg>
       ),
       text: "Private white label available",
@@ -89,38 +92,57 @@ export default function Index() {
 
   const testosteroneCards = [
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/2ccd82d81a8d0ed082b1a57659b505fdfcae057a?width=253",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/2ccd82d81a8d0ed082b1a57659b505fdfcae057a?width=253",
     },
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/8e70cc51d231a522977a8d55c40f7a5276ae06ec?width=253",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/8e70cc51d231a522977a8d55c40f7a5276ae06ec?width=253",
     },
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/575fa964e8603d7a08b139169d7d2b64597f1440?width=253",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/575fa964e8603d7a08b139169d7d2b64597f1440?width=253",
     },
     {
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/e50612109e5c118efbdad3e1de5aecc53381b5dc?width=253",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/e50612109e5c118efbdad3e1de5aecc53381b5dc?width=253",
     },
   ];
 
-  const brandLogos = Array(5).fill("https://api.builder.io/api/v1/image/assets/TEMP/573f8a9a825e36f9f59ba4eedeca62ecaa3d9db8?width=390");
+  const brandLogos = Array(5).fill(
+    "https://api.builder.io/api/v1/image/assets/TEMP/573f8a9a825e36f9f59ba4eedeca62ecaa3d9db8?width=390",
+  );
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Trust Banner */}
       <div className="bg-[#F9F7F0] px-6 sm:px-8 md:px-12 py-6 md:py-7 overflow-hidden">
         <div className="relative">
-          <div className="pointer-events-none absolute inset-0 mask-fade z-[1]" aria-hidden="true" />
+          <div
+            className="pointer-events-none absolute inset-0 mask-fade z-[1]"
+            aria-hidden="true"
+          />
           <div className="marquee flex items-center gap-6 sm:gap-8 md:gap-10 w-max [--duration:40s] hover:[animation-play-state:paused] motion-reduce:!animate-none">
             {trustBadges.map((badge, index) => (
-              <div key={`a-${index}`} className="flex items-center gap-3 sm:gap-4">
+              <div
+                key={`a-${index}`}
+                className="flex items-center gap-3 sm:gap-4"
+              >
                 <div className="flex-shrink-0">{badge.icon}</div>
-                <div className="text-[#333] font-inter text-sm sm:text-base">{badge.text}</div>
+                <div className="text-[#333] font-inter text-sm sm:text-base">
+                  {badge.text}
+                </div>
               </div>
             ))}
             {trustBadges.map((badge, index) => (
-              <div key={`b-${index}`} className="flex items-center gap-3 sm:gap-4">
+              <div
+                key={`b-${index}`}
+                className="flex items-center gap-3 sm:gap-4"
+              >
                 <div className="flex-shrink-0">{badge.icon}</div>
-                <div className="text-[#333] font-inter text-sm sm:text-base">{badge.text}</div>
+                <div className="text-[#333] font-inter text-sm sm:text-base">
+                  {badge.text}
+                </div>
               </div>
             ))}
           </div>
@@ -131,67 +153,69 @@ export default function Index() {
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto">
           <div className="rounded-2xl border border-[#EAEAEA] bg-gradient-to-b from-white to-[#F7F7F7] p-6 sm:p-8 md:p-10">
-          {/* Brand Name */}
-          <h3 className="text-[#333] font-serif text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">
-            the peptide market
-          </h3>
+            {/* Brand Name */}
+            <h3 className="text-[#333] font-serif text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">
+              the peptide market
+            </h3>
 
-          {/* Main Content */}
-          <div className="flex flex-col gap-12 lg:gap-16">
-            {/* Hero Text */}
-            <div className="flex flex-col gap-6">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[91px] font-helvetica leading-tight">
-                <span className="bg-gradient-to-r from-[#1AAE6F] to-[#199F65] bg-clip-text text-transparent">Mental health</span>
-                <br />
-                <span className="text-[#1C1C1C]">personalized to you</span>
-              </h1>
-              <p className="text-[#6B7280] font-helvetica text-base sm:text-lg md:text-xl">
-                Customized care starts here
-              </p>
-            </div>
+            {/* Main Content */}
+            <div className="flex flex-col gap-12 lg:gap-16">
+              {/* Hero Text */}
+              <div className="flex flex-col gap-6">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[91px] font-helvetica leading-tight">
+                  <span className="bg-gradient-to-r from-[#1AAE6F] to-[#199F65] bg-clip-text text-transparent">
+                    Mental health
+                  </span>
+                  <br />
+                  <span className="text-[#1C1C1C]">personalized to you</span>
+                </h1>
+                <p className="text-[#6B7280] font-helvetica text-base sm:text-lg md:text-xl">
+                  Customized care starts here
+                </p>
+              </div>
 
-            {/* Cards Grid */}
-            <div className="flex flex-wrap gap-3 sm:gap-4">
-              {/* Large Cards - First Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full">
-                {testosteroneCards.map((card, index) => (
-                  <div
-                    key={index}
-                    className="rounded-xl p-5 flex flex-col gap-5 min-h-[182px] bg-white border border-[#EAEAEA] hover:shadow-sm transition-all hover:-translate-y-0.5"
-                  >
-                    <div className="flex justify-between items-center">
+              {/* Cards Grid */}
+              <div className="flex flex-wrap gap-3 sm:gap-4">
+                {/* Large Cards - First Row */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full">
+                  {testosteroneCards.map((card, index) => (
+                    <div
+                      key={index}
+                      className="rounded-xl p-5 flex flex-col gap-5 min-h-[182px] bg-white border border-[#EAEAEA] hover:shadow-sm transition-all hover:-translate-y-0.5"
+                    >
+                      <div className="flex justify-between items-center">
+                        <div className="text-base sm:text-[17px] font-helvetica">
+                          <span className="text-[#171716]">Boost</span>{" "}
+                          <span className="text-[#199F65]">testosterone</span>
+                        </div>
+                        <ChevronRight className="w-4 h-4 flex-shrink-0" />
+                      </div>
+                      <img
+                        src={card.image}
+                        alt="Product"
+                        className="w-32 h-28 object-contain mx-auto"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Horizontal Cards - Second Row */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 w-full">
+                  {[1, 2, 3].map((item) => (
+                    <div
+                      key={item}
+                      className="bg-white border border-[#EAEAEA] rounded-xl p-6 flex items-center justify-between min-h-[73px] hover:shadow-sm transition-all hover:-translate-y-0.5"
+                    >
                       <div className="text-base sm:text-[17px] font-helvetica">
                         <span className="text-[#171716]">Boost</span>{" "}
                         <span className="text-[#199F65]">testosterone</span>
                       </div>
                       <ChevronRight className="w-4 h-4 flex-shrink-0" />
                     </div>
-                    <img
-                      src={card.image}
-                      alt="Product"
-                      className="w-32 h-28 object-contain mx-auto"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Horizontal Cards - Second Row */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 w-full">
-                {[1, 2, 3].map((item) => (
-                  <div
-                    key={item}
-                    className="bg-white border border-[#EAEAEA] rounded-xl p-6 flex items-center justify-between min-h-[73px] hover:shadow-sm transition-all hover:-translate-y-0.5"
-                  >
-                    <div className="text-base sm:text-[17px] font-helvetica">
-                      <span className="text-[#171716]">Boost</span>{" "}
-                      <span className="text-[#199F65]">testosterone</span>
-                    </div>
-                    <ChevronRight className="w-4 h-4 flex-shrink-0" />
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -199,7 +223,10 @@ export default function Index() {
       {/* Brands Section */}
       <div className="py-12 sm:py-16 overflow-hidden bg-white">
         <div className="relative">
-          <div className="pointer-events-none absolute inset-0 mask-fade z-[1]" aria-hidden="true" />
+          <div
+            className="pointer-events-none absolute inset-0 mask-fade z-[1]"
+            aria-hidden="true"
+          />
           <div className="marquee flex items-center gap-16 sm:gap-20 md:gap-24 w-max [--duration:30s] hover:[animation-play-state:paused] motion-reduce:!animate-none">
             {brandLogos.map((logo, index) => (
               <img
@@ -230,13 +257,15 @@ export default function Index() {
             color="slate"
             cta={{
               title: "Testosterone Solutions",
-              image: "https://api.builder.io/api/v1/image/assets/TEMP/6292e665eeb327f4a82e272d4cbac87046c6f323?width=312",
+              image:
+                "https://api.builder.io/api/v1/image/assets/TEMP/6292e665eeb327f4a82e272d4cbac87046c6f323?width=312",
               buttonLabel: "Shop Now",
             }}
             slides={[
               {
                 title: "Injectable TRT",
-                image: "https://api.builder.io/api/v1/image/assets/TEMP/f76d1259301903dae173ebf0e7a3984c7a46f308?width=312",
+                image:
+                  "https://api.builder.io/api/v1/image/assets/TEMP/f76d1259301903dae173ebf0e7a3984c7a46f308?width=312",
                 bullets: [
                   "More energy, strength, and libido",
                   "Reduce body fat",
@@ -245,7 +274,8 @@ export default function Index() {
               },
               {
                 title: "Injectable TRT",
-                image: "https://api.builder.io/api/v1/image/assets/TEMP/339411d2a5e370cfdac41242553c914113a9bfdc?width=312",
+                image:
+                  "https://api.builder.io/api/v1/image/assets/TEMP/339411d2a5e370cfdac41242553c914113a9bfdc?width=312",
                 bullets: [
                   "More energy, strength, and libido",
                   "Reduce body fat",
@@ -253,10 +283,14 @@ export default function Index() {
                 ],
               },
             ]}
-            tags={["get in shape", "be energized", "stay hard", "increased sex drive"]}
+            tags={[
+              "get in shape",
+              "be energized",
+              "stay hard",
+              "increased sex drive",
+            ]}
             testimonial={{
-              text:
-                "DRT treatment has been the best decision I've ever made. I'm keeping up with men half my age, also my energy levels are that of my 25-year-old self. Can't say enough about the improvements to my lifestyle.",
+              text: "DRT treatment has been the best decision I've ever made. I'm keeping up with men half my age, also my energy levels are that of my 25-year-old self. Can't say enough about the improvements to my lifestyle.",
               author: "Sarah Jones",
               image:
                 "https://api.builder.io/api/v1/image/assets/TEMP/6a8f9d5eaf0c2d8a885e73df8e14237eb5b79db1?width=538",
@@ -273,19 +307,23 @@ export default function Index() {
                 items={[
                   {
                     title: "Transparent pricing",
-                    description: "Affordable pricing with no hidden fees or memberships.",
+                    description:
+                      "Affordable pricing with no hidden fees or memberships.",
                   },
                   {
                     title: "FDA-registered pharmacies",
-                    description: "All treatments are dispensed through FDA-registered pharmacies.",
+                    description:
+                      "All treatments are dispensed through FDA-registered pharmacies.",
                   },
                   {
                     title: "Free, discreet shipping",
-                    description: "Every prescription ships free in unmarked packaging.",
+                    description:
+                      "Every prescription ships free in unmarked packaging.",
                   },
                   {
                     title: "100% online process",
-                    description: "From consult to delivery, manage everything online.",
+                    description:
+                      "From consult to delivery, manage everything online.",
                   },
                 ]}
               />
@@ -331,7 +369,10 @@ export default function Index() {
                 No hidden fees, ever
               </h2>
               <p className="text-[#808080] font-helvetica text-base sm:text-[18px] md:text-[22px] mb-8 sm:mb-10 md:mb-12 leading-relaxed">
-                We build community by focusing on real solutions, personalized care, science-backed supplements and root cause therapies paired with virtual appointments and accessible diagnostics make healthcare seamless and centered on you.
+                We build community by focusing on real solutions, personalized
+                care, science-backed supplements and root cause therapies paired
+                with virtual appointments and accessible diagnostics make
+                healthcare seamless and centered on you.
               </p>
               <button className="bg-[#333] hover:bg-[#4a4a4a] transition-colors text-white font-helvetica text-xl sm:text-2xl md:text-[26px] px-12 sm:px-16 md:px-24 py-4 sm:py-5 md:py-6 rounded-full">
                 Shop now
@@ -358,68 +399,289 @@ export default function Index() {
               <div className="space-y-3 mb-6">
                 {/* Row: CONVENIENT */}
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase">CONVENIENT</div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">
+                    CONVENIENT
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
+                        fill="#2F2F2F"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
+                        fill="#2F2F2F"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 {/* Row: MEMBERSHIP FEES */}
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase">MEMBERSHIP FEES</div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$129+</span></div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">
+                    MEMBERSHIP FEES
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                      $0
+                    </span>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                      $129+
+                    </span>
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                      $0
+                    </span>
+                  </div>
                 </div>
 
                 {/* Row: CONSULTATION FEES */}
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase">CONSULTATION FEES</div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$0</span></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">$20+</span></div>
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">
+                    CONSULTATION FEES
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                      $0
+                    </span>
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                      $0
+                    </span>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                      $20+
+                    </span>
+                  </div>
                 </div>
 
                 {/* Row: TREATS ROOT CAUSE */}
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase">TREATS ROOT CAUSE</div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">
+                    TREATS ROOT CAUSE
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
+                        fill="#2F2F2F"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 {/* Row: LAB DRAWS */}
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase">LAB DRAWS</div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">
+                    LAB DRAWS
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
+                        fill="#2F2F2F"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
+                        fill="#2F2F2F"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 {/* Row: PROACTIVE */}
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase">PROACTIVE</div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">
+                    PROACTIVE
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
+                        fill="#2F2F2F"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 {/* Row: DATA DRIVEN */}
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] uppercase">DATA DRIVEN</div>
-                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z" fill="#2F2F2F"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
-                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center"><svg className="w-5 h-5" viewBox="0 0 27 27" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z" fill="black"/></svg></div>
+                  <div className="text-[#333] font-helvetica text-[10px] uppercase">
+                    DATA DRIVEN
+                  </div>
+                  <div className="h-11 md:h-12 rounded bg-[#C7D5F6] flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
+                        fill="#2F2F2F"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div className="h-11 md:h-12 rounded border border-[#EDEDED] bg-white flex items-center justify-center">
+                    <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.29473 6.49444C6.4477 6.34167 6.65504 6.25586 6.87123 6.25586C7.08742 6.25586 7.29477 6.34167 7.44773 6.49444L20.5005 19.5472C20.5806 19.6219 20.6449 19.7119 20.6895 19.812C20.7341 19.9121 20.7581 20.0201 20.76 20.1297C20.7619 20.2392 20.7418 20.348 20.7008 20.4496C20.6597 20.5512 20.5987 20.6434 20.5212 20.7209C20.4437 20.7984 20.3514 20.8594 20.2499 20.9005C20.1483 20.9415 20.0395 20.9616 19.9299 20.9597C19.8204 20.9578 19.7124 20.9338 19.6123 20.8892C19.5122 20.8446 19.4222 20.7803 19.3475 20.7002L6.29473 7.64744C6.14196 7.49447 6.05615 7.28713 6.05615 7.07094C6.05615 6.85475 6.14196 6.6474 6.29473 6.49444Z"
+                        fill="black"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.5006 6.49444C20.6534 6.6474 20.7392 6.85475 20.7392 7.07094C20.7392 7.28713 20.6534 7.49447 20.5006 7.64744L7.44787 20.7002C7.29322 20.8443 7.08868 20.9227 6.87733 20.919C6.66599 20.9153 6.46434 20.8297 6.31487 20.6802C6.1654 20.5307 6.07978 20.3291 6.07605 20.1177C6.07233 19.9064 6.15078 19.7018 6.29488 19.5472L19.3476 6.49444C19.5006 6.34167 19.7079 6.25586 19.9241 6.25586C20.1403 6.25586 20.3477 6.34167 20.5006 6.49444Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
               {/* Total Cost Row */}
               <div className="pt-4 sm:pt-5 md:pt-6 border-t border-[#CFCFCF]">
                 <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] font-bold uppercase">TOTAL COST</div>
-                  <div className="py-2"><span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">$0</span></div>
-                  <div className="py-2"><span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">$129+</span></div>
-                  <div className="py-2"><span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">$20+</span></div>
+                  <div className="text-[#333] font-helvetica text-[10px] font-bold uppercase">
+                    TOTAL COST
+                  </div>
+                  <div className="py-2">
+                    <span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">
+                      $0
+                    </span>
+                  </div>
+                  <div className="py-2">
+                    <span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">
+                      $129+
+                    </span>
+                  </div>
+                  <div className="py-2">
+                    <span className="text-[#333] font-helvetica text-sm sm:text-base md:text-lg font-bold">
+                      $20+
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -436,10 +698,30 @@ export default function Index() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
             {[
-              { name: "Ashfaq Rahman", role: "CEO", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F3fd2907523f946399e2ad0d2cd69a22a?format=webp&width=800" },
-              { name: "Oliver Ibrahim", role: "Chief of Staff", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F89910f74fc434db5a2dd68727b14fc3f?format=webp&width=800" },
-              { name: "Muhammad Bin Sohail", role: "Head of Technology", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F2ab4c0bd514143d3a95e3e791a9ead11?format=webp&width=800" },
-              { name: "Gaelle Seman", role: "Head of Sales", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F47a20243accf4fc18f06692a735c0baf?format=webp&width=800" },
+              {
+                name: "Ashfaq Rahman",
+                role: "CEO",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F3fd2907523f946399e2ad0d2cd69a22a?format=webp&width=800",
+              },
+              {
+                name: "Oliver Ibrahim",
+                role: "Chief of Staff",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F89910f74fc434db5a2dd68727b14fc3f?format=webp&width=800",
+              },
+              {
+                name: "Muhammad Bin Sohail",
+                role: "Head of Technology",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F2ab4c0bd514143d3a95e3e791a9ead11?format=webp&width=800",
+              },
+              {
+                name: "Gaelle Seman",
+                role: "Head of Sales",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F47a20243accf4fc18f06692a735c0baf?format=webp&width=800",
+              },
             ].map((member, index) => (
               <div
                 key={index}
@@ -451,7 +733,9 @@ export default function Index() {
                   className="w-full aspect-[4/5] sm:aspect-[3/4] object-cover transform transition duration-500 ease-out filter grayscale group-hover:grayscale-0 group-hover:scale-[1.08]"
                 />
                 <div className="absolute left-3 right-3 bottom-3 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg min-h-[72px] flex flex-col justify-center">
-                  <h3 className={`text-[#333] font-helvetica leading-tight ${member.name === "Muhammad Bin Sohail" ? "text-[14px] sm:text-[15px] md:text-[16px]" : "text-base sm:text-lg md:text-[18px]"} whitespace-nowrap overflow-hidden text-ellipsis`}>
+                  <h3
+                    className={`text-[#333] font-helvetica leading-tight ${member.name === "Muhammad Bin Sohail" ? "text-[14px] sm:text-[15px] md:text-[16px]" : "text-base sm:text-lg md:text-[18px]"} whitespace-nowrap overflow-hidden text-ellipsis`}
+                  >
                     {member.name}
                   </h3>
                   <p className="text-[#90847E] font-helvetica text-xs sm:text-sm">
@@ -473,10 +757,30 @@ export default function Index() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-10 sm:mb-12 md:mb-16">
             {[
-              { name: "Ashfaq Rahman", role: "MD", image: "https://api.builder.io/api/v1/image/assets/TEMP/9a730167ce218459764ed3b2d71115d2742b6411?width=544" },
-              { name: "Oliver Ibrahim", role: "Doctor", image: "https://api.builder.io/api/v1/image/assets/TEMP/c9ab7ea3e7d76914190be15f86949192ad3d35bf?width=544" },
-              { name: "Muhammad Bin Sohail", role: "Head of Technology", image: "https://api.builder.io/api/v1/image/assets/TEMP/4b2ebd867dd1d91c824c85da76edf4cf57c8e550?width=544" },
-              { name: "Gaelle Seman", role: "Head of Sales", image: "https://api.builder.io/api/v1/image/assets/TEMP/14ff3c745ade6c7194d578ebd55a3834d188aa07?width=544" },
+              {
+                name: "Ashfaq Rahman",
+                role: "MD",
+                image:
+                  "https://api.builder.io/api/v1/image/assets/TEMP/9a730167ce218459764ed3b2d71115d2742b6411?width=544",
+              },
+              {
+                name: "Oliver Ibrahim",
+                role: "Doctor",
+                image:
+                  "https://api.builder.io/api/v1/image/assets/TEMP/c9ab7ea3e7d76914190be15f86949192ad3d35bf?width=544",
+              },
+              {
+                name: "Muhammad Bin Sohail",
+                role: "Head of Technology",
+                image:
+                  "https://api.builder.io/api/v1/image/assets/TEMP/4b2ebd867dd1d91c824c85da76edf4cf57c8e550?width=544",
+              },
+              {
+                name: "Gaelle Seman",
+                role: "Head of Sales",
+                image:
+                  "https://api.builder.io/api/v1/image/assets/TEMP/14ff3c745ade6c7194d578ebd55a3834d188aa07?width=544",
+              },
             ].map((advisor, index) => (
               <div
                 key={index}
@@ -605,7 +909,9 @@ export default function Index() {
               <div className="flex flex-col gap-[23px] max-w-[359px] w-full">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-helvetica font-normal leading-normal">
                   <span className="text-white">Unlock the free </span>
-                  <span className="text-[#B9B9B9]">guide to protein for weight loss</span>
+                  <span className="text-[#B9B9B9]">
+                    guide to protein for weight loss
+                  </span>
                 </h2>
                 <p className="text-[#B9B9B9] font-helvetica text-base sm:text-lg">
                   Written by board-certified doctors to support your journey
@@ -626,11 +932,17 @@ export default function Index() {
                 </div>
                 <p className="text-[#B9B9B9] font-helvetica text-sm">
                   By creating an account using email, I agree to the{" "}
-                  <a href="#" className="underline hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="underline hover:text-white transition-colors"
+                  >
                     Terms & conditions
                   </a>{" "}
                   and acknowledge the{" "}
-                  <a href="#" className="underline hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="underline hover:text-white transition-colors"
+                  >
                     Privacy Policy
                   </a>
                   .
@@ -653,22 +965,40 @@ export default function Index() {
                   Navigation
                 </h3>
                 <nav className="flex flex-col gap-[14px]">
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     Home
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     Shop / Products
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     About
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     FAQs
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     Contact / Support
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     Clinician Login
                   </a>
                 </nav>
@@ -680,16 +1010,28 @@ export default function Index() {
                   Legal & Compliance
                 </h3>
                 <nav className="flex flex-col gap-[14px]">
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     Terms & Conditions
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     Privacy Policy
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     Return / Refund Policy
                   </a>
-                  <a href="#" className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  >
                     HIPAA Compliance Notice
                   </a>
                 </nav>
@@ -731,7 +1073,10 @@ export default function Index() {
           </div>
         </div>
         {/* Absolute full-width watermark with 10px margins */}
-        <div aria-hidden className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px] z-0">
+        <div
+          aria-hidden
+          className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px] z-0"
+        >
           <div className="w-full text-white/30 font-orpheus font-bold leading-none whitespace-nowrap text-[clamp(28px,12vw,220px)]">
             the peptide market
           </div>
