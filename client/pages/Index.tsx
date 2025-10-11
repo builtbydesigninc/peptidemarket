@@ -406,25 +406,25 @@ export default function Index() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
             {[
-              { name: "Ashfaq Rahman", role: "CEO", image: "https://api.builder.io/api/v1/image/assets/TEMP/9a730167ce218459764ed3b2d71115d2742b6411?width=544" },
-              { name: "Oliver Ibrahim", role: "Chief of Staff", image: "https://api.builder.io/api/v1/image/assets/TEMP/c9ab7ea3e7d76914190be15f86949192ad3d35bf?width=544" },
-              { name: "Muhammad Bin Sohail", role: "Head of Technology", image: "https://api.builder.io/api/v1/image/assets/TEMP/4b2ebd867dd1d91c824c85da76edf4cf57c8e550?width=544" },
-              { name: "Gaelle Seman", role: "Head of Sales", image: "https://api.builder.io/api/v1/image/assets/TEMP/14ff3c745ade6c7194d578ebd55a3834d188aa07?width=544" },
+              { name: "Ashfaq Rahman", role: "CEO", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F3fd2907523f946399e2ad0d2cd69a22a?format=webp&width=800" },
+              { name: "Oliver Ibrahim", role: "Chief of Staff", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F89910f74fc434db5a2dd68727b14fc3f?format=webp&width=800" },
+              { name: "Muhammad Bin Sohail", role: "Head of Technology", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F2ab4c0bd514143d3a95e3e791a9ead11?format=webp&width=800" },
+              { name: "Gaelle Seman", role: "Head of Sales", image: "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F47a20243accf4fc18f06692a735c0baf?format=webp&width=800" },
             ].map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-md shadow-[0_5.67px_45.362px_0_rgba(0,0,0,0.25)] overflow-hidden"
+                className="group relative rounded-md overflow-hidden bg-white shadow-[0_5.67px_45.362px_0_rgba(0,0,0,0.25)]"
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full aspect-square object-cover"
+                  className="w-full aspect-square object-cover transform transition duration-500 ease-out filter grayscale group-hover:grayscale-0 group-hover:scale-[1.03]"
                 />
-                <div className="p-4">
-                  <h3 className="text-[#333] font-helvetica text-lg sm:text-xl md:text-[22px] mb-2">
+                <div className="absolute left-3 bottom-3 bg-white/90 backdrop-blur-sm rounded-md px-3 py-2 shadow">
+                  <h3 className="text-[#333] font-helvetica text-base sm:text-lg md:text-[18px] leading-tight">
                     {member.name}
                   </h3>
-                  <p className="text-[#90847E] font-helvetica text-sm md:text-[14px]">
+                  <p className="text-[#90847E] font-helvetica text-xs sm:text-sm">
                     {member.role}
                   </p>
                 </div>
