@@ -261,6 +261,41 @@ export default function Index() {
                 "https://api.builder.io/api/v1/image/assets/TEMP/6a8f9d5eaf0c2d8a885e73df8e14237eb5b79db1?width=538",
             }}
           />
+
+          {/* Light Bento Grid of Features */}
+          <div className="mt-8 sm:mt-10 md:mt-12">
+            <h3 className="text-[#111] font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-4 sm:mb-6">
+              Increase Testosterone
+            </h3>
+            <div className="bg-gradient-to-b from-[#FAFAFA] to-[#F5F5F5] rounded-3xl p-4 sm:p-6 md:p-8 border border-[#EEEEEE]">
+              {/* eslint-disable-next-line */}
+              {(() => {
+                const { FeatureBento } = require("../components/FeatureBento");
+                return (
+                  <FeatureBento
+                    items={[
+                      {
+                        title: "Transparent pricing",
+                        description: "Affordable pricing with no hidden fees or memberships.",
+                      },
+                      {
+                        title: "FDA-registered pharmacies",
+                        description: "All treatments are dispensed through FDA-registered pharmacies.",
+                      },
+                      {
+                        title: "Free, discreet shipping",
+                        description: "Every prescription ships free in unmarked packaging.",
+                      },
+                      {
+                        title: "100% online process",
+                        description: "From consult to delivery, manage everything online.",
+                      },
+                    ]}
+                  />
+                );
+              })()}
+            </div>
+          </div>
         </div>
       </div>
 
