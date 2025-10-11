@@ -82,7 +82,9 @@ export function HowItWorks({
                 aria-hidden
                 className={
                   "pointer-events-none absolute inset-0 rounded-[22px] transition-opacity " +
-                  (isActive ? "opacity-100 bg-gradient-to-b from-[#EDEDED]/40 to-transparent" : "opacity-0")
+                  (isActive
+                    ? "opacity-100 bg-gradient-to-b from-[#EDEDED]/40 to-transparent"
+                    : "opacity-0")
                 }
               />
             </div>

@@ -827,41 +827,57 @@ export default function Index() {
                 text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
                 name: "Nawaf",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
               },
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
+                text: "My energy levels are back and I feel like myself again.",
+                name: "Rahul",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
               },
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
+                text: "Super convenient and discrete — highly recommend.",
+                name: "Jess",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1544005314-5d2da3f0f2c7?q=80&w=800&auto=format&fit=crop",
               },
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
+                text: "Support team is fantastic and the results speak for themselves.",
+                name: "Cameron",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=800&auto=format&fit=crop",
               },
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
+                text: "Fast shipping and professional clinicians.",
+                name: "Olivia",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop",
               },
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
+                text: "Noticeable improvement within weeks.",
+                name: "Jacob",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1545996124-0501ebae84d0?q=80&w=800&auto=format&fit=crop",
               },
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
+                text: "The process was easy and affordable.",
+                name: "Amira",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1544005313-3d5f07b1d2c8?q=80&w=800&auto=format&fit=crop",
               },
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
+                text: "Fantastic results and great experience.",
+                name: "Leo",
                 rating: 5,
+                image:
+                  "https://images.unsplash.com/photo-1541534401786-2077eed87a76?q=80&w=800&auto=format&fit=crop",
               },
             ]}
           />
