@@ -418,10 +418,10 @@ export default function Index() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full aspect-[3/4] object-cover transform transition duration-500 ease-out filter grayscale group-hover:grayscale-0 group-hover:scale-[1.05]"
+                  className="w-full aspect-[4/5] sm:aspect-[3/4] object-cover transform transition duration-500 ease-out filter grayscale group-hover:grayscale-0 group-hover:scale-[1.08]"
                 />
-                <div className="absolute left-3 bottom-3 bg-white/90 backdrop-blur-sm rounded-md px-3 py-2 shadow">
-                  <h3 className={`text-[#333] font-helvetica leading-tight ${member.name === "Muhammad Bin Sohail" ? "text-sm sm:text-base md:text-[16px]" : "text-base sm:text-lg md:text-[18px]"}`}>
+                <div className="absolute left-3 right-3 bottom-3 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg min-h-[72px] flex flex-col justify-center">
+                  <h3 className={`text-[#333] font-helvetica leading-tight ${member.name === "Muhammad Bin Sohail" ? "text-[14px] sm:text-[15px] md:text-[16px]" : "text-base sm:text-lg md:text-[18px]"} whitespace-nowrap overflow-hidden text-ellipsis`}>
                     {member.name}
                   </h3>
                   <p className="text-[#90847E] font-helvetica text-xs sm:text-sm">
