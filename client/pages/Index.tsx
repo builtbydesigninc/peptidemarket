@@ -256,7 +256,8 @@ export default function Index() {
               Increase Testosterone
             </h3>
             <div className="bg-gradient-to-b from-[#0F0F10] to-[#151515] rounded-3xl p-4 sm:p-6 md:p-8 border border-[#222222]">
-              <FeatureBento variant="dark"
+              <FeatureBento
+                variant="dark"
                 items={[
                   {
                     title: "Testosterone solutions",
@@ -295,7 +296,8 @@ export default function Index() {
 
       {/* How It Works Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
-        <HowItWorks variant="dark"
+        <HowItWorks
+          variant="dark"
           steps={[
             {
               title: "Complete your health history",
@@ -781,14 +783,46 @@ export default function Index() {
 
           <TestimonialsCarousel
             testimonials={[
-              { text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.", name: "Nawaf", rating: 5 },
-              { text: "My energy levels are back and I feel like myself again.", name: "Rahul", rating: 5 },
-              { text: "Super convenient and discrete — highly recommend.", name: "Jess", rating: 5 },
-              { text: "Support team is fantastic and the results speak for themselves.", name: "Cameron", rating: 5 },
-              { text: "Fast shipping and professional clinicians.", name: "Olivia", rating: 5 },
-              { text: "Noticeable improvement within weeks.", name: "Jacob", rating: 5 },
-              { text: "The process was easy and affordable.", name: "Amira", rating: 5 },
-              { text: "Fantastic results and great experience.", name: "Leo", rating: 5 },
+              {
+                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
+                name: "Nawaf",
+                rating: 5,
+              },
+              {
+                text: "My energy levels are back and I feel like myself again.",
+                name: "Rahul",
+                rating: 5,
+              },
+              {
+                text: "Super convenient and discrete — highly recommend.",
+                name: "Jess",
+                rating: 5,
+              },
+              {
+                text: "Support team is fantastic and the results speak for themselves.",
+                name: "Cameron",
+                rating: 5,
+              },
+              {
+                text: "Fast shipping and professional clinicians.",
+                name: "Olivia",
+                rating: 5,
+              },
+              {
+                text: "Noticeable improvement within weeks.",
+                name: "Jacob",
+                rating: 5,
+              },
+              {
+                text: "The process was easy and affordable.",
+                name: "Amira",
+                rating: 5,
+              },
+              {
+                text: "Fantastic results and great experience.",
+                name: "Leo",
+                rating: 5,
+              },
             ]}
           />
         </div>
@@ -798,27 +832,33 @@ export default function Index() {
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-[601px] mx-auto">
           <div className="flex flex-col gap-[25px]">
-            <FAQItem variant="dark"
+            <FAQItem
+              variant="dark"
               question="What is the peptide market?"
               answer="The peptide market is a comprehensive platform offering personalized healthcare solutions including peptides, TRT, and other science-backed treatments. We focus on providing accessible, data-driven care tailored to your specific needs."
             />
-            <FAQItem variant="dark"
+            <FAQItem
+              variant="dark"
               question="How does the treatment process work?"
               answer="Our treatment process is simple and convenient. Start by completing a health history form, then consult with our licensed clinicians who will review your medical history. If approved, your personalized treatment will be delivered directly to your door, and we'll continue to optimize your care."
             />
-            <FAQItem variant="dark"
+            <FAQItem
+              variant="dark"
               question="Are there any membership or consultation fees?"
               answer="No, we pride ourselves on transparent pricing with no hidden fees. Unlike our competitors who charge $129+ in membership fees, we offer consultations at $0 cost. You only pay for your prescribed treatments."
             />
-            <FAQItem variant="dark"
+            <FAQItem
+              variant="dark"
               question="What makes you different from traditional medicine?"
               answer="We take a proactive, data-driven approach to healthcare. Our treatments address root causes rather than just symptoms, and we offer convenient at-home lab draws and virtual appointments. Plus, there are no consultation fees like you'd find with traditional medicine."
             />
-            <FAQItem variant="dark"
+            <FAQItem
+              variant="dark"
               question="Is the treatment safe and FDA-approved?"
               answer="Yes, all our treatments are dispensed through FDA-registered pharmacies and prescribed by board-certified physicians. We ensure the highest standards of safety and quality in all our products and services."
             />
-            <FAQItem variant="dark"
+            <FAQItem
+              variant="dark"
               question="How long does shipping take?"
               answer="We offer free and discreet shipping on all prescriptions. Most orders are delivered within 3-5 business days. All packages are shipped in unmarked, discreet packaging to protect your privacy."
             />

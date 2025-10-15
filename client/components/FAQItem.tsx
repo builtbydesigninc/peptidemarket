@@ -25,7 +25,9 @@ export function FAQItem({ question, answer, variant = "light" }: FAQItemProps) {
           onClick={() => setIsExpanded(!isExpanded)}
           className={
             "flex-shrink-0 w-[46px] h-[46px] rounded-full transition-colors flex items-center justify-center " +
-            (isDark ? "bg-white/10 hover:bg-white/20" : "bg-black/10 hover:bg-black/20")
+            (isDark
+              ? "bg-white/10 hover:bg-white/20"
+              : "bg-black/10 hover:bg-black/20")
           }
           aria-label={isExpanded ? "Collapse answer" : "Expand answer"}
           aria-expanded={isExpanded}
@@ -71,7 +73,9 @@ export function FAQItem({ question, answer, variant = "light" }: FAQItemProps) {
           {answer}
         </div>
       )}
-      <div className={"w-full h-px " + (isDark ? "bg-white/10" : "bg-[#E1E1E1]")} />
+      <div
+        className={"w-full h-px " + (isDark ? "bg-white/10" : "bg-[#E1E1E1]")}
+      />
     </div>
   );
 }

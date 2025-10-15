@@ -58,12 +58,12 @@ export function HowItWorks({
               className={
                 "relative rounded-[22px] p-6 sm:p-8 overflow-hidden transition-all duration-300 focus:outline-none md:min-h-[360px] " +
                 (isDark
-                  ? (isActive
-                      ? "md:flex-[1.6] bg-[#121212] border border-[#2A2A2A] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
-                      : "md:flex-1 bg-[#0F0F0F] border border-transparent opacity-90")
-                  : (isActive
-                      ? "md:flex-[1.6] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-[#EAEAEA] bg-white"
-                      : "md:flex-1 bg-[#F9F7F1] border border-transparent opacity-90"))
+                  ? isActive
+                    ? "md:flex-[1.6] bg-[#121212] border border-[#2A2A2A] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+                    : "md:flex-1 bg-[#0F0F0F] border border-transparent opacity-90"
+                  : isActive
+                    ? "md:flex-[1.6] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-[#EAEAEA] bg-white"
+                    : "md:flex-1 bg-[#F9F7F1] border border-transparent opacity-90")
               }
               style={{ minWidth: 0 }}
               tabIndex={0}
@@ -116,9 +116,9 @@ export function HowItWorks({
                 className={
                   "pointer-events-none absolute inset-0 rounded-[22px] transition-opacity " +
                   (isActive
-                    ? (isDark
-                        ? "opacity-100 bg-gradient-to-b from-white/5 to-transparent"
-                        : "opacity-100 bg-gradient-to-b from-[#EDEDED]/40 to-transparent")
+                    ? isDark
+                      ? "opacity-100 bg-gradient-to-b from-white/5 to-transparent"
+                      : "opacity-100 bg-gradient-to-b from-[#EDEDED]/40 to-transparent"
                     : "opacity-0")
                 }
               />
