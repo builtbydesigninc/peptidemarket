@@ -334,7 +334,7 @@ export default function Index() {
 
       {/* How It Works Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
-        <HowItWorks
+        <HowItWorks variant="dark"
           steps={[
             {
               title: "Complete your health history",
