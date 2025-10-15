@@ -2,7 +2,6 @@ import { ChevronRight } from "lucide-react";
 import { Carousel } from "../components/Carousel";
 import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
 import { FAQItem } from "../components/FAQItem";
-import { BenefitShowcase } from "../components/BenefitShowcase";
 import { HowItWorks } from "../components/HowItWorks";
 import { FeatureBento } from "../components/FeatureBento";
 
