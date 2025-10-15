@@ -251,53 +251,7 @@ export default function Index() {
       {/* Benefits and Products Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
-          <BenefitShowcase
-            title={"Increase\nTestosterone"}
-            ghostTitle="Increase Testosterone"
-            color="slate"
-            cta={{
-              title: "Testosterone Solutions",
-              image:
-                "https://api.builder.io/api/v1/image/assets/TEMP/6292e665eeb327f4a82e272d4cbac87046c6f323?width=312",
-              buttonLabel: "Shop Now",
-            }}
-            slides={[
-              {
-                title: "Injectable TRT",
-                image:
-                  "https://api.builder.io/api/v1/image/assets/TEMP/f76d1259301903dae173ebf0e7a3984c7a46f308?width=312",
-                bullets: [
-                  "More energy, strength, and libido",
-                  "Reduce body fat",
-                  "Increase mental clarity",
-                ],
-              },
-              {
-                title: "Injectable TRT",
-                image:
-                  "https://api.builder.io/api/v1/image/assets/TEMP/339411d2a5e370cfdac41242553c914113a9bfdc?width=312",
-                bullets: [
-                  "More energy, strength, and libido",
-                  "Reduce body fat",
-                  "Increase mental clarity",
-                ],
-              },
-            ]}
-            tags={[
-              "get in shape",
-              "be energized",
-              "stay hard",
-              "increased sex drive",
-            ]}
-            testimonial={{
-              text: "DRT treatment has been the best decision I've ever made. I'm keeping up with men half my age, also my energy levels are that of my 25-year-old self. Can't say enough about the improvements to my lifestyle.",
-              author: "Sarah Jones",
-              image:
-                "https://api.builder.io/api/v1/image/assets/TEMP/6a8f9d5eaf0c2d8a885e73df8e14237eb5b79db1?width=538",
-            }}
-          />
-
-          {/* Light Bento Grid of Features */}
+          {/* Feature grid replacement */}
           <div className="mt-8 sm:mt-10 md:mt-12">
             <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-4 sm:mb-6">
               Increase Testosterone
