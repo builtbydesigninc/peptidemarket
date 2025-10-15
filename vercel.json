@@ -5,8 +5,8 @@
       "destination": "/index.html"
     }
   ],
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
-  "framework": "vite"
+  "buildCommand": "pnpm run build:client",
+  "outputDirectory": "dist/spa",
+  "framework": null
 }
 
