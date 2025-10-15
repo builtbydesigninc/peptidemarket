@@ -10,22 +10,35 @@ interface HowItWorksProps {
   title?: string;
   subtitle?: string;
   steps: Step[];
+  variant?: "light" | "dark";
 }
 
 export function HowItWorks({
   title = "We're with you every step of the way",
   subtitle,
   steps,
+  variant = "light",
 }: HowItWorksProps) {
   const [active, setActive] = useState(0);
+  const isDark = variant === "dark";
 
   return (
     <div className="max-w-7xl mx-auto">
-      <h2 className="text-[#808080] font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-3 sm:mb-4 md:mb-6">
+      <h2
+        className={
+          (isDark ? "text-[#9CA3AF]" : "text-[#808080]") +
+          " font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-3 sm:mb-4 md:mb-6"
+        }
+      >
         {title}
       </h2>
       {subtitle ? (
-        <p className="text-[#808080] font-helvetica mb-8 sm:mb-10 md:mb-12">
+        <p
+          className={
+            (isDark ? "text-[#9CA3AF]" : "text-[#808080]") +
+            " font-helvetica mb-8 sm:mb-10 md:mb-12"
+          }
+        >
           {subtitle}
         </p>
       ) : null}
@@ -43,27 +56,47 @@ export function HowItWorks({
               onMouseEnter={() => setActive(i)}
               onFocus={() => setActive(i)}
               className={
-                "relative rounded-[22px] p-6 sm:p-8 overflow-hidden transition-all duration-300 focus:outline-none " +
-                "bg-[#F9F7F1] md:min-h-[360px] " +
-                (isActive
-                  ? "md:flex-[1.6] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-[#EAEAEA] bg-white"
-                  : "md:flex-1 border border-transparent opacity-90")
+                "relative rounded-[22px] p-6 sm:p-8 overflow-hidden transition-all duration-300 focus:outline-none md:min-h-[360px] " +
+                (isDark
+                  ? (isActive
+                      ? "md:flex-[1.6] bg-[#121212] border border-[#2A2A2A] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+                      : "md:flex-1 bg-[#0F0F0F] border border-transparent opacity-90")
+                  : (isActive
+                      ? "md:flex-[1.6] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-[#EAEAEA] bg-white"
+                      : "md:flex-1 bg-[#F9F7F1] border border-transparent opacity-90"))
               }
               style={{ minWidth: 0 }}
               tabIndex={0}
             >
               {/* Header */}
               <div className="flex items-start gap-3 mb-4 sm:mb-6">
-                <div className="flex-shrink-0 w-6 h-6 rounded border border-black/70 flex items-center justify-center text-sm text-black font-helvetica">
+                <div
+                  className={
+                    "flex-shrink-0 w-6 h-6 rounded border flex items-center justify-center text-sm font-helvetica " +
+                    (isDark
+                      ? "border-white/60 text-white"
+                      : "border-black/70 text-black")
+                  }
+                >
                   {i + 1}
                 </div>
-                <h3 className="text-black font-helvetica text-base sm:text-lg md:text-xl">
+                <h3
+                  className={
+                    (isDark ? "text-white" : "text-black") +
+                    " font-helvetica text-base sm:text-lg md:text-xl"
+                  }
+                >
                   {step.title}
                 </h3>
               </div>
 
               {/* Body */}
-              <p className="text-[#333] font-helvetica text-sm sm:text-base leading-relaxed max-w-prose">
+              <p
+                className={
+                  (isDark ? "text-[#E5E5E5]" : "text-[#333]") +
+                  " font-helvetica text-sm sm:text-base leading-relaxed max-w-prose"
+                }
+              >
                 {step.description}
               </p>
 
@@ -83,7 +116,9 @@ export function HowItWorks({
                 className={
                   "pointer-events-none absolute inset-0 rounded-[22px] transition-opacity " +
                   (isActive
-                    ? "opacity-100 bg-gradient-to-b from-[#EDEDED]/40 to-transparent"
+                    ? (isDark
+                        ? "opacity-100 bg-gradient-to-b from-white/5 to-transparent"
+                        : "opacity-100 bg-gradient-to-b from-[#EDEDED]/40 to-transparent")
                     : "opacity-0")
                 }
               />
@@ -94,7 +129,14 @@ export function HowItWorks({
 
       {/* CTA */}
       <div className="flex justify-center mt-6 sm:mt-8">
-        <button className="bg-[#333] hover:bg-[#4a4a4a] transition-colors text-white font-helvetica text-sm sm:text-base px-6 sm:px-8 py-3 rounded-full">
+        <button
+          className={
+            (isDark
+              ? "bg-white text-black hover:bg-white/90"
+              : "bg-[#333] text-white hover:bg-[#4a4a4a]") +
+            " transition-colors font-helvetica text-sm sm:text-base px-6 sm:px-8 py-3 rounded-full"
+          }
+        >
           Get started
         </button>
       </div>
