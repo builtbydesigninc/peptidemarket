@@ -259,24 +259,32 @@ export default function Index() {
               <FeatureBento variant="dark"
                 items={[
                   {
-                    title: "Transparent pricing",
+                    title: "Testosterone solutions",
                     description:
-                      "Affordable pricing with no hidden fees or memberships.",
+                      "Clinician-guided treatments to boost energy, strength, and libido.",
+                    image:
+                      "https://api.builder.io/api/v1/image/assets/TEMP/6292e665eeb327f4a82e272d4cbac87046c6f323?width=512",
                   },
                   {
-                    title: "FDA-registered pharmacies",
+                    title: "Injectable TRT",
                     description:
-                      "All treatments are dispensed through FDA-registered pharmacies.",
+                      "Convenient, effective dosing tailored to your labs and goals.",
+                    image:
+                      "https://api.builder.io/api/v1/image/assets/TEMP/f76d1259301903dae173ebf0e7a3984c7a46f308?width=512",
                   },
                   {
                     title: "Free, discreet shipping",
                     description:
-                      "Every prescription ships free in unmarked packaging.",
+                      "Every order ships fast in unmarked packaging with tracking.",
+                    image:
+                      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
                   },
                   {
-                    title: "100% online process",
+                    title: "100% online care",
                     description:
-                      "From consult to delivery, manage everything online.",
+                      "From consults to refills, manage everything from your phone.",
+                    image:
+                      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
                   },
                 ]}
               />
