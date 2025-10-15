@@ -792,7 +792,7 @@ export default function Index() {
                   className="w-full aspect-square object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="text-[#333] font-helvetica text-lg sm:text-xl md:text-[22px] mb-2">
+                  <h3 className="text-white font-helvetica text-lg sm:text-xl md:text-[22px] mb-2">
                     {advisor.name}
                   </h3>
                   <p className="text-[#90847E] font-helvetica text-sm md:text-[14px]">
