@@ -18,7 +18,7 @@ export default function Index() {
         >
           <path
             d="M23 12L20.56 9.22001L20.9 5.54001L17.29 4.72001L15.4 1.54001L12 3.00001L8.6 1.54001L6.71 4.72001L3.1 5.53001L3.44 9.21001L1 12L3.44 14.78L3.1 18.47L6.71 19.29L8.6 22.47L12 21L15.4 22.46L17.29 19.28L20.9 18.46L20.56 14.78L23 12ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58001L18 9.00001L10 17Z"
-            fill="#333333"
+            fill="#E5E5E5"
           />
         </svg>
       ),
@@ -34,7 +34,7 @@ export default function Index() {
         >
           <path
             d="M20.25 5C17.587 5 14.992 4.057 12.45 2.15C12.3202 2.05263 12.1623 2 12 2C11.8377 2 11.6798 2.05263 11.55 2.15C9.008 4.057 6.413 5 3.75 5C3.55109 5 3.36032 5.07902 3.21967 5.21967C3.07902 5.36032 3 5.55109 3 5.75V11C3 16.001 5.958 19.676 11.725 21.948C11.9017 22.0176 12.0983 22.0176 12.275 21.948C18.042 19.676 21 16 21 11V5.75C21 5.55109 20.921 5.36032 20.7803 5.21967C20.6397 5.07902 20.4489 5 20.25 5ZM16.757 9.303L10.757 14.803C10.6145 14.9335 10.4271 15.004 10.2339 14.9997C10.0407 14.9954 9.8566 14.9167 9.72 14.78L7.22 12.28C7.14631 12.2113 7.08721 12.1285 7.04622 12.0365C7.00523 11.9445 6.98319 11.8452 6.98141 11.7445C6.97963 11.6438 6.99816 11.5438 7.03588 11.4504C7.0736 11.357 7.12974 11.2722 7.20096 11.201C7.27218 11.1297 7.35701 11.0736 7.4504 11.0359C7.54379 10.9982 7.64382 10.9796 7.74452 10.9814C7.84523 10.9832 7.94454 11.0052 8.03654 11.0462C8.12854 11.0872 8.21134 11.1463 8.28 11.22L10.273 13.212L15.743 8.197C15.8897 8.06253 16.0837 7.99184 16.2825 8.00047C16.4813 8.00909 16.6685 8.09634 16.803 8.243C16.9375 8.38966 17.0082 8.58374 16.9995 8.78253C16.9909 8.98132 16.9037 9.16854 16.757 9.303Z"
-            fill="#333333"
+            fill="#E5E5E5"
           />
         </svg>
       ),
@@ -50,7 +50,7 @@ export default function Index() {
         >
           <path
             d="M18.4751 5.48317C18.5029 5.46694 18.526 5.4437 18.542 5.41577C18.5581 5.38783 18.5665 5.35618 18.5665 5.32397C18.5665 5.29176 18.5581 5.26011 18.542 5.23217C18.526 5.20424 18.5029 5.181 18.4751 5.16476L11.4369 1.07566C10.9865 0.814623 10.4752 0.677155 9.9547 0.677155C9.43418 0.677155 8.92289 0.814623 8.47255 1.07566L1.43573 5.16476C1.4079 5.181 1.38482 5.20424 1.36878 5.23217C1.35273 5.26011 1.34429 5.29176 1.34429 5.32397C1.34429 5.35618 1.35273 5.38783 1.36878 5.41577C1.38482 5.4437 1.4079 5.46694 1.43573 5.48317L9.86277 10.4404C9.89112 10.4571 9.92342 10.4659 9.95632 10.4659C9.98921 10.4659 10.0215 10.4571 10.0499 10.4404L18.4751 5.48317ZM0.646843 6.737C0.618735 6.72077 0.586841 6.71225 0.554384 6.71231C0.521928 6.71236 0.490061 6.72098 0.462005 6.7373C0.43395 6.75362 0.410701 6.77705 0.394609 6.80524C0.378518 6.83343 0.370155 6.86536 0.370365 6.89782V14.9106C0.371061 15.2967 0.472832 15.676 0.665557 16.0106C0.858283 16.3452 1.13525 16.6235 1.4689 16.8178L8.94118 21.2982C8.96919 21.3143 9.00096 21.3229 9.03329 21.3229C9.06563 21.3229 9.0974 21.3144 9.12542 21.2982C9.15343 21.2821 9.1767 21.2588 9.19289 21.2308C9.20909 21.2028 9.21763 21.1711 9.21766 21.1387V11.8422C9.21763 11.8098 9.20909 11.7781 9.19292 11.7501C9.17674 11.7221 9.15349 11.6989 9.1255 11.6827L0.646843 6.737ZM10.6922 11.8744V21.1364C10.6922 21.1688 10.7008 21.2005 10.717 21.2285C10.7332 21.2565 10.7564 21.2798 10.7844 21.2959C10.8125 21.3121 10.8442 21.3206 10.8766 21.3206C10.9089 21.3206 10.9407 21.312 10.9687 21.2959L18.4405 16.8155C18.7739 16.6214 19.0508 16.3435 19.2435 16.0093C19.4363 15.6752 19.5384 15.2964 19.5395 14.9106V6.89782C19.5394 6.86552 19.5308 6.83382 19.5146 6.80589C19.4983 6.77796 19.4751 6.75478 19.4471 6.73868C19.4191 6.72258 19.3873 6.71412 19.355 6.71415C19.3227 6.71418 19.291 6.7227 19.263 6.73885L10.7844 11.7154C10.7564 11.7316 10.7332 11.7547 10.7171 11.7826C10.7009 11.8105 10.6923 11.8422 10.6922 11.8744Z"
-            fill="#333333"
+            fill="#E5E5E5"
           />
         </svg>
       ),
@@ -66,7 +66,7 @@ export default function Index() {
         >
           <path
             d="M0.370361 3.125C0.370361 1.676 1.54636 0.5 2.99536 0.5H9.74536C11.1944 0.5 12.3704 1.676 12.3704 3.125V18.875C12.3704 19.5712 12.0938 20.2389 11.6015 20.7312C11.1092 21.2234 10.4416 21.5 9.74536 21.5H2.99536C2.29917 21.5 1.63149 21.2234 1.13921 20.7312C0.646923 20.2389 0.370361 19.5712 0.370361 18.875V3.125ZM4.87036 17C4.67145 17 4.48068 17.079 4.34003 17.2197C4.19938 17.3603 4.12036 17.5511 4.12036 17.75C4.12036 17.9489 4.19938 18.1397 4.34003 18.2803C4.48068 18.421 4.67145 18.5 4.87036 18.5H7.87036C8.06927 18.5 8.26004 18.421 8.40069 18.2803C8.54134 18.1397 8.62036 17.9489 8.62036 17.75C8.62036 17.5511 8.54134 17.3603 8.40069 17.2197C8.26004 17.079 8.06927 17 7.87036 17H4.87036Z"
-            fill="#333333"
+            fill="#E5E5E5"
           />
         </svg>
       ),
@@ -82,7 +82,7 @@ export default function Index() {
         >
           <path
             d="M20.5 4H16.5L15.17 2.67C14.89 2.39 14.5 2.22 14.09 2.22H9.91C9.5 2.22 9.11 2.39 8.83 2.67L7.5 4H3.5C2.67 4 2 4.67 2 5.5V19.5C2 20.33 2.67 21 3.5 21H20.5C21.33 21 22 20.33 22 19.5V5.5C22 4.67 21.33 4 20.5 4ZM12 18C9.24 18 7 15.76 7 13C7 10.24 9.24 8 12 8C14.76 8 17 10.24 17 13C17 15.76 14.76 18 12 18ZM12 10C10.34 10 9 11.34 9 13C9 14.66 10.34 16 12 16C13.66 16 15 14.66 15 13C15 11.34 13.66 10 12 10Z"
-            fill="#333333"
+            fill="#E5E5E5"
           />
         </svg>
       ),
@@ -114,9 +114,9 @@ export default function Index() {
   );
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0B0B0B] text-white overflow-x-hidden">
       {/* Trust Banner */}
-      <div className="bg-[#F9F7F0] px-6 sm:px-8 md:px-12 py-6 md:py-7 overflow-hidden">
+      <div className="bg-[#111111] px-6 sm:px-8 md:px-12 py-6 md:py-7 overflow-hidden">
         <div className="relative">
           <div
             className="pointer-events-none absolute inset-0 mask-fade z-[1]"
@@ -129,7 +129,7 @@ export default function Index() {
                 className="flex items-center gap-3 sm:gap-4"
               >
                 <div className="flex-shrink-0">{badge.icon}</div>
-                <div className="text-[#333] font-inter text-sm sm:text-base">
+                <div className="text-[#E5E5E5] font-inter text-sm sm:text-base">
                   {badge.text}
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default function Index() {
                 className="flex items-center gap-3 sm:gap-4"
               >
                 <div className="flex-shrink-0">{badge.icon}</div>
-                <div className="text-[#333] font-inter text-sm sm:text-base">
+                <div className="text-[#E5E5E5] font-inter text-sm sm:text-base">
                   {badge.text}
                 </div>
               </div>
@@ -152,9 +152,9 @@ export default function Index() {
       {/* Hero Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-2xl border border-[#EAEAEA] bg-gradient-to-b from-white to-[#F7F7F7] p-6 sm:p-8 md:p-10">
+          <div className="rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-6 sm:p-8 md:p-10">
             {/* Brand Name */}
-            <h3 className="text-[#333] font-serif text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">
+            <h3 className="text-white font-serif text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">
               the peptide market
             </h3>
 
@@ -163,13 +163,13 @@ export default function Index() {
               {/* Hero Text */}
               <div className="flex flex-col gap-6">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[91px] font-helvetica leading-tight">
-                  <span className="bg-gradient-to-r from-[#1AAE6F] to-[#199F65] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent">
                     Mental health
                   </span>
                   <br />
-                  <span className="text-[#1C1C1C]">personalized to you</span>
+                  <span className="text-[#EAEAEA]">personalized to you</span>
                 </h1>
-                <p className="text-[#6B7280] font-helvetica text-base sm:text-lg md:text-xl">
+                <p className="text-[#9CA3AF] font-helvetica text-base sm:text-lg md:text-xl">
                   Customized care starts here
                 </p>
               </div>
@@ -181,11 +181,11 @@ export default function Index() {
                   {testosteroneCards.map((card, index) => (
                     <div
                       key={index}
-                      className="rounded-xl p-5 flex flex-col gap-5 min-h-[182px] bg-white border border-[#EAEAEA] hover:shadow-sm transition-all hover:-translate-y-0.5"
+                      className="rounded-xl p-5 flex flex-col gap-5 min-h-[182px] bg-[#111111] border border-[#222222] hover:shadow-sm transition-all hover:-translate-y-0.5"
                     >
                       <div className="flex justify-between items-center">
                         <div className="text-base sm:text-[17px] font-helvetica">
-                          <span className="text-[#171716]">Boost</span>{" "}
+                          <span className="text-[#EAEAEA]">Boost</span>{" "}
                           <span className="text-[#199F65]">testosterone</span>
                         </div>
                         <ChevronRight className="w-4 h-4 flex-shrink-0" />
@@ -204,10 +204,10 @@ export default function Index() {
                   {[1, 2, 3].map((item) => (
                     <div
                       key={item}
-                      className="bg-white border border-[#EAEAEA] rounded-xl p-6 flex items-center justify-between min-h-[73px] hover:shadow-sm transition-all hover:-translate-y-0.5"
+                      className="bg-[#111111] border border-[#222222] rounded-xl p-6 flex items-center justify-between min-h-[73px] hover:shadow-sm transition-all hover:-translate-y-0.5"
                     >
                       <div className="text-base sm:text-[17px] font-helvetica">
-                        <span className="text-[#171716]">Boost</span>{" "}
+                        <span className="text-[#EAEAEA]">Boost</span>{" "}
                         <span className="text-[#199F65]">testosterone</span>
                       </div>
                       <ChevronRight className="w-4 h-4 flex-shrink-0" />
@@ -221,7 +221,7 @@ export default function Index() {
       </div>
 
       {/* Brands Section */}
-      <div className="py-12 sm:py-16 overflow-hidden bg-white">
+      <div className="py-12 sm:py-16 overflow-hidden bg-[#0B0B0B]">
         <div className="relative">
           <div
             className="pointer-events-none absolute inset-0 mask-fade z-[1]"
@@ -249,7 +249,7 @@ export default function Index() {
       </div>
 
       {/* Benefits and Products Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
           <BenefitShowcase
             title={"Increase\nTestosterone"}
@@ -299,11 +299,11 @@ export default function Index() {
 
           {/* Light Bento Grid of Features */}
           <div className="mt-8 sm:mt-10 md:mt-12">
-            <h3 className="text-[#111] font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-4 sm:mb-6">
+            <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-4 sm:mb-6">
               Increase Testosterone
             </h3>
-            <div className="bg-gradient-to-b from-[#FAFAFA] to-[#F5F5F5] rounded-3xl p-4 sm:p-6 md:p-8 border border-[#EEEEEE]">
-              <FeatureBento
+            <div className="bg-gradient-to-b from-[#0F0F10] to-[#151515] rounded-3xl p-4 sm:p-6 md:p-8 border border-[#222222]">
+              <FeatureBento variant="dark"
                 items={[
                   {
                     title: "Transparent pricing",
@@ -333,7 +333,7 @@ export default function Index() {
       </div>
 
       {/* How It Works Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <HowItWorks
           steps={[
             {
@@ -360,7 +360,7 @@ export default function Index() {
       </div>
 
       {/* Comparison Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Left Content */}
@@ -690,7 +690,7 @@ export default function Index() {
       </div>
 
       {/* Our Team Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl md:text-[61px] font-helvetica mb-10 sm:mb-12 md:mb-14">
             <span className="text-[#333]">Our </span>
@@ -749,7 +749,7 @@ export default function Index() {
       </div>
 
       {/* Our Medical Advisors Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl md:text-[61px] font-helvetica mb-10 sm:mb-12 md:mb-14">
             <span className="text-[#333]">Our Medical </span>
@@ -810,10 +810,10 @@ export default function Index() {
       </div>
 
       {/* Reviews Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-[#333] font-helvetica text-4xl sm:text-5xl md:text-[61px]">
+            <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[61px]">
               Reviews
             </h2>
           </div>
@@ -834,30 +834,30 @@ export default function Index() {
       </div>
 
       {/* FAQ Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-[601px] mx-auto">
           <div className="flex flex-col gap-[25px]">
-            <FAQItem
+            <FAQItem variant="dark"
               question="What is the peptide market?"
               answer="The peptide market is a comprehensive platform offering personalized healthcare solutions including peptides, TRT, and other science-backed treatments. We focus on providing accessible, data-driven care tailored to your specific needs."
             />
-            <FAQItem
+            <FAQItem variant="dark"
               question="How does the treatment process work?"
               answer="Our treatment process is simple and convenient. Start by completing a health history form, then consult with our licensed clinicians who will review your medical history. If approved, your personalized treatment will be delivered directly to your door, and we'll continue to optimize your care."
             />
-            <FAQItem
+            <FAQItem variant="dark"
               question="Are there any membership or consultation fees?"
               answer="No, we pride ourselves on transparent pricing with no hidden fees. Unlike our competitors who charge $129+ in membership fees, we offer consultations at $0 cost. You only pay for your prescribed treatments."
             />
-            <FAQItem
+            <FAQItem variant="dark"
               question="What makes you different from traditional medicine?"
               answer="We take a proactive, data-driven approach to healthcare. Our treatments address root causes rather than just symptoms, and we offer convenient at-home lab draws and virtual appointments. Plus, there are no consultation fees like you'd find with traditional medicine."
             />
-            <FAQItem
+            <FAQItem variant="dark"
               question="Is the treatment safe and FDA-approved?"
               answer="Yes, all our treatments are dispensed through FDA-registered pharmacies and prescribed by board-certified physicians. We ensure the highest standards of safety and quality in all our products and services."
             />
-            <FAQItem
+            <FAQItem variant="dark"
               question="How long does shipping take?"
               answer="We offer free and discreet shipping on all prescriptions. Most orders are delivered within 3-5 business days. All packages are shipped in unmarked, discreet packaging to protect your privacy."
             />
@@ -866,7 +866,7 @@ export default function Index() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
           <div className="bg-[#333] rounded-[24px] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-[169px]">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-[1090px] mx-auto">
