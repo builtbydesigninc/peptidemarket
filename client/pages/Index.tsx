@@ -1,9 +1,14 @@
 import { ChevronRight } from "lucide-react";
-import { Carousel } from "../components/Carousel";
-import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
+import { Link } from "react-router-dom";
+import { InfiniteMovingCards } from "../components/ui/infinite-moving-cards";
+import { EvervaultCard } from "../components/ui/evervault-card";
+import { LayoutTextFlip } from "../components/ui/layout-text-flip";
+import { ShimmerButton } from "../components/ui/shimmer-button";
+import { GlowingStarsBackgroundCard, GlowingStarsTitle, GlowingStarsDescription } from "../components/ui/glowing-stars";
+import { Spotlight } from "../components/ui/spotlight-new";
+import { Lens } from "../components/ui/lens";
 import { FAQItem } from "../components/FAQItem";
-import { HowItWorks } from "../components/HowItWorks";
-import { FeatureBento } from "../components/FeatureBento";
+import { motion } from "motion/react";
 
 export default function Index() {
   const trustBadges = [
@@ -80,8 +85,13 @@ export default function Index() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M20.5 4H16.5L15.17 2.67C14.89 2.39 14.5 2.22 14.09 2.22H9.91C9.5 2.22 9.11 2.39 8.83 2.67L7.5 4H3.5C2.67 4 2 4.67 2 5.5V19.5C2 20.33 2.67 21 3.5 21H20.5C21.33 21 22 20.33 22 19.5V5.5C22 4.67 21.33 4 20.5 4ZM12 18C9.24 18 7 15.76 7 13C7 10.24 9.24 8 12 8C14.76 8 17 10.24 17 13C17 15.76 14.76 18 12 18ZM12 10C10.34 10 9 11.34 9 13C9 14.66 10.34 16 12 16C13.66 16 15 14.66 15 13C15 11.34 13.66 10 12 10Z"
+            d="M12 2L2 7L12 12L22 7L12 2Z"
             fill="#E5E5E5"
+          />
+          <path
+            d="M2 17L12 22L22 17V12L12 17L2 12V17Z"
+            fill="#E5E5E5"
+            opacity="0.7"
           />
         </svg>
       ),
@@ -89,22 +99,18 @@ export default function Index() {
     },
   ];
 
-  const testosteroneCards = [
+  const categoryCards = [
     {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/2ccd82d81a8d0ed082b1a57659b505fdfcae057a?width=253",
+      category: "Injections",
+      image: "/assets/pm injectable peptide bottle with injetcion.png",
     },
     {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/8e70cc51d231a522977a8d55c40f7a5276ae06ec?width=253",
+      category: "Topicals",
+      image: "/assets/pm bottle white.png",
     },
     {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/575fa964e8603d7a08b139169d7d2b64597f1440?width=253",
-    },
-    {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/e50612109e5c118efbdad3e1de5aecc53381b5dc?width=253",
+      category: "Oral",
+      image: "/assets/pm pills blue and orange gradient.png",
     },
   ];
 
@@ -151,69 +157,91 @@ export default function Index() {
       {/* Hero Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-6 sm:p-8 md:p-10">
-            {/* Brand Name */}
-            <h3 className="text-white font-serif text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">
-              the peptide market
-            </h3>
+          <div className="relative rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-6 sm:p-8 md:p-10 overflow-hidden">
+            <Spotlight
+              gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(0, 0%, 90%, .05) 0, hsla(0, 0%, 70%, .02) 50%, hsla(0, 0%, 50%, 0) 80%)"
+              gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(0, 0%, 85%, .04) 0, hsla(0, 0%, 60%, .01) 80%, transparent 100%)"
+              gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(0, 0%, 80%, .03) 0, hsla(0, 0%, 50%, .01) 80%, transparent 100%)"
+              translateY={-250}
+              width={400}
+              height={1000}
+              smallWidth={180}
+              duration={8}
+              xOffset={80}
+            />
+            {/* Brand Logo */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-8 sm:mb-12"
+            >
+              <img
+                src="/logos/dark.svg"
+                alt="the peptide market"
+                className="h-8 sm:h-10 md:h-12 w-auto"
+              />
+            </motion.div>
 
             {/* Main Content */}
             <div className="flex flex-col gap-12 lg:gap-16">
               {/* Hero Text */}
-              <div className="flex flex-col gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                className="flex flex-col gap-6"
+              >
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[91px] font-helvetica leading-tight">
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-2">
+                    <LayoutTextFlip
+                      text=""
+                      words={[
+                        "Mental Health",
+                        "Hair Regrowth",
+                        "Testosterone",
+                        "Weight Loss",
+                      ]}
+                      duration={3000}
+                    />
+                  </div>
                   <span className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent">
-                    Mental health
+                    personalized to you
                   </span>
-                  <br />
-                  <span className="text-[#EAEAEA]">personalized to you</span>
                 </h1>
                 <p className="text-[#9CA3AF] font-helvetica text-base sm:text-lg md:text-xl">
                   Customized care starts here
                 </p>
-              </div>
+              </motion.div>
 
               {/* Cards Grid */}
-              <div className="flex flex-wrap gap-3 sm:gap-4">
-                {/* Large Cards - First Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full">
-                  {testosteroneCards.map((card, index) => (
-                    <div
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 w-full"
+              >
+                {categoryCards.map((card, index) => (
+                    <button
                       key={index}
-                      className="rounded-xl p-5 flex flex-col gap-5 min-h-[182px] bg-[#111111] border border-[#222222] hover:shadow-sm transition-all hover:-translate-y-0.5"
+                    className="rounded-xl p-6 flex flex-col gap-6 min-h-[320px] bg-[#111111] border border-[#222222] hover:shadow-lg hover:border-[#333] transition-all hover:-translate-y-1 cursor-pointer text-left w-full"
                     >
                       <div className="flex justify-between items-center">
-                        <div className="text-base sm:text-[17px] font-helvetica">
-                          <span className="text-[#EAEAEA]">Boost</span>{" "}
-                          <span className="text-[#199F65]">testosterone</span>
+                      <div className="text-lg sm:text-xl font-helvetica">
+                        <span className="text-[#EAEAEA]">{card.category}</span>
                         </div>
-                        <ChevronRight className="w-4 h-4 flex-shrink-0" />
+                      <ChevronRight className="w-5 h-5 flex-shrink-0 text-[#FF6B35]" />
                       </div>
+                      <Lens zoomFactor={2} lensSize={150}>
                       <img
                         src={card.image}
-                        alt="Product"
-                        className="w-32 h-28 object-contain mx-auto"
+                        alt={card.category}
+                        className="w-full h-52 sm:h-56 md:h-60 object-contain mx-auto"
                       />
-                    </div>
+                      </Lens>
+                    </button>
                   ))}
-                </div>
-
-                {/* Horizontal Cards - Second Row */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 w-full">
-                  {[1, 2, 3].map((item) => (
-                    <div
-                      key={item}
-                      className="bg-[#111111] border border-[#222222] rounded-xl p-6 flex items-center justify-between min-h-[73px] hover:shadow-sm transition-all hover:-translate-y-0.5"
-                    >
-                      <div className="text-base sm:text-[17px] font-helvetica">
-                        <span className="text-[#EAEAEA]">Boost</span>{" "}
-                        <span className="text-[#199F65]">testosterone</span>
-                      </div>
-                      <ChevronRight className="w-4 h-4 flex-shrink-0" />
-                    </div>
-                  ))}
-                </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -247,125 +275,304 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Benefits and Products Section */}
+      {/* Premium Peptide Solutions Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
-          {/* Feature grid replacement */}
-          <div className="mt-8 sm:mt-10 md:mt-12">
-            <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[39px] mb-4 sm:mb-6">
-              Increase Testosterone
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
+          >
+            Premium peptide solutions
+          </motion.h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+            {/* Large Featured Card - Water Splash Bottle */}
+            <motion.button
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="lg:row-span-3 relative overflow-hidden rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-8 sm:p-10 hover:border-[#333] transition-all cursor-pointer text-left"
+            >
+              <div className="flex flex-col h-full justify-center">
+                <div className="mb-6">
+                  <h3 className="text-white font-helvetica text-2xl sm:text-3xl font-bold mb-3">
+                    Pure excellence
             </h3>
-            <div className="bg-gradient-to-b from-[#0F0F10] to-[#151515] rounded-3xl p-4 sm:p-6 md:p-8 border border-[#222222]">
-              <FeatureBento
-                variant="dark"
-                items={[
-                  {
-                    title: "Testosterone solutions",
-                    description:
-                      "Clinician-guided treatments to boost energy, strength, and libido.",
-                    image:
-                      "https://api.builder.io/api/v1/image/assets/TEMP/6292e665eeb327f4a82e272d4cbac87046c6f323?width=512",
-                  },
-                  {
-                    title: "Injectable TRT",
-                    description:
-                      "Convenient, effective dosing tailored to your labs and goals.",
-                    image:
-                      "https://api.builder.io/api/v1/image/assets/TEMP/f76d1259301903dae173ebf0e7a3984c7a46f308?width=512",
-                  },
-                  {
-                    title: "Free, discreet shipping",
-                    description:
-                      "Every order ships fast in unmarked packaging with tracking.",
-                    image:
-                      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
-                  },
-                  {
-                    title: "100% online care",
-                    description:
-                      "From consults to refills, manage everything from your phone.",
-                    image:
-                      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-                  },
-                ]}
-              />
+                  <p className="text-[#9CA3AF] font-helvetica text-base sm:text-lg leading-relaxed">
+                    Premium formulations crafted for results. Every product tested, verified, and optimized for maximum efficacy.
+                  </p>
+                </div>
+                <div className="flex items-center justify-center flex-1 min-h-[380px]">
+                  <Lens zoomFactor={2.2} lensSize={200}>
+                    <img
+                      src="/assets/bottle in a water splash.png"
+                      alt="Premium peptides"
+                      className="w-full max-w-lg h-full object-contain scale-110"
+                    />
+                  </Lens>
             </div>
           </div>
+            </motion.button>
+
+            {/* Top Right - Oral Peptides */}
+            <motion.button
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+              className="relative overflow-hidden rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-8 hover:border-[#333] transition-all cursor-pointer text-left"
+            >
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 h-full">
+                <div className="flex-1">
+                  <h3 className="text-white font-helvetica text-xl sm:text-2xl font-bold mb-2">
+                    Oral formulations
+                  </h3>
+                  <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base leading-relaxed">
+                    Convenient daily protocols
+                  </p>
+        </div>
+                <div className="w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0">
+                  <Lens zoomFactor={2} lensSize={140}>
+                    <img
+                      src="/assets/pm pills blue and orange gradient.png"
+                      alt="Oral peptides"
+                      className="w-full h-full object-contain"
+                    />
+                  </Lens>
+      </div>
+              </div>
+            </motion.button>
+
+            {/* Middle Right - Injectable TRT */}
+            <motion.button
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+              className="relative overflow-hidden rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-8 hover:border-[#333] transition-all cursor-pointer text-left"
+            >
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 h-full">
+                <div className="flex-1">
+                  <h3 className="text-white font-helvetica text-xl sm:text-2xl font-bold mb-2">
+                    Injectable TRT
+                  </h3>
+                  <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base leading-relaxed">
+                    Clinical-grade testosterone therapy
+                  </p>
+                </div>
+                <div className="w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0">
+                  <Lens zoomFactor={2} lensSize={140}>
+                    <img
+                      src="/assets/pm injectable peptide bottle with injetcion.png"
+                      alt="Injectable TRT"
+                      className="w-full h-full object-contain"
+                    />
+                  </Lens>
+      </div>
+              </div>
+            </motion.button>
+
+            {/* Bottom Right - Topical Solutions */}
+            <motion.button
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+              className="relative overflow-hidden rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-8 hover:border-[#333] transition-all cursor-pointer text-left"
+            >
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 h-full">
+                <div className="flex-1">
+                  <h3 className="text-white font-helvetica text-xl sm:text-2xl font-bold mb-2">
+                    Topical compounds
+                  </h3>
+                  <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base leading-relaxed">
+                    Transdermal absorption systems
+                  </p>
+                </div>
+                <div className="w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0">
+                  <Lens zoomFactor={2} lensSize={140}>
+                    <img
+                      src="/assets/pm bottle white.png"
+                      alt="Topical solutions"
+                      className="w-full h-full object-contain"
+                    />
+                  </Lens>
+                </div>
+              </div>
+            </motion.button>
+          </div>
+
+          {/* Bottom Stat Bar */}
+          <div className="mt-8 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              { stat: "100%", label: "FDA-registered pharmacies" },
+              { stat: "24/7", label: "Clinician support" },
+              { stat: "$0", label: "Consultation fees" },
+              { stat: "3-5", label: "Days discreet delivery" },
+            ].map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+                className="rounded-xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-6 text-center"
+              >
+                <div className="text-3xl sm:text-4xl font-helvetica font-bold bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent mb-2">
+                  {item.stat}
+                </div>
+                <p className="text-[#9CA3AF] font-helvetica text-sm">
+                  {item.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA after stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            className="mt-12 sm:mt-16 text-center"
+          >
+            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+              Start Your Assessment
+            </ShimmerButton>
+            <p className="text-[#9CA3AF] font-helvetica text-sm mt-4">
+              Free consultation • FDA-registered pharmacies • Discreet shipping
+            </p>
+          </motion.div>
         </div>
       </div>
 
       {/* How It Works Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
-        <HowItWorks
-          variant="dark"
-          steps={[
-            {
-              title: "Complete your health history",
-              description:
-                "Fill in your health history form before meeting with a licensed clinician so we can personalize your care.",
-            },
-            {
-              title: "Clinician review & approval",
-              description:
-                "Our partners and providers review your medical history and determine if a prescription is right for you.",
-              image:
-                "https://api.builder.io/api/v1/image/assets/TEMP/3a6ba0116ebdbb0cc21e310f768e6539547989da?width=618",
-            },
-            {
-              title: "Fast delivery & optimization",
-              description:
-                "Treatments are shipped to your door with ongoing monitoring and optimizations to keep you on track.",
-              image:
-                "https://api.builder.io/api/v1/image/assets/TEMP/e2b8029fec6ae76eae777f4ebbc23ca419692631?width=752",
-            },
-          ]}
-        />
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-16 sm:py-20 md:py-24 bg-[#0B0B0B]">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
+          >
+            We're with you every step of the way
+          </motion.h2>
+
+          {/* Steps Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* Step 1 */}
+            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] max-w-none h-auto min-h-[320px] flex flex-col p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center text-white font-helvetica font-bold text-sm flex-shrink-0">
+                  1
+                </div>
+                <GlowingStarsTitle className="text-white font-helvetica text-lg sm:text-xl max-w-none">
+                  Health Assessment
+                </GlowingStarsTitle>
+              </div>
+              <GlowingStarsDescription className="text-[#9CA3AF] font-helvetica text-sm max-w-none">
+                Share your goals and medical history with our clinicians.
+              </GlowingStarsDescription>
+            </GlowingStarsBackgroundCard>
+
+            {/* Step 2 */}
+            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] max-w-none h-auto min-h-[320px] flex flex-col p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center text-white font-helvetica font-bold text-sm flex-shrink-0">
+                  2
+                </div>
+                <GlowingStarsTitle className="text-white font-helvetica text-lg sm:text-xl max-w-none">
+                  Expert Approval
+                </GlowingStarsTitle>
+              </div>
+              <GlowingStarsDescription className="text-[#9CA3AF] font-helvetica text-sm max-w-none">
+                Board-certified physicians review and approve your personalized plan.
+              </GlowingStarsDescription>
+            </GlowingStarsBackgroundCard>
+
+            {/* Step 3 */}
+            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] max-w-none h-auto min-h-[320px] flex flex-col p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center text-white font-helvetica font-bold text-sm flex-shrink-0">
+                  3
+                </div>
+                <GlowingStarsTitle className="text-white font-helvetica text-lg sm:text-xl max-w-none">
+                  Fast Delivery
+                </GlowingStarsTitle>
+              </div>
+              <GlowingStarsDescription className="text-[#9CA3AF] font-helvetica text-sm max-w-none">
+                Premium peptides shipped discreetly with ongoing optimization support.
+              </GlowingStarsDescription>
+            </GlowingStarsBackgroundCard>
+          </div>
+        </div>
       </div>
 
       {/* Comparison Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-10 sm:py-12 md:py-16 bg-[#0B0B0B]">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
             {/* Left Content */}
-            <div className="flex-1 max-w-[520px] lg:self-center">
-              <h2 className="text-white font-helvetica text-3xl sm:text-[34px] md:text-[38px] mb-6 sm:mb-8 md:mb-10 leading-tight">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="flex-1 max-w-[420px] lg:self-center"
+            >
+              <h2 className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14 leading-tight">
                 No hidden fees, ever
               </h2>
-              <p className="text-[#9CA3AF] font-helvetica text-base sm:text-[18px] md:text-[22px] mb-8 sm:mb-10 md:mb-12 leading-relaxed">
+              <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base md:text-[18px] mb-6 sm:mb-7 md:mb-8 leading-relaxed">
                 We build community by focusing on real solutions, personalized
                 care, science-backed supplements and root cause therapies paired
                 with virtual appointments and accessible diagnostics make
                 healthcare seamless and centered on you.
               </p>
-              <button className="bg-[#333] hover:bg-[#4a4a4a] transition-colors text-white font-helvetica text-xl sm:text-2xl md:text-[26px] px-12 sm:px-16 md:px-24 py-4 sm:py-5 md:py-6 rounded-full">
+              <ShimmerButton className="h-12 sm:h-14 md:h-16 px-10 sm:px-12 md:px-16 text-lg sm:text-xl md:text-2xl">
                 Shop now
-              </button>
-            </div>
+              </ShimmerButton>
+            </motion.div>
 
             {/* Right Comparison Table */}
-            <div className="flex-1 w-full max-w-[643px]">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+              className="flex-1 w-full max-w-[550px]"
+            >
               {/* Table Headers */}
-              <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-end mb-6 sm:mb-8 md:mb-12 gap-x-4">
+              <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-end mb-4 sm:mb-5 md:mb-6 gap-x-3">
                 <div></div>
-                <div className="text-white font-orpheus text-base sm:text-lg md:text-[19px] font-bold text-center">
-                  the peptide market
+                <div className="flex justify-center items-end">
+                  <img
+                    src="/logos/dark.svg"
+                    alt="the peptide market"
+                    className="h-5 sm:h-6 md:h-7 w-auto"
+                  />
                 </div>
-                <div className="text-[#9CA3AF] font-helvetica text-[10px] sm:text-xs uppercase text-center">
+                <div className="text-[#E5E5E5] font-helvetica text-[9px] sm:text-[10px] uppercase text-center">
                   OUR COMPETITORS
                 </div>
-                <div className="text-[#9CA3AF] font-helvetica text-[10px] sm:text-xs uppercase text-center">
+                <div className="text-[#E5E5E5] font-helvetica text-[9px] sm:text-[10px] uppercase text-center">
                   TRADITIONAL MEDICINE
                 </div>
               </div>
 
               {/* Comparison Rows */}
-              <div className="space-y-3 mb-6">
+              <div className="space-y-2 mb-4">
                 {/* Row: CONVENIENT */}
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#E5E5E5] font-helvetica text-[10px] uppercase">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] uppercase">
                     CONVENIENT
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
@@ -373,7 +580,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
@@ -381,7 +588,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -400,55 +607,55 @@ export default function Index() {
                 </div>
 
                 {/* Row: MEMBERSHIP FEES */}
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#E5E5E5] font-helvetica text-[10px] uppercase">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] uppercase">
                     MEMBERSHIP FEES
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
-                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
+                    <span className="text-white font-helvetica text-xs md:text-sm leading-none whitespace-nowrap font-semibold">
                       $0
                     </span>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
-                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
+                    <span className="text-white font-helvetica text-xs md:text-sm leading-none whitespace-nowrap font-semibold">
                       $129+
                     </span>
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
-                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
+                    <span className="text-white font-helvetica text-xs md:text-sm leading-none whitespace-nowrap font-semibold">
                       $0
                     </span>
                   </div>
                 </div>
 
                 {/* Row: CONSULTATION FEES */}
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#E5E5E5] font-helvetica text-[10px] uppercase">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] uppercase">
                     CONSULTATION FEES
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
-                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
+                    <span className="text-white font-helvetica text-xs md:text-sm leading-none whitespace-nowrap font-semibold">
                       $0
                     </span>
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
-                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
+                    <span className="text-white font-helvetica text-xs md:text-sm leading-none whitespace-nowrap font-semibold">
                       $0
                     </span>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
-                    <span className="text-[#333] font-helvetica text-sm md:text-[15px] leading-none whitespace-nowrap">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
+                    <span className="text-white font-helvetica text-xs md:text-sm leading-none whitespace-nowrap font-semibold">
                       $20+
                     </span>
                   </div>
                 </div>
 
                 {/* Row: TREATS ROOT CAUSE */}
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#E5E5E5] font-helvetica text-[10px] uppercase">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] uppercase">
                     TREATS ROOT CAUSE
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
@@ -456,7 +663,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -472,7 +679,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -491,11 +698,11 @@ export default function Index() {
                 </div>
 
                 {/* Row: LAB DRAWS */}
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#E5E5E5] font-helvetica text-[10px] uppercase">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] uppercase">
                     LAB DRAWS
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
@@ -503,7 +710,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
@@ -511,7 +718,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -530,11 +737,11 @@ export default function Index() {
                 </div>
 
                 {/* Row: PROACTIVE */}
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#E5E5E5] font-helvetica text-[10px] uppercase">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] uppercase">
                     PROACTIVE
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
@@ -542,7 +749,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -558,7 +765,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -577,11 +784,11 @@ export default function Index() {
                 </div>
 
                 {/* Row: DATA DRIVEN */}
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#E5E5E5] font-helvetica text-[10px] uppercase">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] uppercase">
                     DATA DRIVEN
                   </div>
-                  <div className="h-11 md:h-12 rounded bg-[#1F2937] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded bg-[#000000] border border-[#2A2A2A] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         d="M10.9574 20.1239L4.75732 13.9238L6.30734 12.3738L10.9574 17.0239L20.9373 7.04395L22.4873 8.59396L10.9574 20.1239Z"
@@ -589,7 +796,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -605,7 +812,7 @@ export default function Index() {
                       />
                     </svg>
                   </div>
-                  <div className="h-11 md:h-12 rounded border border-[#222222] bg-[#0F0F0F] flex items-center justify-center">
+                  <div className="h-9 md:h-10 rounded border border-[#1A1A1A] bg-[#050505] flex items-center justify-center">
                     <svg className="w-5 h-5" viewBox="0 0 27 27" fill="none">
                       <path
                         fill-rule="evenodd"
@@ -625,29 +832,29 @@ export default function Index() {
               </div>
 
               {/* Total Cost Row */}
-              <div className="pt-4 sm:pt-5 md:pt-6 border-t border-[#222222]">
-                <div className="grid grid-cols-[120px_1fr_1fr_1fr] md:grid-cols-[140px_1fr_1fr_1fr] items-center gap-x-4">
-                  <div className="text-[#333] font-helvetica text-[10px] font-bold uppercase">
+              <div className="pt-3 sm:pt-4 border-t border-[#222222]">
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] md:grid-cols-[110px_1fr_1fr_1fr] items-center gap-x-3">
+                  <div className="text-[#E5E5E5] font-helvetica text-[9px] font-bold uppercase">
                     TOTAL COST
                   </div>
-                  <div className="py-2">
-                    <span className="text-[#E5E5E5] font-helvetica text-sm sm:text-base md:text-lg font-bold">
+                  <div className="py-1.5 flex justify-center">
+                    <span className="text-white font-helvetica text-xs sm:text-sm md:text-base font-bold">
                       $0
                     </span>
                   </div>
-                  <div className="py-2">
-                    <span className="text-[#E5E5E5] font-helvetica text-sm sm:text-base md:text-lg font-bold">
+                  <div className="py-1.5 flex justify-center">
+                    <span className="text-white font-helvetica text-xs sm:text-sm md:text-base font-bold">
                       $129+
                     </span>
                   </div>
-                  <div className="py-2">
-                    <span className="text-[#E5E5E5] font-helvetica text-sm sm:text-base md:text-lg font-bold">
+                  <div className="py-1.5 flex justify-center">
+                    <span className="text-white font-helvetica text-xs sm:text-sm md:text-base font-bold">
                       $20+
                     </span>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -655,175 +862,80 @@ export default function Index() {
       {/* Our Team Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl md:text-[61px] font-helvetica mb-10 sm:mb-12 md:mb-14">
-            <span className="text-white">Our </span>
-            <span className="text-[#9CA3AF]">Team</span>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
+          >
+            Our Team
+          </motion.h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10">
             {[
-              {
-                name: "Ashfaq Rahman",
-                role: "CEO",
-                image:
-                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F3fd2907523f946399e2ad0d2cd69a22a?format=webp&width=800",
-              },
-              {
-                name: "Oliver Ibrahim",
-                role: "Chief of Staff",
-                image:
-                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F89910f74fc434db5a2dd68727b14fc3f?format=webp&width=800",
-              },
-              {
-                name: "Muhammad Bin Sohail",
-                role: "Head of Technology",
-                image:
-                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F2ab4c0bd514143d3a95e3e791a9ead11?format=webp&width=800",
-              },
-              {
-                name: "Gaelle Seman",
-                role: "Head of Sales",
-                image:
-                  "https://cdn.builder.io/api/v1/image/assets%2Fc37b13b2b0fc4b189fd2d2fecf01d42c%2F47a20243accf4fc18f06692a735c0baf?format=webp&width=800",
-              },
+              { image: "/headshots/Ash Rahman.png", name: "Ash Rahman", title: "CEO" },
+              { image: "/headshots/Muhammad Bin Sohail.png", name: "Muhammad Bin Sohail", title: "Head of Technology" },
+              { image: "/headshots/Oliver Ibrahim.png", name: "Oliver Ibrahim", title: "Head of Marketing" },
+              { image: "/headshots/Gaelle Semaan.png", name: "Gaelle Semaan", title: "Head of Closing" },
+              { image: "/headshots/Jimmy.png", name: "Jimmy", title: "Head of Sales" },
             ].map((member, index) => (
-              <div
-                key={index}
-                className="group relative rounded-md overflow-hidden bg-white shadow-[0_5.67px_45.362px_0_rgba(0,0,0,0.25)]"
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full aspect-[4/5] sm:aspect-[3/4] object-cover transform transition duration-500 ease-out filter grayscale group-hover:grayscale-0 group-hover:scale-[1.08]"
+                <EvervaultCard
+                  image={member.image}
+                  name={member.name}
+                  title={member.title}
                 />
-                <div className="absolute left-3 right-3 bottom-3 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg min-h-[72px] flex flex-col justify-center">
-                  <h3
-                    className={`text-[#333] font-helvetica leading-tight ${member.name === "Muhammad Bin Sohail" ? "text-[14px] sm:text-[15px] md:text-[16px]" : "text-base sm:text-lg md:text-[18px]"} whitespace-nowrap overflow-hidden text-ellipsis`}
-                  >
-                    {member.name}
-                  </h3>
-                  <p className="text-[#90847E] font-helvetica text-xs sm:text-sm">
-                    {member.role}
-                  </p>
-                </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Our Medical Advisors Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl md:text-[61px] font-helvetica mb-10 sm:mb-12 md:mb-14">
-            <span className="text-white">Our Medical </span>
-            <span className="text-[#B9B9B9]">Advisors</span>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-10 sm:mb-12 md:mb-16">
-            {[
-              {
-                name: "Ashfaq Rahman",
-                role: "MD",
-                image:
-                  "https://api.builder.io/api/v1/image/assets/TEMP/9a730167ce218459764ed3b2d71115d2742b6411?width=544",
-              },
-              {
-                name: "Oliver Ibrahim",
-                role: "Doctor",
-                image:
-                  "https://api.builder.io/api/v1/image/assets/TEMP/c9ab7ea3e7d76914190be15f86949192ad3d35bf?width=544",
-              },
-              {
-                name: "Muhammad Bin Sohail",
-                role: "Head of Technology",
-                image:
-                  "https://api.builder.io/api/v1/image/assets/TEMP/4b2ebd867dd1d91c824c85da76edf4cf57c8e550?width=544",
-              },
-              {
-                name: "Gaelle Seman",
-                role: "Head of Sales",
-                image:
-                  "https://api.builder.io/api/v1/image/assets/TEMP/14ff3c745ade6c7194d578ebd55a3834d188aa07?width=544",
-              },
-            ].map((advisor, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-md shadow-[0_5.67px_45.362px_0_rgba(0,0,0,0.25)] overflow-hidden"
-              >
-                <img
-                  src={advisor.image}
-                  alt={advisor.name}
-                  className="w-full aspect-square object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-white font-helvetica text-lg sm:text-xl md:text-[22px] mb-2">
-                    {advisor.name}
-                  </h3>
-                  <p className="text-[#90847E] font-helvetica text-sm md:text-[14px]">
-                    {advisor.role}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-white font-helvetica text-lg sm:text-xl md:text-[22px] text-center max-w-lg mx-auto">
-            Our board-certified physicians ensure our treatments are{" "}
-            <span className="font-bold">nothing but the best.</span>
-          </p>
         </div>
       </div>
 
       {/* Reviews Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-white font-helvetica text-4xl sm:text-5xl md:text-[61px]">
-              Reviews
-            </h2>
-          </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
+          >
+            Trusted by clinics across the US
+          </motion.h2>
 
-          <TestimonialsCarousel
-            testimonials={[
+          <InfiniteMovingCards
+            items={[
               {
-                text: "It has changed life in the bedroom and dramatically improved my relationship with my wife.",
-                name: "Nawaf",
-                rating: 5,
+                quote: "Switching to PeptiPharmaRx changed everything for us. Not only are we getting faster peptide shipments, but our margins improved by at least 30%. Their team helped us stay compliant in all 50 states — total game changer.",
+                name: "Dr. Emily Rodriguez",
+                title: "Clinic Owner – Miami, FL",
               },
               {
-                text: "My energy levels are back and I feel like myself again.",
-                name: "Rahul",
-                rating: 5,
+                quote: "We were struggling to find a reliable peptide supplier. Now we get access to over 60 U.S.-made peptides, delivered fast — and our patients love the results. The onboarding was seamless.",
+                name: "Jonathan Blake",
+                title: "Wellness Practice Owner – Austin, TX",
               },
               {
-                text: "Super convenient and discrete — highly recommend.",
-                name: "Jess",
-                rating: 5,
+                quote: "Their telehealth setup saved us months of legal headaches. We launched our medical weight loss program in less than two weeks with full physician coverage and compliance support.",
+                name: "Sarah Kim, NP",
+                title: "Los Angeles, CA",
               },
               {
-                text: "Support team is fantastic and the results speak for themselves.",
-                name: "Cameron",
-                rating: 5,
-              },
-              {
-                text: "Fast shipping and professional clinicians.",
-                name: "Olivia",
-                rating: 5,
-              },
-              {
-                text: "Noticeable improvement within weeks.",
-                name: "Jacob",
-                rating: 5,
-              },
-              {
-                text: "The process was easy and affordable.",
-                name: "Amira",
-                rating: 5,
-              },
-              {
-                text: "Fantastic results and great experience.",
-                name: "Leo",
-                rating: 5,
+                quote: "The PeptiPharmaRx platform feels like it was built for high-performing clinics. From the telemedicine tools to the sleek branding, everything just works. It makes us look and operate like a national brand.",
+                name: "Dr. Kevin Patel",
+                title: "Men's Health Specialist – Scottsdale, AZ",
               },
             ]}
+            direction="left"
+            speed="slow"
+            pauseOnHover={true}
           />
         </div>
       </div>
@@ -863,24 +975,43 @@ export default function Index() {
               answer="We offer free and discreet shipping on all prescriptions. Most orders are delivered within 3-5 business days. All packages are shipped in unmarked, discreet packaging to protect your privacy."
             />
           </div>
+
+          {/* CTA after FAQ */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-12 sm:mt-16 text-center"
+          >
+            <p className="text-[#E5E5E5] font-helvetica text-lg sm:text-xl mb-6">
+              Still have questions? Our clinicians are here to help.
+            </p>
+            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+              Talk to a Specialist
+            </ShimmerButton>
+          </motion.div>
         </div>
       </div>
 
       {/* Newsletter Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#333] rounded-[24px] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-[169px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="relative bg-gradient-to-b from-[#0F0F10] to-[#151515] border border-[#222222] rounded-[24px] px-6 sm:px-12 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-[100px] overflow-hidden"
+          >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-[1090px] mx-auto">
               {/* Left Content */}
-              <div className="flex flex-col gap-[23px] max-w-[359px] w-full">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-helvetica font-normal leading-normal">
-                  <span className="text-white">Unlock the free </span>
-                  <span className="text-[#B9B9B9]">
-                    guide to protein for weight loss
-                  </span>
+              <div className="flex flex-col gap-6 max-w-[450px] w-full">
+                <h2 className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl leading-tight">
+                  Start your transformation today
                 </h2>
-                <p className="text-[#B9B9B9] font-helvetica text-base sm:text-lg">
-                  Written by board-certified doctors to support your journey
+                <p className="text-[#9CA3AF] font-helvetica text-base sm:text-lg leading-relaxed">
+                  Expert guidance for your health and wellness journey
                 </p>
               </div>
 
@@ -890,80 +1021,80 @@ export default function Index() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="w-full px-6 py-[21px] rounded-lg bg-white text-black placeholder:text-[#ACACAC] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+                    className="w-full px-6 py-[21px] rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-white placeholder:text-[#666] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#4A5568]"
                   />
-                  <button className="w-full px-6 py-[9px] rounded-full bg-white text-[#333] font-helvetica text-base sm:text-lg hover:bg-white/90 transition-colors">
+                  <ShimmerButton className="w-full text-base sm:text-lg">
                     Get the Guide
-                  </button>
+                  </ShimmerButton>
                 </div>
-                <p className="text-[#B9B9B9] font-helvetica text-sm">
+                <p className="text-[#9CA3AF] font-helvetica text-sm">
                   By creating an account using email, I agree to the{" "}
-                  <a
-                    href="#"
-                    className="underline hover:text-white transition-colors"
+                  <Link
+                    to="/terms"
+                    className="text-[#E5E7EB] underline hover:text-white transition-colors"
                   >
                     Terms & conditions
-                  </a>{" "}
+                  </Link>{" "}
                   and acknowledge the{" "}
-                  <a
-                    href="#"
-                    className="underline hover:text-white transition-colors"
+                  <Link
+                    to="/privacy"
+                    className="text-[#E5E7EB] underline hover:text-white transition-colors"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                   .
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Footer Section */}
-      <footer className="relative bg-[#333333] px-0 py-12 sm:py-16 md:py-20 lg:py-[87px]">
+      <footer className="relative bg-[#0B0B0B] border-t border-[#222222] px-0 py-12 sm:py-16 md:py-20 lg:py-[87px]">
         <div className="relative z-[1] max-w-[1410px] mx-auto px-6 sm:px-8 pb-[clamp(80px,14vw,260px)]">
           <div className="flex flex-col gap-16 sm:gap-20 md:gap-[91px]">
             {/* Footer Links */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-[187px]">
               {/* Navigation Column */}
               <div className="flex flex-col gap-[22px]">
-                <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
+                <h3 className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
                   Navigation
                 </h3>
                 <nav className="flex flex-col gap-[14px]">
                   <a
                     href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     Home
                   </a>
                   <a
                     href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     Shop / Products
                   </a>
                   <a
                     href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     About
                   </a>
                   <a
                     href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     FAQs
                   </a>
                   <a
                     href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     Contact / Support
                   </a>
                   <a
                     href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     Clinician Login
                   </a>
@@ -972,54 +1103,48 @@ export default function Index() {
 
               {/* Legal & Compliance Column */}
               <div className="flex flex-col gap-[22px]">
-                <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
+                <h3 className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
                   Legal & Compliance
                 </h3>
                 <nav className="flex flex-col gap-[14px]">
-                  <a
-                    href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  <Link
+                    to="/terms"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     Terms & Conditions
-                  </a>
-                  <a
-                    href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  </Link>
+                  <Link
+                    to="/privacy"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     Privacy Policy
-                  </a>
-                  <a
-                    href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  </Link>
+                  <Link
+                    to="/refund"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     Return / Refund Policy
-                  </a>
-                  <a
-                    href="#"
-                    className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
+                  </Link>
+                  <Link
+                    to="/hipaa"
+                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     HIPAA Compliance Notice
-                  </a>
+                  </Link>
                 </nav>
               </div>
 
               {/* Contact Column */}
               <div className="flex flex-col gap-[22px]">
-                <h3 className="text-white font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
+                <h3 className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-2xl sm:text-3xl md:text-[31px] font-bold">
                   Contact
                 </h3>
                 <div className="flex flex-col gap-[14px]">
-                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
-                    Email: ash@thepeptidemarket.com
+                  <p className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px]">
+                    Email: ash@builtbydesign.io
                   </p>
-                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
-                    Phone: +1 (914) 874-9600
-                  </p>
-                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
+                  <p className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px]">
                     Address: 123 North St, New York, NY, 15546
-                  </p>
-                  <p className="text-[#B9B9B9] font-helvetica text-lg sm:text-xl md:text-[20px]">
-                    Hours: Mon-Fri, 9AM-6PM EST
                   </p>
                 </div>
               </div>
@@ -1027,10 +1152,10 @@ export default function Index() {
 
             {/* Footer Bottom */}
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-8">
-              <p className="text-[#B9B9B9] font-helvetica text-xs font-bold">
+              <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base">
                 © 2025 The Peptide Market™
               </p>
-              <p className="text-[#B9B9B9] font-helvetica text-xs font-bold text-center">
+              <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base text-center">
                 Complete Peptide Solutions for Modern Medicine.
               </p>
             </div>
@@ -1043,8 +1168,8 @@ export default function Index() {
           aria-hidden
           className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px] z-0"
         >
-          <div className="w-full text-white/30 font-orpheus font-bold leading-none whitespace-nowrap text-[clamp(28px,12vw,220px)]">
-            the peptide market
+          <div className="w-full text-white/15 font-orpheus font-bold leading-none whitespace-nowrap text-[clamp(32px,13vw,240px)] uppercase tracking-tight">
+            PEPTIDE MARKET
           </div>
         </div>
       </footer>
