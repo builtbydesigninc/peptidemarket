@@ -81,7 +81,7 @@ export default function Refund() {
                 To initiate a return:
               </p>
               <ol className="list-decimal list-inside text-[#E5E5E5] font-helvetica leading-relaxed space-y-3 ml-4">
-                <li>Contact our support team at <a href="mailto:ash@builtbydesign.io" className="text-[#FF6B35] hover:text-[#FF8C42] underline">ash@builtbydesign.io</a> within the eligible timeframe</li>
+                <li>Contact our support team at <a href="mailto:info@thepeptidemarket.com" className="text-[#FF6B35] hover:text-[#FF8C42] underline">info@thepeptidemarket.com</a> within the eligible timeframe</li>
                 <li>Provide your order number and reason for return</li>
                 <li>Receive return authorization and shipping instructions</li>
                 <li>Ship the product back in original condition and packaging</li>
@@ -133,8 +133,8 @@ export default function Refund() {
               <h2 className="text-2xl font-helvetica font-bold text-white mb-4">Contact Us</h2>
               <p className="text-[#E5E5E5] font-helvetica leading-relaxed">
                 For returns, refunds, or questions about this policy, contact us at:{" "}
-                <a href="mailto:ash@builtbydesign.io" className="text-[#FF6B35] hover:text-[#FF8C42] underline">
-                  ash@builtbydesign.io
+                <a href="mailto:info@thepeptidemarket.com" className="text-[#FF6B35] hover:text-[#FF8C42] underline">
+                  info@thepeptidemarket.com
                 </a>
               </p>
             </div>

@@ -144,7 +144,7 @@ export default function Hipaa() {
               <p className="text-[#E5E5E5] font-helvetica leading-relaxed ml-4">
                 <strong>Privacy Officer</strong><br />
                 The Peptide Market<br />
-                Email: <a href="mailto:ash@builtbydesign.io" className="text-[#FF6B35] hover:text-[#FF8C42] underline">ash@builtbydesign.io</a>
+                Email: <a href="mailto:info@thepeptidemarket.com" className="text-[#FF6B35] hover:text-[#FF8C42] underline">info@thepeptidemarket.com</a>
               </p>
             </div>
 

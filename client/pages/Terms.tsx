@@ -134,8 +134,8 @@ export default function Terms() {
               <h2 className="text-2xl font-helvetica font-bold text-white mb-4">10. Contact</h2>
               <p className="text-[#E5E5E5] font-helvetica leading-relaxed">
                 For questions regarding these Terms & Conditions, contact us at:{" "}
-                <a href="mailto:ash@builtbydesign.io" className="text-[#FF6B35] hover:text-[#FF8C42] underline">
-                  ash@builtbydesign.io
+                <a href="mailto:info@thepeptidemarket.com" className="text-[#FF6B35] hover:text-[#FF8C42] underline">
+                  info@thepeptidemarket.com
                 </a>
               </p>
             </div>

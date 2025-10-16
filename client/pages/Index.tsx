@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { InfiniteMovingCards } from "../components/ui/infinite-moving-cards";
 import { EvervaultCard } from "../components/ui/evervault-card";
@@ -8,9 +8,11 @@ import { GlowingStarsBackgroundCard, GlowingStarsTitle, GlowingStarsDescription 
 import { Spotlight } from "../components/ui/spotlight-new";
 import { Lens } from "../components/ui/lens";
 import { FAQItem } from "../components/FAQItem";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
 
 export default function Index() {
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
   const trustBadges = [
     {
       icon: (
@@ -97,16 +99,86 @@ export default function Index() {
       ),
       text: "Private white label available",
     },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+            stroke="#E5E5E5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
+      text: "Complete turnkey partner",
+    },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+            fill="#E5E5E5"
+          />
+        </svg>
+      ),
+      text: "USA Made",
+    },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 12L11 14L15 10M20 6H4C2.89543 6 2 6.89543 2 8V16C2 17.1046 2.89543 18 4 18H20C21.1046 18 22 17.1046 22 16V8C22 6.89543 21.1046 6 20 6Z"
+            stroke="#E5E5E5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
+      text: "Third party tested",
+    },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.43 12.98C19.47 12.66 19.5 12.34 19.5 12C19.5 11.66 19.47 11.34 19.43 11.02L21.54 9.37C21.73 9.22 21.78 8.95 21.66 8.73L19.66 5.27C19.54 5.05 19.27 4.97 19.05 5.05L16.56 6.05C16.04 5.65 15.48 5.32 14.87 5.07L14.49 2.42C14.46 2.18 14.25 2 14 2H10C9.75 2 9.54 2.18 9.51 2.42L9.13 5.07C8.52 5.32 7.96 5.66 7.44 6.05L4.95 5.05C4.72 4.96 4.46 5.05 4.34 5.27L2.34 8.73C2.21 8.95 2.27 9.22 2.46 9.37L4.57 11.02C4.53 11.34 4.5 11.67 4.5 12C4.5 12.33 4.53 12.66 4.57 12.98L2.46 14.63C2.27 14.78 2.22 15.05 2.34 15.27L4.34 18.73C4.46 18.95 4.73 19.03 4.95 18.95L7.44 17.95C7.96 18.35 8.52 18.68 9.13 18.93L9.51 21.58C9.54 21.82 9.75 22 10 22H14C14.25 22 14.46 21.82 14.49 21.58L14.87 18.93C15.48 18.68 16.04 18.34 16.56 17.95L19.05 18.95C19.28 19.04 19.54 18.95 19.66 18.73L21.66 15.27C21.78 15.05 21.73 14.78 21.54 14.63L19.43 12.98ZM12 15.5C10.07 15.5 8.5 13.93 8.5 12C8.5 10.07 10.07 8.5 12 8.5C13.93 8.5 15.5 10.07 15.5 12C15.5 13.93 13.93 15.5 12 15.5Z"
+            fill="#E5E5E5"
+          />
+        </svg>
+      ),
+      text: "Research grade peptides",
+    },
   ];
 
   const categoryCards = [
     {
-      category: "Injections",
+      category: "Injectables",
       image: "/assets/pm injectable peptide bottle with injetcion.png",
     },
     {
       category: "Topicals",
-      image: "/assets/pm bottle white.png",
+      image: "/assets/pm topical cream bottle.png",
     },
     {
       category: "Oral",
@@ -114,38 +186,51 @@ export default function Index() {
     },
   ];
 
-  const brandLogos = Array(5).fill(
-    "https://api.builder.io/api/v1/image/assets/TEMP/573f8a9a825e36f9f59ba4eedeca62ecaa3d9db8?width=390",
-  );
-
   return (
     <div className="min-h-screen bg-[#0B0B0B] text-white overflow-x-hidden">
       {/* Announcement Bar */}
-      <div className="relative bg-gradient-to-r from-[#FF6B35] via-[#FF8C42] to-[#FF6B35] px-6 py-3 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
-        <div className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
+      <AnimatePresence>
+        {showAnnouncement && (
           <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="flex items-center gap-2 sm:gap-3"
+            initial={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="relative bg-gradient-to-r from-[#1A1A1A] via-[#252525] to-[#1A1A1A] overflow-hidden border-b border-[#2A2A2A]"
           >
-            <span className="inline-flex items-center gap-1.5 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span className="text-white font-helvetica text-xs font-semibold uppercase tracking-wide">
-                Limited Time
-              </span>
-            </span>
-            <p className="text-white font-helvetica text-sm sm:text-base md:text-lg font-semibold">
-              <span className="hidden sm:inline">Black Friday Sale: </span>
-              <span className="font-bold">10% OFF</span> All Treatments
-              <span className="hidden md:inline"> • Ends Soon</span>
-            </p>
+            <div className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 px-6 py-3">
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="flex items-center gap-2 sm:gap-3"
+              >
+                <span className="inline-flex items-center gap-1.5 bg-[#FF6B35]/20 backdrop-blur-sm px-3 py-1 rounded-full border border-[#FF6B35]/30">
+                  <svg className="w-4 h-4 text-[#FF6B35]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span className="text-[#FF6B35] font-helvetica text-xs font-semibold uppercase tracking-wide">
+                    Limited Time
+                  </span>
+                </span>
+                <p className="text-[#E5E5E5] font-helvetica text-sm sm:text-base md:text-lg font-semibold">
+                  <span className="hidden sm:inline">Black Friday Sale: </span>
+                  <span className="font-bold text-[#FF6B35]">10% OFF</span> Entire Catalog
+                  <span className="hidden md:inline"> • Ends Soon</span>
+                </p>
+              </motion.div>
+              
+              {/* Close Button */}
+              <button
+                onClick={() => setShowAnnouncement(false)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[#9CA3AF] hover:text-white transition-colors p-1"
+                aria-label="Dismiss announcement"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
           </motion.div>
-        </div>
-      </div>
+        )}
+      </AnimatePresence>
 
       {/* Trust Banner */}
       <div className="bg-[#111111] px-6 sm:px-8 md:px-12 py-6 md:py-7 overflow-hidden">
@@ -181,6 +266,27 @@ export default function Index() {
         </div>
       </div>
 
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 backdrop-blur-2xl bg-black/60 border-b border-white/10 shadow-xl">
+        <div className="px-6 sm:px-8 md:px-12 lg:px-28">
+          <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link to="/">
+              <img
+                src="/logos/dark.svg"
+                alt="the peptide market"
+                className="h-8 sm:h-10 w-auto"
+              />
+            </Link>
+            
+            {/* CTA Button */}
+            <ShimmerButton className="h-12 px-10 text-lg">
+              Apply Now
+            </ShimmerButton>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto">
@@ -196,20 +302,6 @@ export default function Index() {
               duration={8}
               xOffset={80}
             />
-            {/* Brand Logo */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="mb-8 sm:mb-12"
-            >
-              <img
-                src="/logos/dark.svg"
-                alt="the peptide market"
-                className="h-8 sm:h-10 md:h-12 w-auto"
-              />
-            </motion.div>
-
             {/* Main Content */}
             <div className="flex flex-col gap-12 lg:gap-16">
               {/* Hero Text */}
@@ -220,24 +312,25 @@ export default function Index() {
                 className="flex flex-col gap-6"
               >
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[91px] font-helvetica leading-tight">
-                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-2">
-                    <LayoutTextFlip
-                      text=""
-                      words={[
-                        "Mental Health",
-                        "Hair Regrowth",
-                        "Testosterone",
-                        "Weight Loss",
-                      ]}
-                      duration={3000}
-                    />
+                  <div className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent mb-6">
+                    Peptides for
                   </div>
-                  <span className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent">
-                    personalized to you
-                  </span>
+                  <LayoutTextFlip
+                    text=""
+                    words={[
+                      "Hair Regrowth",
+                      "Testosterone",
+                      "Weight Loss",
+                      "Sexual Wellness",
+                      "Muscle Growth",
+                      "Skin Care",
+                      "Immune System",
+                    ]}
+                    duration={3000}
+                  />
                 </h1>
                 <p className="text-[#9CA3AF] font-helvetica text-base sm:text-lg md:text-xl">
-                  Customized care starts here
+                  Helping your patients and practice become profitable.
                 </p>
               </motion.div>
 
@@ -269,35 +362,19 @@ export default function Index() {
                     </button>
                   ))}
               </motion.div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Brands Section */}
-      <div className="py-12 sm:py-16 overflow-hidden bg-[#0B0B0B]">
-        <div className="relative">
-          <div
-            className="pointer-events-none absolute inset-0 mask-fade z-[1]"
-            aria-hidden="true"
-          />
-          <div className="marquee flex items-center gap-16 sm:gap-20 md:gap-24 w-max [--duration:30s] hover:[animation-play-state:paused] motion-reduce:!animate-none">
-            {brandLogos.map((logo, index) => (
-              <img
-                key={`a-${index}`}
-                src={logo}
-                alt="Brand logo"
-                className="h-10 sm:h-12 md:h-[51px] w-auto object-contain opacity-40 hover:opacity-100 transition-opacity"
-              />
-            ))}
-            {brandLogos.map((logo, index) => (
-              <img
-                key={`b-${index}`}
-                src={logo}
-                alt="Brand logo"
-                className="h-10 sm:h-12 md:h-[51px] w-auto object-contain opacity-40 hover:opacity-100 transition-opacity"
-              />
-            ))}
+              {/* Telehealth for Clinics - Minimal Bar */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                className="mt-2 relative rounded-lg border border-[#2A2A2A] bg-gradient-to-r from-[#1A1A1A] to-[#151515] py-3 px-4 text-center overflow-hidden"
+              >
+                <p className="relative z-10 text-[#9CA3AF] font-helvetica text-sm sm:text-base italic">
+                  Add Turnkey Telehealth Services to Your Clinic
+                </p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -312,7 +389,7 @@ export default function Index() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
           >
-            Premium peptide solutions
+            Premium Peptide Solutions
           </motion.h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
@@ -327,10 +404,10 @@ export default function Index() {
               <div className="flex flex-col h-full justify-center">
                 <div className="mb-6">
                   <h3 className="text-white font-helvetica text-2xl sm:text-3xl font-bold mb-3">
-                    Pure excellence
+                    Pure Excellence
             </h3>
                   <p className="text-[#9CA3AF] font-helvetica text-base sm:text-lg leading-relaxed">
-                    Premium formulations crafted for results. Every product tested, verified, and optimized for maximum efficacy.
+                    Pure Excellence at 99.6% purity. Every product tested, verified, and optimized for maximum efficacy.
                   </p>
                 </div>
                 <div className="flex items-center justify-center flex-1 min-h-[380px]">
@@ -353,13 +430,13 @@ export default function Index() {
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
               className="relative overflow-hidden rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-8 hover:border-[#333] transition-all cursor-pointer text-left"
             >
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 h-full">
+              <div className="flex flex-col sm:flex-row items-center gap-6 h-full">
                 <div className="flex-1">
                   <h3 className="text-white font-helvetica text-xl sm:text-2xl font-bold mb-2">
-                    Oral formulations
+                    Oral Formulations
                   </h3>
                   <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base leading-relaxed">
-                    Convenient daily protocols
+                    Convenient Daily Protocols
                   </p>
         </div>
                 <div className="w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0">
@@ -374,7 +451,7 @@ export default function Index() {
               </div>
             </motion.button>
 
-            {/* Middle Right - Injectable TRT */}
+            {/* Middle Right - Subcutaneous Injectables */}
             <motion.button
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -382,20 +459,20 @@ export default function Index() {
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
               className="relative overflow-hidden rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-8 hover:border-[#333] transition-all cursor-pointer text-left"
             >
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 h-full">
+              <div className="flex flex-col sm:flex-row items-center gap-6 h-full">
                 <div className="flex-1">
                   <h3 className="text-white font-helvetica text-xl sm:text-2xl font-bold mb-2">
-                    Injectable TRT
+                    Subcutaneous Injectables
                   </h3>
                   <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base leading-relaxed">
-                    Clinical-grade testosterone therapy
+                    Lyophilized Peptide Vials (Purity Tested)
                   </p>
                 </div>
                 <div className="w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0">
                   <Lens zoomFactor={2} lensSize={140}>
                     <img
                       src="/assets/pm injectable peptide bottle with injetcion.png"
-                      alt="Injectable TRT"
+                      alt="Subcutaneous Injectables"
                       className="w-full h-full object-contain"
                     />
                   </Lens>
@@ -411,19 +488,19 @@ export default function Index() {
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
               className="relative overflow-hidden rounded-2xl border border-[#222222] bg-gradient-to-b from-[#0F0F10] to-[#151515] p-8 hover:border-[#333] transition-all cursor-pointer text-left"
             >
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 h-full">
+              <div className="flex flex-col sm:flex-row items-center gap-6 h-full">
                 <div className="flex-1">
                   <h3 className="text-white font-helvetica text-xl sm:text-2xl font-bold mb-2">
-                    Topical compounds
+                    Topical Compounds
                   </h3>
                   <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base leading-relaxed">
-                    Transdermal absorption systems
+                    Transdermal Absorption Systems
                   </p>
                 </div>
                 <div className="w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0">
                   <Lens zoomFactor={2} lensSize={140}>
                     <img
-                      src="/assets/pm bottle white.png"
+                      src="/assets/pm topical cream bottle.png"
                       alt="Topical solutions"
                       className="w-full h-full object-contain"
                     />
@@ -438,7 +515,7 @@ export default function Index() {
             {[
               { stat: "100%", label: "FDA-registered pharmacies" },
               { stat: "24/7", label: "Clinician support" },
-              { stat: "$0", label: "Consultation fees" },
+              { stat: "COA", label: "Docs available & 3rd party tested" },
               { stat: "3-5", label: "Days discreet delivery" },
             ].map((item, index) => (
               <motion.div
@@ -468,10 +545,10 @@ export default function Index() {
             className="mt-12 sm:mt-16 text-center"
           >
             <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-              Start Your Assessment
+              Apply Now
             </ShimmerButton>
             <p className="text-[#9CA3AF] font-helvetica text-sm mt-4">
-              Free consultation • FDA-registered pharmacies • Discreet shipping
+              FDA-registered pharmacies • Discreet shipping
             </p>
           </motion.div>
         </div>
@@ -487,56 +564,75 @@ export default function Index() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
           >
-            We're with you every step of the way
+            We're With You Every Step Of The Way
           </motion.h2>
 
           {/* Steps Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Step 1 */}
-            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] max-w-none h-auto min-h-[320px] flex flex-col p-6">
-              <div className="flex items-center gap-3 mb-4">
+            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] !max-w-none !max-h-none !h-auto flex flex-col p-8">
+              <div className="flex items-center gap-3 mb-4 w-full">
                 <div className="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center text-white font-helvetica font-bold text-sm flex-shrink-0">
                   1
                 </div>
-                <GlowingStarsTitle className="text-white font-helvetica text-lg sm:text-xl max-w-none">
-                  Health Assessment
-                </GlowingStarsTitle>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-white font-helvetica text-base sm:text-lg font-semibold break-words">
+                    Dedicated 24/7 Support
+                  </h3>
+                </div>
               </div>
-              <GlowingStarsDescription className="text-[#9CA3AF] font-helvetica text-sm max-w-none">
-                Share your goals and medical history with our clinicians.
-              </GlowingStarsDescription>
+              <p className="text-[#9CA3AF] font-helvetica text-sm leading-relaxed">
+                Access our online portal anytime for immediate assistance and real-time support.
+              </p>
             </GlowingStarsBackgroundCard>
 
             {/* Step 2 */}
-            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] max-w-none h-auto min-h-[320px] flex flex-col p-6">
-              <div className="flex items-center gap-3 mb-4">
+            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] !max-w-none !max-h-none !h-auto flex flex-col p-8">
+              <div className="flex items-center gap-3 mb-4 w-full">
                 <div className="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center text-white font-helvetica font-bold text-sm flex-shrink-0">
                   2
                 </div>
-                <GlowingStarsTitle className="text-white font-helvetica text-lg sm:text-xl max-w-none">
-                  Expert Approval
-                </GlowingStarsTitle>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-white font-helvetica text-base sm:text-lg font-semibold break-words">
+                    100% Online Ordering
+                  </h3>
+                </div>
               </div>
-              <GlowingStarsDescription className="text-[#9CA3AF] font-helvetica text-sm max-w-none">
-                Board-certified physicians review and approve your personalized plan.
-              </GlowingStarsDescription>
+              <p className="text-[#9CA3AF] font-helvetica text-sm leading-relaxed">
+                Order seamlessly online with no minimum order quantity required.
+              </p>
             </GlowingStarsBackgroundCard>
 
             {/* Step 3 */}
-            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] max-w-none h-auto min-h-[320px] flex flex-col p-6">
-              <div className="flex items-center gap-3 mb-4">
+            <GlowingStarsBackgroundCard className="bg-gradient-to-b from-[#0F0F10] to-[#151515] border-[#222222] !max-w-none !max-h-none !h-auto flex flex-col p-8">
+              <div className="flex items-center gap-3 mb-4 w-full">
                 <div className="w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center text-white font-helvetica font-bold text-sm flex-shrink-0">
                   3
                 </div>
-                <GlowingStarsTitle className="text-white font-helvetica text-lg sm:text-xl max-w-none">
-                  Fast Delivery
-                </GlowingStarsTitle>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-white font-helvetica text-base sm:text-lg font-semibold break-words">
+                    Fast Delivery
+                  </h3>
+                </div>
               </div>
-              <GlowingStarsDescription className="text-[#9CA3AF] font-helvetica text-sm max-w-none">
+              <p className="text-[#9CA3AF] font-helvetica text-sm leading-relaxed">
                 Premium peptides shipped discreetly with ongoing optimization support.
-              </GlowingStarsDescription>
+              </p>
             </GlowingStarsBackgroundCard>
           </div>
+          
+          {/* CTA after How It Works */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-12 sm:mt-16 text-center"
+          >
+            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+              Apply Now
+            </ShimmerButton>
+          </motion.div>
         </div>
       </div>
 
@@ -553,17 +649,17 @@ export default function Index() {
               className="flex-1 max-w-[420px] lg:self-center"
             >
               <h2 className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14 leading-tight">
-                No hidden fees, ever
+                No Hidden Fees, Ever
               </h2>
               <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base md:text-[18px] mb-6 sm:mb-7 md:mb-8 leading-relaxed">
-                We build community by focusing on real solutions, personalized
-                care, science-backed supplements and root cause therapies paired
-                with virtual appointments and accessible diagnostics make
-                healthcare seamless and centered on you.
+                We build community by focusing on real solutions, personalized care, science-backed supplements and root cause therapies paired with virtual appointments and accessible diagnostics make healthcare seamless and centered on you.
               </p>
               <ShimmerButton className="h-12 sm:h-14 md:h-16 px-10 sm:px-12 md:px-16 text-lg sm:text-xl md:text-2xl">
-                Shop now
+                Apply Now
               </ShimmerButton>
+              <p className="text-[#9CA3AF] font-helvetica text-sm mt-4">
+                FDA-registered pharmacies • Discreet shipping
+              </p>
             </motion.div>
 
             {/* Right Comparison Table */}
@@ -903,7 +999,7 @@ export default function Index() {
               { image: "/headshots/Ash Rahman.png", name: "Ash Rahman", title: "CEO" },
               { image: "/headshots/Muhammad Bin Sohail.png", name: "Muhammad Bin Sohail", title: "Head of Technology" },
               { image: "/headshots/Oliver Ibrahim.png", name: "Oliver Ibrahim", title: "Head of Marketing" },
-              { image: "/headshots/Gaelle Semaan.png", name: "Gaelle Semaan", title: "Head of Closing" },
+              { image: "/headshots/Gaelle Semaan.png", name: "Gaelle Semaan", title: "Clinic Launch Liaison" },
               { image: "/headshots/Jimmy.png", name: "Jimmy", title: "Head of Sales" },
             ].map((member, index) => (
               <motion.div
@@ -921,6 +1017,19 @@ export default function Index() {
               </motion.div>
             ))}
           </div>
+          
+          {/* CTA after Our Team */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-12 sm:mt-16 text-center"
+          >
+            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+              Apply Now
+            </ShimmerButton>
+          </motion.div>
         </div>
       </div>
 
@@ -934,13 +1043,13 @@ export default function Index() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
           >
-            Trusted by clinics across the US
+            Trusted By Clinics Across The US
           </motion.h2>
 
           <InfiniteMovingCards
             items={[
               {
-                quote: "Switching to PeptiPharmaRx changed everything for us. Not only are we getting faster peptide shipments, but our margins improved by at least 30%. Their team helped us stay compliant in all 50 states — total game changer.",
+                quote: "Switching to Peptide Market changed everything for us. Not only are we getting faster peptide shipments, but our margins improved by at least 30%. Their team helped us stay compliant in all 50 states — total game changer.",
                 name: "Dr. Emily Rodriguez",
                 title: "Clinic Owner – Miami, FL",
               },
@@ -955,7 +1064,7 @@ export default function Index() {
                 title: "Los Angeles, CA",
               },
               {
-                quote: "The PeptiPharmaRx platform feels like it was built for high-performing clinics. From the telemedicine tools to the sleek branding, everything just works. It makes us look and operate like a national brand.",
+                quote: "The Peptide Market platform feels like it was built for high-performing clinics. From the telemedicine tools to the sleek branding, everything just works. It makes us look and operate like a national brand.",
                 name: "Dr. Kevin Patel",
                 title: "Men's Health Specialist – Scottsdale, AZ",
               },
@@ -964,6 +1073,19 @@ export default function Index() {
             speed="slow"
             pauseOnHover={true}
           />
+          
+          {/* CTA after Reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-12 sm:mt-16 text-center"
+          >
+            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+              Apply Now
+            </ShimmerButton>
+          </motion.div>
         </div>
       </div>
 
@@ -974,12 +1096,22 @@ export default function Index() {
             <FAQItem
               variant="dark"
               question="What is the peptide market?"
-              answer="The peptide market is a comprehensive platform offering personalized healthcare solutions including peptides, TRT, and other science-backed treatments. We focus on providing accessible, data-driven care tailored to your specific needs."
+              answer="The peptide market is a comprehensive platform offering personalized healthcare solutions around supplying peptides, hormone therapy, and telehealth services. We focus on only the highest purity Lyophilized peptides to our clients. Accessible, data-driven care tailored to your specific needs."
             />
             <FAQItem
               variant="dark"
-              question="How does the treatment process work?"
-              answer="Our treatment process is simple and convenient. Start by completing a health history form, then consult with our licensed clinicians who will review your medical history. If approved, your personalized treatment will be delivered directly to your door, and we'll continue to optimize your care."
+              question="Why Add Peptides To Your Traditional Medical Practice Or Clinic?"
+              answer="The sentiment towards using progressive medicine is increasing at an unprecedented rate. We have taken a proactive, data-driven approach to where the healthcare market is headed. So why not offer Peptides to treat your patients and clients in a controlled environment then have them go to less experienced and skilled people at an amazing markup. The best part is this requires no extra work on your part to add an extra 5-7 figures to your business. We help you offer convenient direct to patient delivery and virtual appointments."
+            />
+            <FAQItem
+              variant="dark"
+              question="How Pure are your peptides?"
+              answer="Our pharmaceutical grade lyophilized peptides are third party batch tested at 99.6% purity. Highest available on the market. COA toxin documentations are available for each batch."
+            />
+            <FAQItem
+              variant="dark"
+              question="How Do I Work With Peptide Market?"
+              answer="Our application process is simple and convenient. If approved, your Clinic Launch Liaison will directly set you up on our platform to get you started offering peptides to your patients immediately."
             />
             <FAQItem
               variant="dark"
@@ -1001,6 +1133,16 @@ export default function Index() {
               question="How long does shipping take?"
               answer="We offer free and discreet shipping on all prescriptions. Most orders are delivered within 3-5 business days. All packages are shipped in unmarked, discreet packaging to protect your privacy."
             />
+            <FAQItem
+              variant="dark"
+              question="Do you price match competitors?"
+              answer="Not only will we price match, but if we can beat their pricing we will. This will be rare as we already offer the best pricing in the peptide market!"
+            />
+            <FAQItem
+              variant="dark"
+              question="Do you have Minimum Order Quantities?"
+              answer="No! We are your partner and scale up or down according to your needs."
+            />
           </div>
 
           {/* CTA after FAQ */}
@@ -1012,10 +1154,10 @@ export default function Index() {
             className="mt-12 sm:mt-16 text-center"
           >
             <p className="text-[#E5E5E5] font-helvetica text-lg sm:text-xl mb-6">
-              Still have questions? Our clinicians are here to help.
+              Still Have Questions? Our Team Is Here To Help.
             </p>
             <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-              Talk to a Specialist
+              Apply Now
             </ShimmerButton>
           </motion.div>
         </div>
@@ -1035,10 +1177,10 @@ export default function Index() {
               {/* Left Content */}
               <div className="flex flex-col gap-6 max-w-[450px] w-full">
                 <h2 className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl leading-tight">
-                  Start your transformation today
+                  Learn The Benefits Of Adding Peptides To Your Practice?
                 </h2>
                 <p className="text-[#9CA3AF] font-helvetica text-base sm:text-lg leading-relaxed">
-                  Expert guidance for your health and wellness journey
+                  Stay updated with industry insights, best practices, and exclusive offers.
                 </p>
               </div>
 
@@ -1051,7 +1193,7 @@ export default function Index() {
                     className="w-full px-6 py-[21px] rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-white placeholder:text-[#666] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#4A5568]"
                   />
                   <ShimmerButton className="w-full text-base sm:text-lg">
-                    Get the Guide
+                    Sign up for the newsletter today
                   </ShimmerButton>
                 </div>
                 <p className="text-[#9CA3AF] font-helvetica text-sm">
@@ -1099,7 +1241,7 @@ export default function Index() {
                     href="#"
                     className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
-                    Shop / Products
+                    Shop / Catalog
                   </a>
                   <a
                     href="#"
@@ -1112,18 +1254,6 @@ export default function Index() {
                     className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
                   >
                     FAQs
-                  </a>
-                  <a
-                    href="#"
-                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
-                  >
-                    Contact / Support
-                  </a>
-                  <a
-                    href="#"
-                    className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px] hover:text-white transition-colors"
-                  >
-                    Clinician Login
                   </a>
                 </nav>
               </div>
@@ -1168,10 +1298,10 @@ export default function Index() {
                 </h3>
                 <div className="flex flex-col gap-[14px]">
                   <p className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px]">
-                    Email: ash@builtbydesign.io
+                    Email: info@thepeptidemarket.com
                   </p>
                   <p className="text-[#9CA3AF] font-helvetica text-lg sm:text-xl md:text-[20px]">
-                    Address: 123 North St, New York, NY, 15546
+                    Address: 5900 Balcones Drive Suite 100, Austin, TX, 78731
                   </p>
                 </div>
               </div>
@@ -1193,9 +1323,9 @@ export default function Index() {
         {/* Absolute full-width watermark with 10px margins */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute left-[10px] right-[10px] bottom-[10px] z-0"
+          className="pointer-events-none select-none absolute left-0 right-0 bottom-[10px] z-0 overflow-hidden px-2"
         >
-          <div className="w-full text-white/15 font-orpheus font-bold leading-none whitespace-nowrap text-[clamp(32px,13vw,240px)] uppercase tracking-tight">
+          <div className="w-full text-white/15 font-orpheus font-bold leading-none text-center text-[clamp(28px,10vw,240px)] uppercase tracking-tight">
             PEPTIDE MARKET
           </div>
         </div>
