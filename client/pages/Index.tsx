@@ -280,9 +280,11 @@ export default function Index() {
             </Link>
             
             {/* CTA Button */}
-            <ShimmerButton className="h-12 px-10 text-lg">
-              Apply Now
-            </ShimmerButton>
+            <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
+              <ShimmerButton className="h-12 px-10 text-lg">
+                Apply Now
+              </ShimmerButton>
+            </a>
           </div>
         </div>
       </nav>
@@ -544,9 +546,11 @@ export default function Index() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="mt-12 sm:mt-16 text-center"
           >
-            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-              Apply Now
-            </ShimmerButton>
+            <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
+              <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+                Apply Now
+              </ShimmerButton>
+            </a>
             <p className="text-[#9CA3AF] font-helvetica text-sm mt-4">
               FDA-registered pharmacies • Discreet shipping
             </p>
@@ -629,9 +633,11 @@ export default function Index() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mt-12 sm:mt-16 text-center"
           >
-            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-              Apply Now
-            </ShimmerButton>
+            <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
+              <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+                Apply Now
+              </ShimmerButton>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -654,9 +660,11 @@ export default function Index() {
               <p className="text-[#9CA3AF] font-helvetica text-sm sm:text-base md:text-[18px] mb-6 sm:mb-7 md:mb-8 leading-relaxed">
                 We build community by focusing on real solutions, personalized care, science-backed supplements and root cause therapies paired with virtual appointments and accessible diagnostics make healthcare seamless and centered on you.
               </p>
-              <ShimmerButton className="h-12 sm:h-14 md:h-16 px-10 sm:px-12 md:px-16 text-lg sm:text-xl md:text-2xl">
-                Apply Now
-              </ShimmerButton>
+              <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
+                <ShimmerButton className="h-12 sm:h-14 md:h-16 px-10 sm:px-12 md:px-16 text-lg sm:text-xl md:text-2xl">
+                  Apply Now
+                </ShimmerButton>
+              </a>
               <p className="text-[#9CA3AF] font-helvetica text-sm mt-4">
                 FDA-registered pharmacies • Discreet shipping
               </p>
@@ -1026,9 +1034,11 @@ export default function Index() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mt-12 sm:mt-16 text-center"
           >
-            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-              Apply Now
-            </ShimmerButton>
+            <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
+              <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+                Apply Now
+              </ShimmerButton>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -1082,9 +1092,11 @@ export default function Index() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mt-12 sm:mt-16 text-center"
           >
-            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-              Apply Now
-            </ShimmerButton>
+            <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
+              <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+                Apply Now
+              </ShimmerButton>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -1156,9 +1168,11 @@ export default function Index() {
             <p className="text-[#E5E5E5] font-helvetica text-lg sm:text-xl mb-6">
               Still Have Questions? Our Team Is Here To Help.
             </p>
-            <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-              Apply Now
-            </ShimmerButton>
+            <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
+              <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
+                Apply Now
+              </ShimmerButton>
+            </a>
           </motion.div>
         </div>
       </div>
