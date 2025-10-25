@@ -9,10 +9,49 @@ import { Spotlight } from "../components/ui/spotlight-new";
 import { Lens } from "../components/ui/lens";
 import { FAQItem } from "../components/FAQItem";
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 
 export default function Index() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        "https://services.leadconnectorhq.com/hooks/lRIPmQzakuiffBK5S13p/webhook-trigger/ca6e7673-ae36-4cd2-832a-5cc306004fb0",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        // Redirect to lead magnet page
+        window.location.href = "https://peptide-market-presentat-68hedpd.gamma.site/";
+      } else {
+        console.error("Failed to submit form");
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const trustBadges = [
     {
       icon: (
@@ -1214,15 +1253,42 @@ export default function Index() {
               </div>
 
               {/* Right Form */}
-              <div className="flex flex-col gap-[36px] max-w-[384px] w-full">
-                <div className="flex flex-col gap-[30px]">
+              <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-[36px] max-w-[384px] w-full">
+                <div className="flex flex-col gap-[20px]">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    required
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    className="w-full px-6 py-[21px] rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-white placeholder:text-[#666] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#4A5568]"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    required
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    className="w-full px-6 py-[21px] rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-white placeholder:text-[#666] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#4A5568]"
+                  />
                   <input
                     type="email"
                     placeholder="Email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-6 py-[21px] rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-white placeholder:text-[#666] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#4A5568]"
                   />
-                  <ShimmerButton className="w-full text-base sm:text-lg">
-                    Sign up for the newsletter today
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full px-6 py-[21px] rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-white placeholder:text-[#666] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#4A5568]"
+                  />
+                  <ShimmerButton type="submit" disabled={isSubmitting} className="w-full text-base sm:text-lg">
+                    {isSubmitting ? "Submitting..." : "Sign up for the newsletter today"}
                   </ShimmerButton>
                 </div>
                 <p className="text-[#9CA3AF] font-helvetica text-sm">
@@ -1242,7 +1308,7 @@ export default function Index() {
                   </Link>
                   .
                 </p>
-              </div>
+              </form>
             </div>
           </motion.div>
         </div>
