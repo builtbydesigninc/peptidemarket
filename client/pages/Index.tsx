@@ -344,25 +344,28 @@ export default function Index() {
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 w-full"
               >
                 {categoryCards.map((card, index) => (
-                    <button
-                      key={index}
+                  <a
+                    key={index}
+                    href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="rounded-xl p-6 flex flex-col gap-6 min-h-[320px] bg-[#111111] border border-[#222222] hover:shadow-lg hover:border-[#333] transition-all hover:-translate-y-1 cursor-pointer text-left w-full"
-                    >
-                      <div className="flex justify-between items-center">
+                  >
+                    <div className="flex justify-between items-center">
                       <div className="text-lg sm:text-xl font-helvetica">
                         <span className="text-[#EAEAEA]">{card.category}</span>
-                        </div>
-                      <ChevronRight className="w-5 h-5 flex-shrink-0 text-[#FF6B35]" />
                       </div>
-                      <Lens zoomFactor={2} lensSize={150}>
+                      <ChevronRight className="w-5 h-5 flex-shrink-0 text-[#FF6B35]" />
+                    </div>
+                    <Lens zoomFactor={2} lensSize={150}>
                       <img
                         src={card.image}
                         alt={card.category}
                         className="w-full h-52 sm:h-56 md:h-60 object-contain mx-auto"
                       />
-                      </Lens>
-                    </button>
-                  ))}
+                    </Lens>
+                  </a>
+                ))}
               </motion.div>
 
               {/* Telehealth for Clinics - Minimal Bar */}
@@ -396,7 +399,10 @@ export default function Index() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Large Featured Card - Water Splash Bottle */}
-            <motion.button
+            <motion.a
+              href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -422,10 +428,13 @@ export default function Index() {
                   </Lens>
             </div>
           </div>
-            </motion.button>
+            </motion.a>
 
             {/* Top Right - Oral Peptides */}
-            <motion.button
+            <motion.a
+              href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -451,10 +460,13 @@ export default function Index() {
                   </Lens>
       </div>
               </div>
-            </motion.button>
+            </motion.a>
 
             {/* Middle Right - Subcutaneous Injectables */}
-            <motion.button
+            <motion.a
+              href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -480,10 +492,13 @@ export default function Index() {
                   </Lens>
       </div>
               </div>
-            </motion.button>
+            </motion.a>
 
             {/* Bottom Right - Topical Solutions */}
-            <motion.button
+            <motion.a
+              href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -509,7 +524,7 @@ export default function Index() {
                   </Lens>
                 </div>
               </div>
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Bottom Stat Bar */}
