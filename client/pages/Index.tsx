@@ -19,10 +19,18 @@ export default function Index() {
     email: "",
     phone: "",
   });
+  const [optIn, setOptIn] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const handleNewsletterSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    
+    if (!optIn) {
+      alert("Please agree to receive promotional messages to continue.");
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -38,16 +46,21 @@ export default function Index() {
       );
 
       if (response.ok) {
-        // Redirect to lead magnet page
-        window.location.href = "https://peptide-market-presentat-68hedpd.gamma.site/";
+        // Show success popup
+        setShowSuccessPopup(true);
+        
+        // Redirect after 3 seconds
+        setTimeout(() => {
+          window.location.href = "https://peptide-market-presentat-68hedpd.gamma.site/";
+        }, 3000);
       } else {
         console.error("Failed to submit form");
         alert("Something went wrong. Please try again.");
+        setIsSubmitting(false);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again.");
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -1287,6 +1300,20 @@ export default function Index() {
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-6 py-[21px] rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-white placeholder:text-[#666] font-helvetica text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#4A5568]"
                   />
+                  
+                  {/* Opt-in Checkbox */}
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={optIn}
+                      onChange={(e) => setOptIn(e.target.checked)}
+                      className="mt-1 w-5 h-5 rounded border-[#2A2A2A] bg-[#1A1A1A] text-[#FF6B35] focus:ring-2 focus:ring-[#4A5568] cursor-pointer"
+                    />
+                    <span className="text-[#9CA3AF] font-helvetica text-sm leading-relaxed">
+                      I agree to receive promotional and informational messages via Email and SMS
+                    </span>
+                  </label>
+                  
                   <ShimmerButton type="submit" disabled={isSubmitting} className="w-full text-base sm:text-lg">
                     {isSubmitting ? "Submitting..." : "Sign up for the newsletter today"}
                   </ShimmerButton>
@@ -1425,6 +1452,120 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Success Popup with Confetti */}
+      <AnimatePresence>
+        {showSuccessPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          >
+            {/* Confetti Animation */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {[...Array(50)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-3 h-3 rounded-full"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: '-10%',
+                    backgroundColor: [
+                      '#FF6B35',
+                      '#F7931E',
+                      '#FDC830',
+                      '#4ECDC4',
+                      '#44A8FF',
+                      '#A855F7',
+                      '#EC4899',
+                    ][Math.floor(Math.random() * 7)],
+                  }}
+                  animate={{
+                    y: ['0vh', '110vh'],
+                    x: [0, (Math.random() - 0.5) * 200],
+                    rotate: [0, Math.random() * 720 - 360],
+                    opacity: [1, 0.8, 0],
+                  }}
+                  transition={{
+                    duration: Math.random() * 2 + 2,
+                    ease: 'easeOut',
+                    delay: Math.random() * 0.5,
+                  }}
+                />
+              ))}
+            </div>
+
+            {/* Success Message */}
+            <motion.div
+              initial={{ scale: 0.8, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="relative z-10 bg-gradient-to-b from-[#0F0F10] to-[#151515] border-2 border-[#FF6B35] rounded-2xl p-8 sm:p-12 max-w-md mx-4 text-center"
+            >
+              {/* Success Icon */}
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#FF6B35]/20 flex items-center justify-center"
+              >
+                <svg
+                  className="w-10 h-10 text-[#FF6B35]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </motion.div>
+
+              {/* Message */}
+              <motion.h3
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-2xl sm:text-3xl font-helvetica font-bold bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent mb-3"
+              >
+                Congratulations! 🎉
+              </motion.h3>
+              
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="text-[#9CA3AF] font-helvetica text-base sm:text-lg mb-4"
+              >
+                You've successfully signed up!
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-[#FF6B35] font-helvetica text-sm sm:text-base"
+              >
+                Redirecting to your lead magnet...
+              </motion.p>
+
+              {/* Loading Spinner */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="mt-6"
+              >
+                <div className="w-8 h-8 mx-auto border-4 border-[#FF6B35]/20 border-t-[#FF6B35] rounded-full animate-spin" />
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
