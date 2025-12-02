@@ -1057,59 +1057,6 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Our Team Section */}
-      <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="bg-gradient-to-r from-[#9CA3AF] to-[#E5E7EB] bg-clip-text text-transparent font-helvetica text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mb-10 sm:mb-12 md:mb-14"
-          >
-            Our Team
-          </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10">
-            {[
-              { image: "/headshots/Ash Rahman.png", name: "Ash Rahman", title: "CEO" },
-              { image: "/headshots/Muhammad Bin Sohail.png", name: "Muhammad Bin Sohail", title: "Head of Technology" },
-              { image: "/headshots/Oliver Ibrahim.png", name: "Oliver Ibrahim", title: "Head of Marketing" },
-              { image: "/headshots/Gaelle Semaan.png", name: "Gaelle Semaan", title: "Clinic Launch Liaison" },
-              { image: "/headshots/Jimmy.png", name: "Jimmy", title: "Head of Sales" },
-            ].map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-              >
-                <EvervaultCard
-                  image={member.image}
-                  name={member.name}
-                  title={member.title}
-                />
-              </motion.div>
-            ))}
-          </div>
-          
-          {/* CTA after Our Team */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mt-12 sm:mt-16 text-center"
-          >
-            <a href="https://calendly.com/d/cwfs-hbf-n6q/luxury-peptide-therapy-dc" target="_blank" rel="noopener noreferrer">
-              <ShimmerButton className="h-14 sm:h-16 px-12 sm:px-16 text-lg sm:text-xl">
-                Apply Now
-              </ShimmerButton>
-            </a>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Reviews Section */}
       <div className="px-6 sm:px-8 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 bg-[#0B0B0B]">
         <div className="max-w-7xl mx-auto">
